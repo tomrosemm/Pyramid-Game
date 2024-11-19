@@ -1,0 +1,18 @@
+Theming: 
+Egyptian Tomb
+
+Systems:
+- Health Metering
+- Basic Combat/Fights
+- Attribute System for Enemies/Player that affects combat
+
+Enemies/Obstacles:
+- Mummies
+- Tomb Goblins
+
+Locations/Map:
+
+Items:
+
+Events:
+- Sphinx Quiz
