@@ -1,0 +1,10 @@
+1 - Entrance
+2 - Encampment
+3 - SnakeWay
+4 - Lesser Burial Chamber
+5 - Sphinx Room
+6 - Armory
+7 - Inner Burial Chamber
+8 - Sandy Cove
+9 - Royal Tomb
+10 - Treasure Chamber
