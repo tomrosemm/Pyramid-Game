@@ -1,0 +1,30 @@
+Rooms:
+(?) Base room class for other rooms to inherit from
+- Entrance
+- Encampment
+- SnakeWay
+- Lesser Burial Chamber
+- Sphinx Room
+- Armory
+- Inner Burial Chamber
+- Sandy Cove
+- Royal Tomb
+- Treasure Chamber
+
+Enemies:
+- Treasure Goblin
+- Mummy
+
+Systems:
+- Health
+- Combat
+- Light w/Torch (On top of snakeway, maybe give more detail and different response from Sphinx)
+
+Items:
+- Axe
+- Torch
+- Hooked Sword
+
+Events:
+- Sphinx riddle
+- Healing and item info in Sandy Cove

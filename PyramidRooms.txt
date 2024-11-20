@@ -1,10 +1,32 @@
-1 - Entrance
-2 - Encampment
-3 - SnakeWay
-4 - Lesser Burial Chamber
-5 - Sphinx Room
-6 - Armory
-7 - Inner Burial Chamber
-8 - Sandy Cove
-9 - Royal Tomb
-10 - Treasure Chamber
+1 - Entrance:
+Start here. Story? Torch to grab just prompt player as to whether they want to take or not. Door to N
+
+2 - Encampment:
+Battlefield/Tomb Goblin Camp. Prompt player to grab an axe, and then enter battle with 1-2 tomb goblins. Make easy if weapon grabbed, moderately challenging if not. Door to N
+
+3 - SnakeWay:
+Small, twisting hallway around back of pyramid; Snakes in hallway. If torch grabbed, avoid; if not, randomly take away some health in a range.
+Starts N, Turns E for pyramid length, Exit in End of South wall. 
+
+4 - Lesser Burial Chamber:
+Tomb room, a couple tomb goblins and a mummy. Door to S
+
+5 - Sphinx Room:
+Large crumbling sphinx head guarding E side of South wall. Sphinx has riddle; if correct, he crumbles to reveal the Armory door; maybe make unnecessarily sad.
+if wrong, he gives either starting weapon or torch if player is missing one of them. If not, he refills health. Door to Inner burial chamber to W
+
+6 - Armory:
+Ransacked except for a very powerful hooked sword. Upon entering, if player is still at >= 75% health, have a booby trap spring.
+
+7 - Inner Burial Chamber:
+Tomb room, 2-3 Mummies in here, Door to N
+
+8 - Sandy Cove:
+Resting room, maybe give clue about missing items (axe or torch), refill health, if have all items give another chance at sphinx quiz with hint,
+ possibly through some little story thing if time/we feel like it. Door to N
+
+9 - Royal Tomb:
+Big fight, make easy if weapon grabbed, moderately challenging if not. some sort of secret mechanism to open treasure room in back of W wall
+
+10 - Treasure Chamber:
+Treasure! Riches! Maybe story!
