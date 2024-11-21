@@ -26,7 +26,7 @@ Resting room, maybe give clue about missing items (axe or torch), refill health,
  possibly through some little story thing if time/we feel like it. Door to N
 
 9 - Royal Tomb:
-Big fight, make easy if weapon grabbed, moderately challenging if not. some sort of secret mechanism to open treasure room in back of W wall
+Big fight, make easy if new weapon grabbed, moderately challenging if not. some sort of secret mechanism to open treasure room in back of W wall
 
 10 - Treasure Chamber:
 Treasure! Riches! Maybe story!
