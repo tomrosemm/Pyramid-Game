@@ -1,6 +1,6 @@
 def SnakeWay():
     
-    directions = ["forward", "backward"]
+    directions = ["FORWARD", "BACKWARD"]
     
     hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
     

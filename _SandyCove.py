@@ -1,5 +1,5 @@
 def SandyCove():
     
-    directions = ["forward", "backward"]
+    directions = ["FORWARD", "BACKWARD"]
     
     return
