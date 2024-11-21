@@ -1,18 +1,16 @@
 Rooms:
-- (?) Room parent class
-- Entrance
-- Encampment
-- SnakeWay
-- Lesser Burial Chamber
-- Sphinx Room
-- Armory
-- Inner Burial Chamber
-- Sandy Cove
-- Royal Tomb
-- Treasure Chamber
+T - Entrance
+D - Encampment
+T - SnakeWay
+D - Lesser Burial Chamber
+T - Sphinx Room
+D - Armory
+T - Inner Burial Chamber
+T - Sandy Cove
+D - Royal Tomb
+D - Treasure Chamber
 
 Enemies:
-- (?) Enemy parent class
 - Treasure Goblin
 - Mummy
 
@@ -22,7 +20,6 @@ Systems:
 - Light w/Torch (IN addition to snakeway, maybe give more detail in rooms and different response from Sphinx when in light)
 
 Items:
-- (?) Item parent class
 - Axe
 - Torch
 - Hooked Sword
