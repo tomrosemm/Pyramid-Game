@@ -1,0 +1,2 @@
+def Entrance():
+    return
