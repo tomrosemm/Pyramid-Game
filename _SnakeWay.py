@@ -18,12 +18,12 @@ def SnakeWay():
     
     while userInput not in directions:
         print("CHOICE(S): FORWARD, BACKWARD")
-        userInput = input()
+        userInput = input().upper()
 
-        if userInput == "forward":   
+        if userInput == "FORWARD":   
             print("FORWARD: TO SPHINX ROOM") #Test Print
             
-            if hasTorch == True:
+            if hasTorch:
                 print("THE LIGHT OF THE TORCH ALLOWS YOU TO COMPLETELY AVOID THE SNAKES")
             
             else:
@@ -31,6 +31,10 @@ def SnakeWay():
                 #Take damage
             
             #SphinxRoom()
+        
+        elif userInput == "BACKWARD":
+            print("BACKWARD: TO ENCAMPMENT")
+            #Encampment()
             
         else:
             print("Please enter a valid direction.")
