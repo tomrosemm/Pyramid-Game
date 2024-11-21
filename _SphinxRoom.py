@@ -1,6 +1,6 @@
 def SphinxRoom():
     
-    directions = ["backward", "right"] #Changes if riddle is solved, as door is open
+    directions = ["BACKWARD", "RIGHT"] #Changes if riddle is solved, as door is open
     
     hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
     
