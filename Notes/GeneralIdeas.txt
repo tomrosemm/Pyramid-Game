@@ -13,6 +13,12 @@ Enemies/Obstacles:
 Locations/Map:
 
 Items:
+- Flask (heal)
+- Flashlight
+- Dagger
+- Sword
+- Poison Vial
+- Armored Cloak
 
 Events:
 - Sphinx Quiz
