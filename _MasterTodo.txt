@@ -19,7 +19,7 @@ Enemies:
 Systems:
 - Health
 - Combat
-- Light w/Torch (On top of snakeway, maybe give more detail and different response from Sphinx)
+- Light w/Torch (IN addition to snakeway, maybe give more detail in rooms and different response from Sphinx when in light)
 
 Items:
 - (?) Item parent class
