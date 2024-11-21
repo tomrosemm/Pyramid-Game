@@ -1,5 +1,5 @@
 Rooms:
-(?) Base room class for other rooms to inherit from
+- (?) Room parent class
 - Entrance
 - Encampment
 - SnakeWay
@@ -12,6 +12,7 @@ Rooms:
 - Treasure Chamber
 
 Enemies:
+- (?) Enemy parent class
 - Treasure Goblin
 - Mummy
 
@@ -21,6 +22,7 @@ Systems:
 - Light w/Torch (On top of snakeway, maybe give more detail and different response from Sphinx)
 
 Items:
+- (?) Item parent class
 - Axe
 - Torch
 - Hooked Sword
