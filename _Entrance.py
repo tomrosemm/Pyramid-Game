@@ -4,9 +4,9 @@ def Entrance():
     hasTorch = False
     
     print("YOU ARE IN THE ENTRANCE")   
-    torchChoice = input("TAKE TORCH? (y/n)")
+    torchChoice = input("TAKE TORCH? (y/n)").upper()
     
-    if torchChoice.upper() == "Y":        
+    if torchChoice == "Y":        
         hasTorch = True
     
     else:     
@@ -19,12 +19,12 @@ def Entrance():
     
     while userInput not in directions:        
         print("CHOICE(S): FORWARD")
-        userInput = input()
+        userInput = input().upper()
 
-        if userInput == "forward":   
+        if userInput == "FORWARD":   
             print("FORWARD: TO ENCAMPMENT") #Test Print
             
-            if hasTorch == True:
+            if hasTorch:
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
             
             #Encampment()
