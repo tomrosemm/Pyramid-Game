@@ -1,0 +1,6 @@
+- Should we have all four directions available in each room and just only make the ones 
+that we want actually progress, maybe giving short descriptions about sides of current room on other choices?
+
+- Should we hold onto some sort of record of what happens, give a play by play summary upon game completion?
+
+- Time/compatibility to incorporate a Tkinter screen at end of game?
