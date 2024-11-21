@@ -27,7 +27,8 @@ def Entrance():
             if hasTorch == True:
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
             
+            #Encampment()
+            
         else:
             print("Please enter a valid direction.")
     
-    return
