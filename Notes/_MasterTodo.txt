@@ -27,4 +27,4 @@ Items:
 Events:
 - Sphinx riddle
 - Healing and item info in Sandy Cove
-- Tkinter End Screen
+- (?)Tkinter End Screen

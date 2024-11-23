@@ -1,7 +1,9 @@
 wonIBCBattle = True
 
 def IBCBattle():
+        
     print("BATTLE LOGIC")
+
     
     #Meat of the fight logic, definitely not putting it off
     
