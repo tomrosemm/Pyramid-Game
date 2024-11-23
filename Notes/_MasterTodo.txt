@@ -1,14 +1,32 @@
-Rooms:
-T - Entrance
+To do list
+
+Room setups:
+XT - Entrance
 D - Encampment
-T - SnakeWay
+XT - SnakeWay
 D - Lesser Burial Chamber
-T - Sphinx Room
+XT - Sphinx Room
 D - Armory
-T - Inner Burial Chamber
-T - Sandy Cove
+XT - Inner Burial Chamber
+XT - Sandy Cove
 D - Royal Tomb
 D - Treasure Chamber
+
+XT- Combat base System
+XT- Health base system
+
+
+Rooms:
+- Entrance
+- Encampment
+- SnakeWay
+- Lesser Burial Chamber
+- Sphinx Room
+- Armory
+- Inner Burial Chamber
+- Sandy Cove
+- Royal Tomb
+- Treasure Chamber
 
 Enemies:
 - Treasure Goblin
