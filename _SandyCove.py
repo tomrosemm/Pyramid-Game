@@ -1,11 +1,19 @@
-hasTorch = False#Test Variable
-hasAxe = False#Test Variable
+# hasTorch = False#Test Variable
+# hasAxe = False#Test Variable
 
 
 def SandyCove():
     
-    global hasTorch
-    global hasAxe
+    player = {
+    "name": "Player",
+    "health": 100,
+    "baseDamageRange": (10,20),
+    "hasAxe": False,
+    "hasSword": False,
+    "axeBonus": (5, 10),
+    "swordBonus": (10,15),
+    "hasTorch": False
+    }
     
     directions = ["FORWARD", "BACKWARD"]
     

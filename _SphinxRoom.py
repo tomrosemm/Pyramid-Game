@@ -1,5 +1,16 @@
 def SphinxRoom():
     
+    player = {
+    "name": "Player",
+    "health": 100,
+    "baseDamageRange": (10,20),
+    "hasAxe": False,
+    "hasSword": False,
+    "axeBonus": (5, 10),
+    "swordBonus": (10,15),
+    "hasTorch": False
+    }
+    
     directions = ["BACKWARD", "RIGHT"] #Changes if riddle is solved, as door is open
     
     hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance

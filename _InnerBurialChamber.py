@@ -1,16 +1,26 @@
-wonIBCBattle = True
+# wonIBCBattle = True
 
-def IBCBattle():
+# def IBCBattle():
         
-    print("BATTLE LOGIC")
+#     print("BATTLE LOGIC")
 
-    #Meat of the fight logic, definitely not putting it off
+#     #Meat of the fight logic, definitely not putting it off
     
-    global wonIBCBattle
+#     global wonIBCBattle
+
     
-
-
 def InnerBurialChamber():
+    
+    player = {
+    "name": "Player",
+    "health": 100,
+    "baseDamageRange": (10,20),
+    "hasAxe": False,
+    "hasSword": False,
+    "axeBonus": (5, 10),
+    "swordBonus": (10,15),
+    "hasTorch": False
+    }
     
     directions = ["RIGHT", "BACKWARD"]
     
