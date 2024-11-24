@@ -13,7 +13,7 @@ def SphinxRoom():
     
     directions = ["BACKWARD", "RIGHT"] #Changes if riddle is solved, as door is open
     
-    hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
+    # hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
     
     riddleAnswer = "THE ANSWER"
     
@@ -21,7 +21,7 @@ def SphinxRoom():
     
     print("A SPHINX GREETS YOU")
     
-    if hasTorch:
+    if player["hasTorch"]:
         print("THE SPHINX SEEMS TO GREATLY ENJOY THE LIGHT OF THE TORCH")
     
     else:
@@ -29,12 +29,12 @@ def SphinxRoom():
     
     print("THE SPHINX ASKS YOU A RIDDLE. THE ANSWER IS: THE ANSWER")
     playerRiddleAnswer = ''
-    playerRiddleAnswer = input().upper()
+    playerRiddleAnswer = input().strip().upper()#Depending on the answer might not want strip here
     
     if riddleAnswer == playerRiddleAnswer:
         print("YOU WERE CORRECT")
         
-        if hasTorch:
+        if player["hasTorch"]:
             print("SPHINX THANKS YOU FOR THE LIGHT TOO.")
             #Give torch reward
         
@@ -45,7 +45,7 @@ def SphinxRoom():
     else:
         print("YOU WERE WRONG")
         
-        if hasTorch:
+        if player["hasTorch"]:
             print("SPHINX THANKS YOU FOR THE LIGHT THOUGH")
             #Give torch reward
         
@@ -57,7 +57,7 @@ def SphinxRoom():
     
     while userInput not in directions:
         print("CHOICES: " + ", ".join(directions).upper())
-        userInput = input().upper
+        userInput = input().strip().upper
         
         if userInput == "FORWARD" & riddleSolved:
             print("YOU STEP OVER THE CRUMBLED SPHINX")

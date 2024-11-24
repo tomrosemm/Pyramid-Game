@@ -19,13 +19,13 @@ def SandyCove():
     
     print("YOU ARE IN A SANDY COVE")
     
-    if not hasTorch:
+    if player["hasTorch"] == False:
         print("HINT TO TORCH")
         
-    if not hasAxe:
+    if player["hasAxe"] == False:
         print("HINT TO AXE")
         
-    if hasTorch and hasAxe:
+    if player["hasTorch"] and player["hasAxe"]:
         print("TAKE ANOTHER SHOT AT THE RIDDLE")
         #UNLOCK RIDDLE SOMEHOW
     
@@ -39,7 +39,7 @@ def SandyCove():
     while userInput not in directions:
         print("CHOICES: FORWARD, BACKWARD")
         print("WHERE DO YOU WANT TO MOVE?")
-        userInput = input().upper()
+        userInput = input().strip().upper()
         
         if userInput == "FORWARD":
             print("FORWARD: TO ROYAL TOMB")

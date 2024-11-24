@@ -1,12 +1,12 @@
-# wonIBCBattle = True
+wonIBCBattle = True
 
-# def IBCBattle():
+def IBCBattle():
         
-#     print("BATTLE LOGIC")
+    print("BATTLE LOGIC")
 
-#     #Meat of the fight logic, definitely not putting it off
+    #Meat of the fight logic, definitely not putting it off
     
-#     global wonIBCBattle
+    global wonIBCBattle
 
     
 def InnerBurialChamber():
@@ -24,8 +24,8 @@ def InnerBurialChamber():
     
     directions = ["RIGHT", "BACKWARD"]
     
-    hasAxe = True#Test variable, will be influenced by picking up axe in encampment room
-    hasSword = True#Test variable, will be influenced by getting sword in armory
+    # hasAxe = True#Test variable, will be influenced by picking up axe in encampment room
+    # hasSword = True#Test variable, will be influenced by getting sword in armory
     
     global wonIBCBattle
     
@@ -33,10 +33,10 @@ def InnerBurialChamber():
     
     print("YOU ARE ATTACKED BY 2 TOMB GOBLINS AND A MUMMY")
     
-    if hasSword:
+    if player["hasSword"]:
         print("YOU HAVE A HOOKED SWORD")
         
-    elif hasAxe and not hasSword:
+    elif player["hasAxe"] and not player["hasSword"]:
         print("YOU HAVE AN AXE")
     
     else:
@@ -54,7 +54,7 @@ def InnerBurialChamber():
         
         while userInput not in directions:
             print("CHOICES: RIGHT, BACKWARD")
-            userInput = input().upper()
+            userInput = input().strip().upper()
             
             if userInput == "RIGHT":
                 print("RIGHT: TO SANDY COVE")#Test print

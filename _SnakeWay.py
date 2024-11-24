@@ -13,11 +13,11 @@ def SnakeWay():
     
     directions = ["FORWARD", "BACKWARD"]
     
-    hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
+    # hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
     
     print("YOU ARE IN THE SNAKEWAY")
     
-    if hasTorch == False:
+    if player["hasTorch"] == False:
         print("YOU DON'T HAVE A LIGHT SOURCE, AND IT'S PITCH BLACK. YOU HEAR HISSING")
             
     else:
@@ -29,12 +29,12 @@ def SnakeWay():
     
     while userInput not in directions:
         print("CHOICE(S): FORWARD, BACKWARD")
-        userInput = input().upper()
+        userInput = input().strip().upper()
 
         if userInput == "FORWARD":   
             print("FORWARD: TO SPHINX ROOM") #Test Print
             
-            if hasTorch:
+            if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH ALLOWS YOU TO COMPLETELY AVOID THE SNAKES")
             
             else:

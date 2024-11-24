@@ -12,16 +12,15 @@ def Entrance():
     }
     
     directions = ["forward"]    
-    hasTorch = False
+    # hasTorch = False
     
     print("YOU ARE IN THE ENTRANCE")   
-    torchChoice = input("TAKE TORCH? (y/n)").upper()
+    torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
     
     if torchChoice == "Y":        
-        hasTorch = True
+        player["hasTorch"] = True
     
     else:     
-        hasTorch = False
         print("NO TORCH")
     
     print("YOU CAN TRAVEL ONLY FORWARD")
@@ -30,12 +29,12 @@ def Entrance():
     
     while userInput not in directions:        
         print("CHOICE(S): FORWARD")
-        userInput = input().upper()
+        userInput = input().strip().upper()
 
         if userInput == "FORWARD":   
             print("FORWARD: TO ENCAMPMENT") #Test Print
             
-            if hasTorch:
+            if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
             
             #Encampment()
