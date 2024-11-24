@@ -23,7 +23,8 @@ player = {
     "hasAxe": False,
     "hasSword": False,
     "axeBonus": (5, 10),
-    "swordBonus": (10,15)
+    "swordBonus": (10,15),
+    "hasTorch": False
 }
 
 tombGoblin = {
