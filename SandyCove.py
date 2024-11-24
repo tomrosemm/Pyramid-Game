@@ -51,4 +51,3 @@ def SandyCove():
         
         else:
             print("Please enter a valid direction.")
-            

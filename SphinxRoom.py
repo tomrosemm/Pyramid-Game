@@ -78,4 +78,3 @@ def SphinxRoom():
         
         else:
             print("Please enter a valid direction.")
-            

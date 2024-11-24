@@ -49,4 +49,3 @@ def SnakeWay():
             
         else:
             print("Please enter a valid direction.")
-    

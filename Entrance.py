@@ -1,15 +1,15 @@
-def Entrance():
+def Entrance(player):
     
-    player = {
-    "name": "Player",
-    "health": 100,
-    "baseDamageRange": (10,20),
-    "hasAxe": False,
-    "hasSword": False,
-    "axeBonus": (5, 10),
-    "swordBonus": (10,15),
-    "hasTorch": False
-    }
+    # player = {
+    # "name": "Player",
+    # "health": 100,
+    # "baseDamageRange": (10,20),
+    # "hasAxe": False,
+    # "hasSword": False,
+    # "axeBonus": (5, 10),
+    # "swordBonus": (10,15),
+    # "hasTorch": False
+    # }
     
     directions = ["forward"]    
     # hasTorch = False
@@ -19,6 +19,7 @@ def Entrance():
     
     if torchChoice == "Y":        
         player["hasTorch"] = True
+        print("TORCH TAKEN")
     
     else:     
         print("NO TORCH")
@@ -41,4 +42,4 @@ def Entrance():
             
         else:
             print("Please enter a valid direction.")
-    
+            
