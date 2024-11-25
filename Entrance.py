@@ -1,17 +1,6 @@
 def Entrance(player):
     
-    # player = {
-    # "name": "Player",
-    # "health": 100,
-    # "baseDamageRange": (10,20),
-    # "hasAxe": False,
-    # "hasSword": False,
-    # "axeBonus": (5, 10),
-    # "swordBonus": (10,15),
-    # "hasTorch": False
-    # }
-    
-    directions = ["forward"]    
+    directions = ["FORWARD"]    
     
     print("YOU ARE IN THE ENTRANCE")   
     torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
@@ -37,8 +26,22 @@ def Entrance(player):
             if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
             
-            # Encampment()
+            # Encampment(player)
             
         else:
             print("Please enter a valid direction.")
-            
+
+if __name__ == '__main__':
+    
+    player = {
+        "name": "Player",
+        "health": 100,
+        "baseDamageRange": (10,20),
+        "hasAxe": False,
+        "hasSword": False,
+        "axeBonus": (5, 10),
+        "swordBonus": (10,15),
+        "hasTorch": False
+    }
+    
+    Entrance(player)

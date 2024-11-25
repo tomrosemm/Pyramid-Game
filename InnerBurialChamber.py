@@ -1,26 +1,7 @@
-wonIBCBattle = True
-
-def IBCBattle():
-        
-    print("BATTLE LOGIC")
-
-    #Meat of the fight logic, definitely not putting it off
-    
-    global wonIBCBattle
-
+from SphinxRoom import *
+from SandyCove import *
     
 def InnerBurialChamber(player):
-    
-    # player = {
-    # "name": "Player",
-    # "health": 100,
-    # "baseDamageRange": (10,20),
-    # "hasAxe": False,
-    # "hasSword": False,
-    # "axeBonus": (5, 10),
-    # "swordBonus": (10,15),
-    # "hasTorch": False
-    # }
     
     directions = ["RIGHT", "BACKWARD"]
     
@@ -41,9 +22,10 @@ def InnerBurialChamber(player):
     
     print("BEGIN BATTLE")
     
-    IBCBattle()#Calls the IBCBattle function
+    #Call combat, return bool for won
+    combatWon = True
     
-    if wonIBCBattle:
+    if combatWon:
         print("SUCCESSFUL BATTLE")
         print("YOU CAN TRAVEL RIGHT OR BACKWARD")
         print("WHERE DO YOU WANT TO MOVE?")
@@ -55,11 +37,11 @@ def InnerBurialChamber(player):
             
             if userInput == "RIGHT":
                 print("RIGHT: TO SANDY COVE")#Test print
-                #SandyCove()
+                SandyCove(player)
             
             elif userInput == "BACKWARD":
                 print("BACKWARD: TO SPHINX ROOM")
-                #SphinxRoom()
+                SphinxRoom(player)
 
             else:
                 print("Please enter a valid direction.")
@@ -67,3 +49,18 @@ def InnerBurialChamber(player):
     else:
         print("YOU DIED!")
         quit()
+
+if __name__ == '__main__':
+    
+    player = {
+        "name": "Player",
+        "health": 100,
+        "baseDamageRange": (10,20),
+        "hasAxe": False,
+        "hasSword": False,
+        "axeBonus": (5, 10),
+        "swordBonus": (10,15),
+        "hasTorch": False
+    }
+    
+    InnerBurialChamber(player)

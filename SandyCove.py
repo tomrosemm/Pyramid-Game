@@ -1,15 +1,6 @@
+from InnerBurialChamber import *
+
 def SandyCove(player):
-    
-    # player = {
-    # "name": "Player",
-    # "health": 100,
-    # "baseDamageRange": (10,20),
-    # "hasAxe": False,
-    # "hasSword": False,
-    # "axeBonus": (5, 10),
-    # "swordBonus": (10,15),
-    # "hasTorch": False
-    # }
     
     directions = ["FORWARD", "BACKWARD"]
     
@@ -39,11 +30,26 @@ def SandyCove(player):
         
         if userInput == "FORWARD":
             print("FORWARD: TO ROYAL TOMB")
-            #RoyalTomb()
+            #RoyalTomb(player)
         
         elif userInput == "BACKWARD":
             print("BACKWARD: TO INNER BURIAL CHAMBER")
-            #InnerBurialChamber()
+            InnerBurialChamber(player)
         
         else:
             print("Please enter a valid direction.")
+
+if __name__ == '__main__':
+    
+    player = {
+        "name": "Player",
+        "health": 100,
+        "baseDamageRange": (10,20),
+        "hasAxe": False,
+        "hasSword": False,
+        "axeBonus": (5, 10),
+        "swordBonus": (10,15),
+        "hasTorch": False
+    }
+    
+    SandyCove(player)
