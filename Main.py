@@ -1,13 +1,14 @@
 #Import rooms
 from Entrance import *
-#Encampment
+from Encampment import *
 from SnakeWay import *
+from LesserBurialChamber import *
 from SphinxRoom import *
-#Armory
+from Armory import *
 from InnerBurialChamber import *
 from SandyCove import *
-#Royal Tomb
-#Treasure Chamber
+from RoyalTomb import *
+from TreasureChamber import *
 
 #Import Systems
 from Combat import *

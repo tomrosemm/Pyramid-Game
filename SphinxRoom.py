@@ -1,5 +1,8 @@
-from SnakeWay import *
+from LesserBurialChamber import *
+from Armory import *
 from InnerBurialChamber import *
+
+from Combat import *
 
 def SphinxRoom(player):
     
@@ -19,7 +22,7 @@ def SphinxRoom(player):
     
     print("THE SPHINX ASKS YOU A RIDDLE. THE ANSWER IS: THE ANSWER")
     playerRiddleAnswer = ''
-    playerRiddleAnswer = input().strip().upper()#Depending on the answer might not want strip here
+    playerRiddleAnswer = input().upper()
     
     if riddleAnswer == playerRiddleAnswer:
         print("YOU WERE CORRECT")
@@ -30,7 +33,7 @@ def SphinxRoom(player):
         
         print("SPHINX CRUMBLES TO REVEAL A DOOR")
         riddleSolved = True
-        directions = ["forward", "backward", "right"]
+        directions = ["FORWARD", "BACKWARD", "RIGHT"]
     
     else:
         print("YOU WERE WRONG")
@@ -52,7 +55,7 @@ def SphinxRoom(player):
         if userInput == "FORWARD" & riddleSolved:
             print("YOU STEP OVER THE CRUMBLED SPHINX")
             print("FORWARD: TO ARMORY")#Test print
-            #Armory(player)
+            Armory(player)
         
         elif userInput == "FORWARD" & riddleSolved == False:
                 print("THE SPHINX GROWLS AS YOU APPROACH")
@@ -63,8 +66,8 @@ def SphinxRoom(player):
             InnerBurialChamber(player)
         
         elif userInput == "BACKWARD":
-            print("BACKWARD: TO SNAKEWAY")#Test print
-            SnakeWay(player)
+            print("BACKWARD: TO LESSER BURIAL CHAMBER")#Test print
+            LesserBurialChamber(player)
         
         else:
             print("Please enter a valid direction.")
@@ -72,7 +75,7 @@ def SphinxRoom(player):
 if __name__ == '__main__':
     
     player = {
-        "name": "Player",
+        "name": "TestPlayer",
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,

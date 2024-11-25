@@ -1,20 +1,17 @@
 from SphinxRoom import *
 from SandyCove import *
+
+from Combat import *
     
 def InnerBurialChamber(player):
     
     directions = ["RIGHT", "BACKWARD"]
     
-    global wonIBCBattle
-    
     print("YOU ARE IN THE INNER BURIAL CHAMBER")
     
     print("YOU ARE ATTACKED BY 2 TOMB GOBLINS AND A MUMMY")
-    
-    if player["hasSword"]:
-        print("YOU HAVE A HOOKED SWORD")
         
-    elif player["hasAxe"] and not player["hasSword"]:
+    if player["hasAxe"]:
         print("YOU HAVE AN AXE")
     
     else:
@@ -53,7 +50,7 @@ def InnerBurialChamber(player):
 if __name__ == '__main__':
     
     player = {
-        "name": "Player",
+        "name": "TestPlayer",
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,

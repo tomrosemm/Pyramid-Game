@@ -1,35 +1,30 @@
-from Encampment import *
+from SphinxRoom import *
 
-def Entrance(player):
-    
+def Armory(player):
     directions = ["FORWARD"]    
     
-    print("YOU ARE IN THE ENTRANCE")   
-    torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
+    print("YOU ARE IN THE ARMORY")   
+    swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
     
     #Set up to catch mistaken entries, basically just a copy of the room movement structure
-    if torchChoice == "Y":        
-        player["hasTorch"] = True
-        print("TORCH TAKEN")
+    if swordChoice == "Y":        
+        player["hasSword"] = True
+        print("SWORD TAKEN")
     
     else:     
-        print("NO TORCH")
+        print("NO SWORD")
     
-    print("YOU CAN TRAVEL ONLY FORWARD")
+    print("YOU CAN TRAVEL ONLY BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")
     userInput = ''
     
     while userInput not in directions:        
-        print("CHOICE(S): FORWARD")
+        print("CHOICE(S): BACKWARD")
         userInput = input().strip().upper()
 
-        if userInput == "FORWARD":   
-            print("FORWARD: TO ENCAMPMENT") #Test Print
-            
-            if player["hasTorch"]:
-                print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
-            
-            Encampment(player)
+        if userInput == "BACKWARD":   
+            print("BACKWARD: TO SPHINX ROOM") #Test Print
+            SphinxRoom(player)
             
         else:
             print("Please enter a valid direction.")
@@ -47,4 +42,4 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    Entrance(player)
+    Armory(player)

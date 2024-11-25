@@ -1,17 +1,11 @@
-from SphinxRoom import *
+from LesserBurialChamber import *
+from Encampment import *
+
+import random
+
+#Do something to make coming back through the snakeway from sphinx room w/o torch also proc snake bites
 
 def SnakeWay(player):
-    
-    # player = {
-    # "name": "Player",
-    # "health": 100,
-    # "baseDamageRange": (10,20),
-    # "hasAxe": False,
-    # "hasSword": False,
-    # "axeBonus": (5, 10),
-    # "swordBonus": (10,15),
-    # "hasTorch": False
-    # }
     
     directions = ["FORWARD", "BACKWARD"]
     
@@ -32,20 +26,20 @@ def SnakeWay(player):
         userInput = input().strip().upper()
 
         if userInput == "FORWARD":   
-            print("FORWARD: TO SPHINX ROOM") #Test Print
+            print("FORWARD: TO LESSER BURIAL CHAMBER") #Test Print
             
             if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH ALLOWS YOU TO COMPLETELY AVOID THE SNAKES")
             
             else:
                 print("YOU STUMBLE THROUGH THE DARKNESS AND INTO MORE THAN A COUPLE SNAKES. THEY BITE.")
-                #Take damage
+                #Take randomized damage
             
-            SphinxRoom(player)
+            LesserBurialChamber(player)
         
         elif userInput == "BACKWARD":
             print("BACKWARD: TO ENCAMPMENT")
-            #Encampment()
+            Encampment(player)
             
         else:
             print("Please enter a valid direction.")
@@ -53,7 +47,7 @@ def SnakeWay(player):
 if __name__ == '__main__':
     
     player = {
-        "name": "Player",
+        "name": "TestPlayer",
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,

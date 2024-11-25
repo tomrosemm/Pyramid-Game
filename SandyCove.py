@@ -1,4 +1,5 @@
 from InnerBurialChamber import *
+from RoyalTomb import *
 
 def SandyCove(player):
     
@@ -18,7 +19,7 @@ def SandyCove(player):
     
     #Check health, refill if under full, say something if full
     
-    print("YOU CAN TRAVEL FORWARD OR BACKWARDS")
+    print("YOU CAN TRAVEL FORWARD OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")
     
     userInput = ''
@@ -30,7 +31,7 @@ def SandyCove(player):
         
         if userInput == "FORWARD":
             print("FORWARD: TO ROYAL TOMB")
-            #RoyalTomb(player)
+            RoyalTomb(player)
         
         elif userInput == "BACKWARD":
             print("BACKWARD: TO INNER BURIAL CHAMBER")
@@ -42,7 +43,7 @@ def SandyCove(player):
 if __name__ == '__main__':
     
     player = {
-        "name": "Player",
+        "name": "TestPlayer",
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,
