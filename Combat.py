@@ -1,21 +1,7 @@
+#Tweak hp values on death of player or enemy to go from a negative to 0
+
 import random
 import time
-
-player = {
-    "name": "Player",
-    "health": 100,
-    "baseDamageRange": (10,20),
-    "hasAxe": False,
-    "hasSword": False,
-    "axeBonus": (5, 10),
-    "swordBonus": (10,15)
-}
-
-tombGoblin = {
-    "name": "Goblin Fred",
-    "health": 75,
-    "damageRange": (5,15)
-}
 
 def calculateDamageRange(player):
     
@@ -34,7 +20,7 @@ def calculateDamageRange(player):
     return player["baseDamageRange"]
 
 def combat(player,enemy):
-    print(f"TIME TO FIGHT A {enemy['name']}!")
+    print(f"TIME TO FIGHT {enemy['name']}!")
     
     while player["health"] > 0 and enemy["health"] > 0:
         
@@ -61,4 +47,22 @@ def combat(player,enemy):
     
     print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
 
-combat(player,tombGoblin)
+if __name__ == '__main__':
+    
+    player = {
+        "name": "Player",
+        "health": 100,
+        "baseDamageRange": (10,20),
+        "hasAxe": False,
+        "hasSword": False,
+        "axeBonus": (5, 10),
+        "swordBonus": (10,15)
+}
+
+    tombGoblin = {
+        "name": "Goblin Fred",
+        "health": 75,
+        "damageRange": (5,15)
+}
+    
+    combat(player, tombGoblin)
