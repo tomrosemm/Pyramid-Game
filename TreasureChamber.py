@@ -1,16 +1,33 @@
 def TreasureChamber(player, roomStates):
-    directions = ["BACKWARD", "Q"]    
+    directions = ["BACKWARD", "Q"]   
     
-    print("YOU ARE IN THE TREASURE CHAMBER")   
-    treasureChoice = input("TAKE TREASURE? (y/n)").strip().upper()
+    #Initialize the room states if not already done
+    if "TreasureChamber" not in roomStates:
+        roomStates["TreasureChamber"] = {"visited": False, "treasureTaken": False}
+        
+    if not roomStates["TreasureChamber"]["visited"]:
+        print("WELCOME TO THE TREASURE CHAMBER FOR THE FIRST TIME")
+        roomStates["TreasureChamber"]["visited"] = True
     
-    #Set up to catch mistaken entries, basically just a copy of the room movement structure
-    if treasureChoice == "Y":        
-        print("TREASURE TAKEN. YOU WIN!")
-        quit()
+    else:
+        print("WELCOME BACK TO THE TREASURE CHAMBER")
     
-    else:     
-        print("NO TREASURE")
+    print("YOU ARE IN THE TREASURE CHAMBER")
+    
+    if not roomStates["TreasureChamber"]["treasureTaken"]:
+        treasureChoice = input("TAKE TREASURE? (y/n)").strip().upper()
+    
+        #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        if treasureChoice == "Y":
+            roomStates["TreasureChamber"]["treasureTaken"] = True    
+            print("TREASURE TAKEN. YOU WIN!")
+            quit()
+    
+        else:     
+            print("NO TREASURE")
+    
+    else:
+        print("THE TREASURE HAS ALREADY BEEN TAKEN")
     
     print("YOU CAN TRAVEL ONLY BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")

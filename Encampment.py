@@ -4,23 +4,48 @@ from Combat import *
 
 def Encampment(player, roomStates):
     
-    #Setup some way to save that combat in this room has already happened, check against it before running combat
-    
     directions = ["FORWARD", "BACKWARD", "Q"]    
     
-    print("YOU ARE IN THE TOMB GOBLIN ENCAMPMENT")   
-    axeChoice = input("TAKE AXE? (y/n)").strip().upper()
+    #Initialize the room states if not already done
+    if "Encampment" not in roomStates:
+        roomStates["Encampment"] = {"visited": False, "axeTaken": False, "battleWon": False}
+        
+    if not roomStates["Encampment"]["visited"]:
+        print("GREETINGS FROM THE TOMB GOBLINS")
+        roomStates["Encampment"]["visited"] = True
     
-    #Set up to catch mistaken entries, basically just a copy of the room movement structure
-    if axeChoice == "Y":        
-        player["hasAxe"] = True
-        print("AXE TAKEN")
+    else:
+        print("WELCOME BACK TO THE GOBLIN ENCAMPMENT")
     
-    else:     
-        print("NO AXE")
+    print("YOU ARE IN THE TOMB GOBLIN ENCAMPMENT")
     
-    print("TIME TO BATTLE!")
-    print("LET'S SAY YOU WON FOR NOW")
+    #check if player has already taken the axe
+    if not roomStates["Encampment"]["axeTaken"]:
+        axeChoice = input("TAKE AXE? (y/n)").strip().upper()
+    
+        #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        if axeChoice == "Y":        
+            player["hasAxe"] = True
+            roomStates["Encampment"]["axeTaken"] = True
+            print("AXE TAKEN")
+    
+        else:     
+            print("NO AXE")
+    
+    else:
+        print("THE AXE HAS ALREADY BEEN TAKEN")
+    
+    if not roomStates["Encampment"]["battleWon"]:
+        print("TIME TO BATTLE!")
+    
+        #Battle
+    
+        roomStates["Encampment"]["battleWon"] = True
+    
+        print("LET'S SAY YOU WON FOR NOW")
+    
+    else:
+        print("YOU ALREADY DEFEATED THE TOMB GOBLINS")
     
     print("YOU CAN TRAVEL FORWARD OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")

@@ -6,9 +6,18 @@ import random
 
 def SnakeWay(player, roomStates):
     
-    #Setup some way to save what in this room has already happened, check against it before running combat
-    
     directions = ["FORWARD", "BACKWARD", "Q"]
+    
+    #Initialize the room states if not already done
+    if "SnakeWay" not in roomStates:
+        roomStates["Snakeway"] = {"visited": False}
+    
+    if not roomStates["Snakeway"]["visited"]:
+        print("FIRST TIME IN THE SNAKEWAY")
+        roomStates["Snakeway"]["visited"] = True
+    
+    else:
+        print("WELCOME BACK TO THE SNAKEWAY")
     
     print("YOU ARE IN THE SNAKEWAY")
     

@@ -1,19 +1,34 @@
 def Armory(player, roomStates):
     
-    #Setup some way to save what in this room has already happened, check against it before running combat
-    
     directions = ["FORWARD", "Q"]    
     
-    print("YOU ARE IN THE ARMORY")   
-    swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
+    #Initialize the room states if not already done
+    if "Armory" not in roomStates:
+        roomStates["Armory"] = {"visited": False, "swordTaken": False}
+        
+    if not roomStates["Armory"]["visited"]:
+        print("WELCOME TO THE ARMORY FOR THE FIRST TIME")
+        roomStates["Armory"]["visited"] = True
     
-    #Set up to catch mistaken entries, basically just a copy of the room movement structure
-    if swordChoice == "Y":        
-        player["hasSword"] = True
-        print("SWORD TAKEN")
+    else:
+        print("WELCOME BACK TO THE ARMORY")
     
-    else:     
-        print("NO SWORD")
+    print("YOU ARE IN THE ARMORY")
+    
+    if not roomStates["Armory"]["swordTaken"]:
+        swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
+    
+        #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        if swordChoice == "Y":        
+            player["hasSword"] = True
+            roomStates["Armory"]["swordTaken"] = True
+            print("SWORD TAKEN")
+        
+        else:     
+            print("NO SWORD")
+    
+    else:
+        print("THE SWORD HAS ALREADY BEEN TAKEN")
     
     print("YOU CAN TRAVEL ONLY BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")

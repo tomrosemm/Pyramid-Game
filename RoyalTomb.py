@@ -3,31 +3,43 @@ from TreasureChamber import *
 from Combat import *
 
 def RoyalTomb(player, roomStates):
-    
-    #Setup some way to save that combat in this room has already happened, check against it before running combat
-    
+
     directions = ["LEFT", "BACKWARD", "Q"]    
+    
+    #Initialize the room states if not already done
+    if "RoyalTomb" not in roomStates:
+        roomStates["RoyalTomb"] = {"visited": False, "battleWon": False}
+        
+    if not roomStates["RoyalTomb"]["visited"]:
+        print("WELCOME TO THE ROYAL TOMB FOR THE FIRST TIME")
+        roomStates["RoyalTomb"]["visited"] = True
+    
+    else:
+        print("WELCOME BACK TO THE ROYAL TOMB")
     
     print("YOU ARE IN THE ROYAL TOMB")
     
-    print("YOU ARE ATTACKED BY 3 TOMB GOBLINS AND 2 MUMMIES")
+    if not roomStates["RoyalTomb"]["battleWon"]:
+        print("YOU ARE ATTACKED BY 3 TOMB GOBLINS AND 2 MUMMIES")
         
-    if player["hasAxe"] and not player["hasSword"]:
-        print("YOU HAVE AN AXE")
+        if player["hasAxe"] and not player["hasSword"]:
+            print("YOU HAVE AN AXE")
     
-    elif player["hasSword"]:
-        print("YOU HAVE A HOOKED SWORD")
+        elif player["hasSword"]:
+            print("YOU HAVE A HOOKED SWORD")
+    
+        else:
+            print("STRAP IN")
+    
+        print("BEGIN BATTLE")
+
+        #Battle
+        
+        roomStates["RoyalTomb"]["battleWon"] = True
+        print("LET'S SAY YOU WON FOR NOW")
     
     else:
-        print("STRAP IN")
-    
-    print("BEGIN BATTLE")
-    
-    #Call combat, return bool for won
-    combatWon = True
-    
-    print("TIME TO BATTLE!")
-    print("LET'S SAY YOU WON FOR NOW")
+        print("YOU ALREADY DEFEATED THE BOSS")
     
     print("YOU CAN TRAVEL FORWARD OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")

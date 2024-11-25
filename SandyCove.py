@@ -2,9 +2,18 @@ from RoyalTomb import *
 
 def SandyCove(player, roomStates):
     
-    #Setup some way to save what in this room has already happened, check against it before running combat
-    
     directions = ["FORWARD", "BACKWARD", "Q"]
+    
+    #Initialize the room states if not already done
+    if "SandyCove" not in roomStates:
+        roomStates["SandyCove"] = {"visited": False}
+        
+    if not roomStates["SandyCove"]["visited"]:
+        print("WELCOME TOT HE SANDY COVE FOR THE FIRST TIME")
+        roomStates["SandyCove"]["visited"] = True
+    
+    else:
+        print("WELCOME BACK TO THE SANDY COVE")
     
     print("YOU ARE IN A SANDY COVE")
     

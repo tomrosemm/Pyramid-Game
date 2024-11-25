@@ -4,55 +4,65 @@ from Combat import *
     
 def InnerBurialChamber(player, roomStates):
     
-    #Setup some way to save that combat in this room has already happened, check against it before running combat
-    
     directions = ["RIGHT", "BACKWARD", "Q"]
     
-    print("YOU ARE IN THE INNER BURIAL CHAMBER")
-    
-    print("YOU ARE ATTACKED BY 2 TOMB GOBLINS AND A MUMMY")
+    #Initialize the room states if not already done
+    if "InnerBurialChamber" not in roomStates:
+        roomStates["InnerBurialChamber"] = {"visited": False, "battleWon": False}
         
-    if player["hasAxe"]:
-        print("YOU HAVE AN AXE")
+    if not roomStates["Encampment"]["visited"]:
+        print("WELCOME TO THE INNER BURIAL CHAMBER FOR THE FIRST TIME")
+        roomStates["InnerBurialChamber"]["visited"] = True
     
     else:
-        print("STRAP IN")
+        print("WELCOME BACK TO THE INNER BURIAL CHAMBER")
     
-    print("BEGIN BATTLE")
+    print("YOU ARE IN THE INNER BURIAL CHAMBER")\
+        
+    if not roomStates["InnerBurialChamber"]["battleWon"]:
+        print("YOU ARE ATTACKED BY 2 TOMB GOBLINS AND A MUMMY")
+        
+        if player["hasAxe"]:
+            print("YOU HAVE AN AXE")
     
-    #Call combat, return bool for won
-    combatWon = True
-    
-    if combatWon:
+        else:
+            print("STRAP IN")
+        
+        print("BEGIN BATTLE")
+        
+        #Battle
+        
+        roomStates["InnerBurialChamber"]["battleWon"] = True
         print("SUCCESSFUL BATTLE")
-        print("YOU CAN TRAVEL RIGHT OR BACKWARD")
-        print("WHERE DO YOU WANT TO MOVE?")
-        userInput = ''
-        
-        while userInput not in directions:
-            print("CHOICES: RIGHT, BACKWARD")
-            print("Q TO QUIT")
-            userInput = input().strip().upper()
-            
-            if userInput == "RIGHT":
-                print("RIGHT: TO SANDY COVE")#Test print
-                SandyCove(player, roomStates)
-            
-            elif userInput == "BACKWARD":
-                from SphinxRoom import SphinxRoom
-                print("BACKWARD: TO SPHINX ROOM")
-                SphinxRoom(player, roomStates)
-                
-            elif userInput == "Q":
-                print("GOODBYE")
-                quit()
-
-            else:
-                print("Please enter a valid direction.")
-
+    
     else:
-        print("YOU DIED!")
-        quit()
+        print("YOU ALREADY DEFEATED THE ENEMIES")
+        
+    print("YOU CAN TRAVEL RIGHT OR BACKWARD")
+    print("WHERE DO YOU WANT TO MOVE?")
+    userInput = ''
+        
+    while userInput not in directions:
+        print("CHOICES: RIGHT, BACKWARD")
+        print("Q TO QUIT")
+        userInput = input().strip().upper()
+            
+        if userInput == "RIGHT":
+            print("RIGHT: TO SANDY COVE")#Test print
+            SandyCove(player, roomStates)
+        
+        elif userInput == "BACKWARD":
+            from SphinxRoom import SphinxRoom
+            print("BACKWARD: TO SPHINX ROOM")
+            SphinxRoom(player, roomStates)
+                
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
+
+        else:
+            print("Please enter a valid direction.")
+            
 
 if __name__ == '__main__':
     

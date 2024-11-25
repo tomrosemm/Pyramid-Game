@@ -4,17 +4,32 @@ from Combat import *
 
 def LesserBurialChamber(player, roomStates):
     
-    #Setup some way to save that combat in this room has already happened, check against it before running combat
+    directions = ["FORWARD", "BACKWARD", "Q"]
     
-    directions = ["FORWARD", "BACKWARD", "Q"]    
+    #Initialize the room states if not already done
+    if "LesserBurialChamber" not in roomStates:
+        roomStates["LesserBurialChamber"] = {"visited": False, "battleWon": False}
+        
+    if not roomStates["LesserBurialChamber"]["visited"]:
+        print("FIRST TIME IN THE LESSER BURIAL CHAMBER")
+        roomStates["LesserBurialChamber"]["visited"] = True
     
-    print("YOU ARE IN THE LESSER BURIAL CHAMBER")   
+    else:
+        print("WELCOME BACK TO THE LESSER BURIAL CHAMBER")
     
-    print("TIME TO BATTLE!")
+    print("YOU ARE IN THE LESSER BURIAL CHAMBER")
     
-    #Battle
+    if not roomStates["LesserBurialChamber"]["battleWon"]:
+        print("TIME TO BATTLE!")
     
-    print("LET'S SAY YOU WON FOR NOW")
+        #Battle
+        
+        roomStates["LesserBurialChamber"]["battleWon"] = True
+    
+        print("LET'S SAY YOU WON FOR NOW")
+    
+    else:
+        print("YOU ALREADY DEFEATED THE ENEMIES HERE")
     
     print("YOU CAN TRAVEL FORWARD OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")

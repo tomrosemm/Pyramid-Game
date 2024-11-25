@@ -4,7 +4,7 @@ def Entrance(player,roomStates):
     
     directions = ["FORWARD", "Q"]
     
-    #Initialize the room state if not already done
+    #Initialize the room states if not already done
     if "Entrance" not in roomStates:
         roomStates["Entrance"] = {"visited": False, "torchTaken": False}    
     
