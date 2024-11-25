@@ -14,7 +14,7 @@ from TreasureChamber import *
 from Combat import *
 
 #External Libraries to try out
-import blessings
+# import blessings
 import pyfiglet
 import names
 import prompt_toolkit
@@ -37,15 +37,20 @@ if __name__ == "__main__":
     
     while True:
         print("WELCOME TO THE GAME")
+        print()
         
         #Allow for random name choice form names
         
         new_name = input("Enter the player's name: ").strip()
+        print()
         
         if new_name:
             player["name"] = new_name
             print(f"Player's name updated to: {player['name']}")
+            print()
+            
         else:
             print("Name cannot be empty. Using default name.")
+            print()
             
         Entrance(player, roomStates)
