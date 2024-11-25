@@ -26,11 +26,12 @@ if __name__ == "__main__":
         "hasTorch": False
     }
 
-    tombGoblin = {
-        "name": "Goblin Fred",
-        "health": 75,
-        "damageRange": (5,15)
-    }
+    roomStates = {}
+    # tombGoblin = {
+    #     "name": "Goblin Fred",
+    #     "health": 75,
+    #     "damageRange": (5,15)
+    # }
     
     while True:
         print("WELCOME TO THE GAME")
@@ -43,4 +44,4 @@ if __name__ == "__main__":
         else:
             print("Name cannot be empty. Using default name.")
             
-        Entrance(player)
+        Entrance(player, roomStates)

@@ -2,7 +2,7 @@ from SphinxRoom import *
 
 from Combat import *
 
-def LesserBurialChamber(player):
+def LesserBurialChamber(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
@@ -26,12 +26,12 @@ def LesserBurialChamber(player):
 
         if userInput == "FORWARD":   
             print("FORWARD: TO SPHINX ROOM") #Test Print
-            SphinxRoom(player)
+            SphinxRoom(player, roomStates)
         
         elif userInput == "BACKWARD":
             from SnakeWay import SnakeWay
             print("BACKWARD: TO SnakeWay")
-            SnakeWay(player)
+            SnakeWay(player, roomStates)
             
         else:
             print("Please enter a valid direction.")
@@ -49,4 +49,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    LesserBurialChamber(player)
+    roomStates = {}
+    
+    LesserBurialChamber(player, roomStates)

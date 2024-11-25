@@ -1,4 +1,4 @@
-def Armory(player):
+def Armory(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
@@ -26,7 +26,7 @@ def Armory(player):
         if userInput == "BACKWARD":
             from SphinxRoom import SphinxRoom
             print("BACKWARD: TO SPHINX ROOM") #Test Print
-            SphinxRoom(player)
+            SphinxRoom(player, roomStates)
             
         else:
             print("Please enter a valid direction.")
@@ -44,4 +44,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    Armory(player)
+    roomStates = {}
+    
+    Armory(player, roomStates)

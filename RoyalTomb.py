@@ -2,7 +2,7 @@ from TreasureChamber import *
 
 from Combat import *
 
-def RoyalTomb(player):
+def RoyalTomb(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
@@ -39,12 +39,12 @@ def RoyalTomb(player):
 
         if userInput == "LEFT":   
             print("FORWARD: TO TREASURE CHAMBER") #Test Print
-            TreasureChamber(player)
+            TreasureChamber(player, roomStates)
         
         elif userInput == "BACKWARD":
             from SandyCove import SandyCove
             print("BACKWARD: TO SANDY COVE")
-            SandyCove(player)
+            SandyCove(player, roomStates)
             
         else:
             print("Please enter a valid direction.")
@@ -62,4 +62,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    RoyalTomb(player)
+    roomStates = {}
+    
+    RoyalTomb(player, roomStates)

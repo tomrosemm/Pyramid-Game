@@ -1,6 +1,6 @@
 from RoyalTomb import *
 
-def SandyCove(player):
+def SandyCove(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
@@ -32,12 +32,12 @@ def SandyCove(player):
         
         if userInput == "FORWARD":
             print("FORWARD: TO ROYAL TOMB")
-            RoyalTomb(player)
+            RoyalTomb(player, roomStates)
         
         elif userInput == "BACKWARD":
             from InnerBurialChamber import InnerBurialChamber
             print("BACKWARD: TO INNER BURIAL CHAMBER")
-            InnerBurialChamber(player)
+            InnerBurialChamber(player, roomStates)
         
         else:
             print("Please enter a valid direction.")
@@ -55,4 +55,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    SandyCove(player)
+    roomStates = {}
+    
+    SandyCove(player, roomStates)

@@ -1,4 +1,4 @@
-def TreasureChamber(player):
+def TreasureChamber(player, roomStates):
     directions = ["BACKWARD"]    
     
     print("YOU ARE IN THE TREASURE CHAMBER")   
@@ -23,7 +23,7 @@ def TreasureChamber(player):
         if userInput == "BACKWARD":   
             from RoyalTomb import RoyalTomb
             print("BACKWARD: TO ROYAL TOMB") #Test Print
-            RoyalTomb(player)
+            RoyalTomb(player, roomStates)
             
         else:
             print("Please enter a valid direction.")
@@ -41,4 +41,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    RoyalTomb(player)
+    roomStates = {}
+    
+    TreasureChamber(player, roomStates)

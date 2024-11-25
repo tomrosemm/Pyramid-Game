@@ -2,7 +2,7 @@ from SnakeWay import *
 
 from Combat import *
 
-def Encampment(player):
+def Encampment(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
@@ -32,12 +32,12 @@ def Encampment(player):
 
         if userInput == "FORWARD":   
             print("FORWARD: TO SNAKEWAY") #Test Print
-            SnakeWay(player)
+            SnakeWay(player, roomStates)
         
         elif userInput == "BACKWARD":
             from Entrance import Entrance
             print("BACKWARD: TO ENTRANCE")
-            Entrance(player)
+            Entrance(player, roomStates)
             
         else:
             print("Please enter a valid direction.")
@@ -55,4 +55,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    Encampment(player)
+    roomStates = {}
+    
+    Encampment(player, roomStates)

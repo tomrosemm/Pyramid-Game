@@ -2,7 +2,7 @@ from SandyCove import *
 
 from Combat import *
     
-def InnerBurialChamber(player):
+def InnerBurialChamber(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
@@ -35,12 +35,12 @@ def InnerBurialChamber(player):
             
             if userInput == "RIGHT":
                 print("RIGHT: TO SANDY COVE")#Test print
-                SandyCove(player)
+                SandyCove(player, roomStates)
             
             elif userInput == "BACKWARD":
                 from SphinxRoom import SphinxRoom
                 print("BACKWARD: TO SPHINX ROOM")
-                SphinxRoom(player)
+                SphinxRoom(player, roomStates)
 
             else:
                 print("Please enter a valid direction.")
@@ -62,4 +62,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    InnerBurialChamber(player)
+    roomStates = {}
+    
+    InnerBurialChamber(player, roomStates)

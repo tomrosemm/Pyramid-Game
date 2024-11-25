@@ -1,6 +1,6 @@
 from Encampment import *
 
-def Entrance(player):
+def Entrance(player,roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     

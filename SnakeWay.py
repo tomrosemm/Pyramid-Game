@@ -4,7 +4,7 @@ import random
 
 #Do something to make coming back through the snakeway from sphinx room w/o torch also proc snake bites
 
-def SnakeWay(player):
+def SnakeWay(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
@@ -36,12 +36,12 @@ def SnakeWay(player):
                 print("YOU STUMBLE THROUGH THE DARKNESS AND INTO MORE THAN A COUPLE SNAKES. THEY BITE.")
                 #Take randomized damage
             
-            LesserBurialChamber(player)
+            LesserBurialChamber(player, roomStates)
         
         elif userInput == "BACKWARD":
             from Encampment import Encampment
             print("BACKWARD: TO ENCAMPMENT")
-            Encampment(player)
+            Encampment(player, roomStates)
             
         else:
             print("Please enter a valid direction.")
@@ -59,5 +59,7 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    SnakeWay(player)
+    roomStates = {}
+    
+    SnakeWay(player, roomStates)
         

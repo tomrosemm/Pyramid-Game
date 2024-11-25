@@ -3,7 +3,7 @@ from InnerBurialChamber import *
 
 from Combat import *
 
-def SphinxRoom(player):
+def SphinxRoom(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
@@ -56,7 +56,7 @@ def SphinxRoom(player):
         if userInput == "FORWARD" and riddleSolved:
             print("YOU STEP OVER THE CRUMBLED SPHINX")
             print("FORWARD: TO ARMORY")#Test print
-            Armory(player)
+            Armory(player, roomStates)
         
         elif userInput == "FORWARD" and riddleSolved == False:
                 print("THE SPHINX GROWLS AS YOU APPROACH")
@@ -64,12 +64,12 @@ def SphinxRoom(player):
         
         elif userInput == "RIGHT":
             print("RIGHT: TO INNER BURIAL CHAMBER") #Test print
-            InnerBurialChamber(player)
+            InnerBurialChamber(player, roomStates)
         
         elif userInput == "BACKWARD":
             from LesserBurialChamber import LesserBurialChamber
             print("BACKWARD: TO LESSER BURIAL CHAMBER")#Test print
-            LesserBurialChamber(player)
+            LesserBurialChamber(player, roomStates)
         
         else:
             print("Please enter a valid direction.")
@@ -87,4 +87,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    SphinxRoom(player)
+    roomStates = {}
+    
+    SphinxRoom(player, roomStates)
