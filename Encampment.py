@@ -1,4 +1,3 @@
-from Entrance import *
 from SnakeWay import *
 
 from Combat import *
@@ -36,6 +35,7 @@ def Encampment(player):
             SnakeWay(player)
         
         elif userInput == "BACKWARD":
+            from Entrance import Entrance
             print("BACKWARD: TO ENTRANCE")
             Entrance(player)
             

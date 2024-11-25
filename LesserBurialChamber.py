@@ -1,4 +1,3 @@
-from SnakeWay import *
 from SphinxRoom import *
 
 from Combat import *
@@ -30,6 +29,7 @@ def LesserBurialChamber(player):
             SphinxRoom(player)
         
         elif userInput == "BACKWARD":
+            from SnakeWay import SnakeWay
             print("BACKWARD: TO SnakeWay")
             SnakeWay(player)
             

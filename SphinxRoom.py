@@ -1,4 +1,3 @@
-from LesserBurialChamber import *
 from Armory import *
 from InnerBurialChamber import *
 
@@ -52,14 +51,14 @@ def SphinxRoom(player):
     
     while userInput not in directions:
         print("CHOICES: " + ", ".join(directions).upper())
-        userInput = input().strip().upper
+        userInput = input().strip().upper()
         
-        if userInput == "FORWARD" & riddleSolved:
+        if userInput == "FORWARD" and riddleSolved:
             print("YOU STEP OVER THE CRUMBLED SPHINX")
             print("FORWARD: TO ARMORY")#Test print
             Armory(player)
         
-        elif userInput == "FORWARD" & riddleSolved == False:
+        elif userInput == "FORWARD" and riddleSolved == False:
                 print("THE SPHINX GROWLS AS YOU APPROACH")
                 #If there's time can we do something where you can push it further and enter an unbeatable battle with the sphinx?
         
@@ -68,6 +67,7 @@ def SphinxRoom(player):
             InnerBurialChamber(player)
         
         elif userInput == "BACKWARD":
+            from LesserBurialChamber import LesserBurialChamber
             print("BACKWARD: TO LESSER BURIAL CHAMBER")#Test print
             LesserBurialChamber(player)
         

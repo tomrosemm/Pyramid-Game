@@ -1,4 +1,3 @@
-from SandyCove import *
 from TreasureChamber import *
 
 from Combat import *
@@ -43,6 +42,7 @@ def RoyalTomb(player):
             TreasureChamber(player)
         
         elif userInput == "BACKWARD":
+            from SandyCove import SandyCove
             print("BACKWARD: TO SANDY COVE")
             SandyCove(player)
             

@@ -1,5 +1,4 @@
 from LesserBurialChamber import *
-from Encampment import *
 
 import random
 
@@ -40,6 +39,7 @@ def SnakeWay(player):
             LesserBurialChamber(player)
         
         elif userInput == "BACKWARD":
+            from Encampment import Encampment
             print("BACKWARD: TO ENCAMPMENT")
             Encampment(player)
             

@@ -1,5 +1,3 @@
-from RoyalTomb import *
-
 def TreasureChamber(player):
     directions = ["BACKWARD"]    
     
@@ -23,6 +21,7 @@ def TreasureChamber(player):
         userInput = input().strip().upper()
 
         if userInput == "BACKWARD":   
+            from RoyalTomb import RoyalTomb
             print("BACKWARD: TO ROYAL TOMB") #Test Print
             RoyalTomb(player)
             

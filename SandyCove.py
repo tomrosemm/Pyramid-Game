@@ -1,4 +1,3 @@
-from InnerBurialChamber import *
 from RoyalTomb import *
 
 def SandyCove(player):
@@ -36,6 +35,7 @@ def SandyCove(player):
             RoyalTomb(player)
         
         elif userInput == "BACKWARD":
+            from InnerBurialChamber import InnerBurialChamber
             print("BACKWARD: TO INNER BURIAL CHAMBER")
             InnerBurialChamber(player)
         

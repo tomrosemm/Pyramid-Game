@@ -1,4 +1,3 @@
-from SphinxRoom import *
 from SandyCove import *
 
 from Combat import *
@@ -39,6 +38,7 @@ def InnerBurialChamber(player):
                 SandyCove(player)
             
             elif userInput == "BACKWARD":
+                from SphinxRoom import SphinxRoom
                 print("BACKWARD: TO SPHINX ROOM")
                 SphinxRoom(player)
 

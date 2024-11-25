@@ -1,5 +1,3 @@
-from SphinxRoom import *
-
 def Armory(player):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
@@ -25,7 +23,8 @@ def Armory(player):
         print("CHOICE(S): BACKWARD")
         userInput = input().strip().upper()
 
-        if userInput == "BACKWARD":   
+        if userInput == "BACKWARD":
+            from SphinxRoom import SphinxRoom
             print("BACKWARD: TO SPHINX ROOM") #Test Print
             SphinxRoom(player)
             
