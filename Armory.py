@@ -1,6 +1,9 @@
 from SphinxRoom import *
 
 def Armory(player):
+    
+    #Setup some way to save what in this room has already happened, check against it before running combat
+    
     directions = ["FORWARD"]    
     
     print("YOU ARE IN THE ARMORY")   

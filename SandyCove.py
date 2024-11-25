@@ -3,6 +3,8 @@ from RoyalTomb import *
 
 def SandyCove(player):
     
+    #Setup some way to save what in this room has already happened, check against it before running combat
+    
     directions = ["FORWARD", "BACKWARD"]
     
     print("YOU ARE IN A SANDY COVE")

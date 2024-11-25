@@ -5,6 +5,8 @@ from Combat import *
     
 def InnerBurialChamber(player):
     
+    #Setup some way to save that combat in this room has already happened, check against it before running combat
+    
     directions = ["RIGHT", "BACKWARD"]
     
     print("YOU ARE IN THE INNER BURIAL CHAMBER")

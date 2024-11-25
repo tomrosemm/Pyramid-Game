@@ -4,6 +4,9 @@ from TreasureChamber import *
 from Combat import *
 
 def RoyalTomb(player):
+    
+    #Setup some way to save that combat in this room has already happened, check against it before running combat
+    
     directions = ["LEFT", "BACKWARD"]    
     
     print("YOU ARE IN THE ROYAL TOMB")

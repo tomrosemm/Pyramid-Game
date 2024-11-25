@@ -6,6 +6,8 @@ from Combat import *
 
 def SphinxRoom(player):
     
+    #Setup some way to save what in this room has already happened, check against it before running combat
+    
     directions = ["BACKWARD", "RIGHT"] #Changes if riddle is solved, as door is open
     
     riddleAnswer = "THE ANSWER"
