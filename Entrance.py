@@ -2,20 +2,33 @@ from Encampment import *
 
 def Entrance(player,roomStates):
     
-    #Setup some way to save what in this room has already happened, check against it before running combat
+    directions = ["FORWARD", "Q"]
     
-    directions = ["FORWARD"]    
+    #Initialize the room state if not already done
+    if "Entrance" not in roomStates:
+        roomStates["Entrance"] = {"visited": False, "torchTaken": False}    
     
-    print("YOU ARE IN THE ENTRANCE")   
-    torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
+    if not roomStates["Entrance"]["visited"]:
+        print("WELCOME TO THE PYRAMID")
+        roomStates["Entrance"]["visited"] = True
     
-    #Set up to catch mistaken entries, basically just a copy of the room movement structure
-    if torchChoice == "Y":        
-        player["hasTorch"] = True
-        print("TORCH TAKEN")
+    print("YOU ARE IN THE ENTRANCE")
     
-    else:     
-        print("NO TORCH")
+    #Check if player has already taken the torch
+    if not roomStates["Entrance"]["torchTaken"]:
+        torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
+    
+        #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        if torchChoice == "Y":        
+            player["hasTorch"] = True
+            roomStates["Entrance"]["torchTaken"] = True
+            print("TORCH TAKEN")
+        
+        else:     
+            print("NO TORCH")
+    
+    else:
+        print("THE TORCH IS ALREADY TAKEN")
     
     print("YOU CAN TRAVEL ONLY FORWARD")
     print("WHERE DO YOU WANT TO MOVE?")
@@ -23,6 +36,7 @@ def Entrance(player,roomStates):
     
     while userInput not in directions:        
         print("CHOICE(S): FORWARD")
+        print("Q TO QUIT")
         userInput = input().strip().upper()
 
         if userInput == "FORWARD":   
@@ -31,7 +45,11 @@ def Entrance(player,roomStates):
             if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
             
-            Encampment(player)
+            Encampment(player, roomStates)
+        
+        elif userInput == "Q":
+            print("Goodbye")
+            quit()
             
         else:
             print("Please enter a valid direction.")
@@ -49,4 +67,6 @@ if __name__ == '__main__':
         "hasTorch": False
     }
     
-    Entrance(player)
+    roomStates = {}
+    
+    Entrance(player, roomStates)

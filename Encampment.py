@@ -6,7 +6,7 @@ def Encampment(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
-    directions = ["FORWARD", "BACKWARD"]    
+    directions = ["FORWARD", "BACKWARD", "Q"]    
     
     print("YOU ARE IN THE TOMB GOBLIN ENCAMPMENT")   
     axeChoice = input("TAKE AXE? (y/n)").strip().upper()
@@ -28,6 +28,7 @@ def Encampment(player, roomStates):
     
     while userInput not in directions:        
         print("CHOICE(S): FORWARD, BACKWARD")
+        print("Q TO QUIT")
         userInput = input().strip().upper()
 
         if userInput == "FORWARD":   
@@ -38,6 +39,10 @@ def Encampment(player, roomStates):
             from Entrance import Entrance
             print("BACKWARD: TO ENTRANCE")
             Entrance(player, roomStates)
+            
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
             
         else:
             print("Please enter a valid direction.")

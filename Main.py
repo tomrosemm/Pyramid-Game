@@ -13,6 +13,13 @@ from TreasureChamber import *
 #Import Systems
 from Combat import *
 
+#External Libraries to try out
+import blessings
+import pyfiglet
+import names
+import prompt_toolkit
+import numpy
+
 if __name__ == "__main__":
     
     player = {
@@ -27,14 +34,11 @@ if __name__ == "__main__":
     }
 
     roomStates = {}
-    # tombGoblin = {
-    #     "name": "Goblin Fred",
-    #     "health": 75,
-    #     "damageRange": (5,15)
-    # }
     
     while True:
         print("WELCOME TO THE GAME")
+        
+        #Allow for random name choice form names
         
         new_name = input("Enter the player's name: ").strip()
         
