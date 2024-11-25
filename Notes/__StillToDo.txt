@@ -1,0 +1,7 @@
+-Sphinx Riddle(s)
+-Set battles up in rooms with success check
+-Write actual words in print placeholders
+-Space out prints better
+-Utilize an external library
+-Set up unit tests
+-Battle Test/Tweaking numbers
