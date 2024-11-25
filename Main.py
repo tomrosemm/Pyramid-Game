@@ -1,37 +1,16 @@
 #Import rooms
-from Entrance import Entrance
+from Entrance import *
 #Encampment
-# from _SnakeWay import *
-# from _SphinxRoom import *
-# #Armory
-# from _InnerBurialChamber import *
-# from _SandyCove import *
-# #Royal Tomb
-# #Treasure Chamber
+from SnakeWay import *
+from SphinxRoom import *
+#Armory
+from InnerBurialChamber import *
+from SandyCove import *
+#Royal Tomb
+#Treasure Chamber
 
-# #Import Systems
-# from Combat import *
-
-# #Import Libraries
-# import random
-# import time
-
-# player = {
-#     "name": "Player",
-#     "health": 100,
-#     "baseDamageRange": (10,20),
-#     "hasAxe": False,
-#     "hasSword": False,
-#     "axeBonus": (5, 10),
-#     "swordBonus": (10,15),
-#     "hasTorch": False
-# }
-
-# tombGoblin = {
-#     "name": "Goblin Fred",
-#     "health": 75,
-#     "damageRange": (5,15)
-# }
+#Import Systems
+from Combat import *
 
 if __name__ == "__main__":
     
@@ -54,7 +33,6 @@ if __name__ == "__main__":
     
     while True:
         print("WELCOME TO THE GAME")
-        print("ENTER YOUR NAME: ")
         
         new_name = input("Enter the player's name: ").strip()
         

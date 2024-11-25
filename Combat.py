@@ -60,3 +60,5 @@ def combat(player,enemy):
             break
     
     print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+
+# combat(player, tombGoblin)

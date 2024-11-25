@@ -1,19 +1,19 @@
-def SnakeWay():
+from SphinxRoom import SphinxRoom
+
+def SnakeWay(player):
     
-    player = {
-    "name": "Player",
-    "health": 100,
-    "baseDamageRange": (10,20),
-    "hasAxe": False,
-    "hasSword": False,
-    "axeBonus": (5, 10),
-    "swordBonus": (10,15),
-    "hasTorch": False
-    }
+    # player = {
+    # "name": "Player",
+    # "health": 100,
+    # "baseDamageRange": (10,20),
+    # "hasAxe": False,
+    # "hasSword": False,
+    # "axeBonus": (5, 10),
+    # "swordBonus": (10,15),
+    # "hasTorch": False
+    # }
     
     directions = ["FORWARD", "BACKWARD"]
-    
-    # hasTorch = True #Test variable, in execution will be linked to the action of taking torch in entrance
     
     print("YOU ARE IN THE SNAKEWAY")
     
@@ -41,7 +41,7 @@ def SnakeWay():
                 print("YOU STUMBLE THROUGH THE DARKNESS AND INTO MORE THAN A COUPLE SNAKES. THEY BITE.")
                 #Take damage
             
-            #SphinxRoom()
+            # SphinxRoom(player)
         
         elif userInput == "BACKWARD":
             print("BACKWARD: TO ENCAMPMENT")

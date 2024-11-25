@@ -9,23 +9,20 @@ def IBCBattle():
     global wonIBCBattle
 
     
-def InnerBurialChamber():
+def InnerBurialChamber(player):
     
-    player = {
-    "name": "Player",
-    "health": 100,
-    "baseDamageRange": (10,20),
-    "hasAxe": False,
-    "hasSword": False,
-    "axeBonus": (5, 10),
-    "swordBonus": (10,15),
-    "hasTorch": False
-    }
+    # player = {
+    # "name": "Player",
+    # "health": 100,
+    # "baseDamageRange": (10,20),
+    # "hasAxe": False,
+    # "hasSword": False,
+    # "axeBonus": (5, 10),
+    # "swordBonus": (10,15),
+    # "hasTorch": False
+    # }
     
     directions = ["RIGHT", "BACKWARD"]
-    
-    # hasAxe = True#Test variable, will be influenced by picking up axe in encampment room
-    # hasSword = True#Test variable, will be influenced by getting sword in armory
     
     global wonIBCBattle
     

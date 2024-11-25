@@ -12,7 +12,6 @@ def Entrance(player):
     # }
     
     directions = ["forward"]    
-    # hasTorch = False
     
     print("YOU ARE IN THE ENTRANCE")   
     torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
@@ -38,7 +37,7 @@ def Entrance(player):
             if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
             
-            #Encampment()
+            # Encampment()
             
         else:
             print("Please enter a valid direction.")
