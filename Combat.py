@@ -1,17 +1,21 @@
 #Tweak hp values on death of player or enemy to go from a negative to 0
 
-import random
-import time
+#Import libraries
+import random #Choosing from range for damage in combat
+import time #Sleeping in combat for better flow
 
 def calculateDamageRange(player):
+    #Takes player dictionary, checks for sword or axe, returns augmented damage range for strongest match or base range if none found
     
     if player["hasAxe"] and not player["hasSword"]:
+        #Sword stronger, so check first if we only have axe
         return (
             player["baseDamageRange"][0] + player["axeBonus"][0],
             player["baseDamageRange"][1] + player["axeBonus"][1]
         )
     
     elif player["hasSword"]:
+        #Sword stronger, so if we have sword at all, match here
         return (
             player["baseDamageRange"][0] + player["swordBonus"][0],
             player["baseDamageRange"][1] + player["swordBonus"][1]
