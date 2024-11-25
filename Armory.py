@@ -2,7 +2,7 @@ def Armory(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
-    directions = ["FORWARD"]    
+    directions = ["FORWARD", "Q"]    
     
     print("YOU ARE IN THE ARMORY")   
     swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
@@ -21,12 +21,17 @@ def Armory(player, roomStates):
     
     while userInput not in directions:        
         print("CHOICE(S): BACKWARD")
+        print('Q TO QUIT')
         userInput = input().strip().upper()
 
         if userInput == "BACKWARD":
             from SphinxRoom import SphinxRoom
             print("BACKWARD: TO SPHINX ROOM") #Test Print
             SphinxRoom(player, roomStates)
+            
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
             
         else:
             print("Please enter a valid direction.")

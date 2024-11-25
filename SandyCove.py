@@ -4,7 +4,7 @@ def SandyCove(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
-    directions = ["FORWARD", "BACKWARD"]
+    directions = ["FORWARD", "BACKWARD", "Q"]
     
     print("YOU ARE IN A SANDY COVE")
     
@@ -27,7 +27,7 @@ def SandyCove(player, roomStates):
     
     while userInput not in directions:
         print("CHOICES: FORWARD, BACKWARD")
-        print("WHERE DO YOU WANT TO MOVE?")
+        print("Q TO QUIT")
         userInput = input().strip().upper()
         
         if userInput == "FORWARD":
@@ -38,6 +38,10 @@ def SandyCove(player, roomStates):
             from InnerBurialChamber import InnerBurialChamber
             print("BACKWARD: TO INNER BURIAL CHAMBER")
             InnerBurialChamber(player, roomStates)
+            
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
         
         else:
             print("Please enter a valid direction.")

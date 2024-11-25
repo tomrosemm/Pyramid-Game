@@ -7,7 +7,7 @@ def SphinxRoom(player, roomStates):
     
     #Setup some way to save what in this room has already happened, check against it before running combat
     
-    directions = ["BACKWARD", "RIGHT"] #Changes if riddle is solved, as door is open
+    directions = ["BACKWARD", "RIGHT", "Q"] #Changes if riddle is solved, as door is open
     
     riddleAnswer = "THE ANSWER"
     
@@ -34,7 +34,7 @@ def SphinxRoom(player, roomStates):
         
         print("SPHINX CRUMBLES TO REVEAL A DOOR")
         riddleSolved = True
-        directions = ["FORWARD", "BACKWARD", "RIGHT"]
+        directions = ["FORWARD", "BACKWARD", "RIGHT", "Q"]
     
     else:
         print("YOU WERE WRONG")
@@ -45,12 +45,15 @@ def SphinxRoom(player, roomStates):
         
         riddleSolved = False
     
-    print("YOU CAN TRAVEL " + ", ".join(directions))
+    # print("YOU CAN TRAVEL " + ", ".join(directions))
+    print("YOU CAN TRAVEL " + ", ".join([d for d in directions if d != "Q"]))
     print("WHERE DO YOU WANT TO MOVE?")
     userInput = ''
     
     while userInput not in directions:
-        print("CHOICES: " + ", ".join(directions).upper())
+        # print("CHOICES: " + ", ".join(directions).upper())
+        print("CHOICES: " + ", ".join([d for d in directions if d != "Q"]).upper())
+        print("Q TO QUIT")
         userInput = input().strip().upper()
         
         if userInput == "FORWARD" and riddleSolved:
@@ -70,6 +73,10 @@ def SphinxRoom(player, roomStates):
             from LesserBurialChamber import LesserBurialChamber
             print("BACKWARD: TO LESSER BURIAL CHAMBER")#Test print
             LesserBurialChamber(player, roomStates)
+        
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
         
         else:
             print("Please enter a valid direction.")

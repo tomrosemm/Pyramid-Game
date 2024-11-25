@@ -6,7 +6,7 @@ def InnerBurialChamber(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
-    directions = ["RIGHT", "BACKWARD"]
+    directions = ["RIGHT", "BACKWARD", "Q"]
     
     print("YOU ARE IN THE INNER BURIAL CHAMBER")
     
@@ -31,6 +31,7 @@ def InnerBurialChamber(player, roomStates):
         
         while userInput not in directions:
             print("CHOICES: RIGHT, BACKWARD")
+            print("Q TO QUIT")
             userInput = input().strip().upper()
             
             if userInput == "RIGHT":
@@ -41,6 +42,10 @@ def InnerBurialChamber(player, roomStates):
                 from SphinxRoom import SphinxRoom
                 print("BACKWARD: TO SPHINX ROOM")
                 SphinxRoom(player, roomStates)
+                
+            elif userInput == "Q":
+                print("GOODBYE")
+                quit()
 
             else:
                 print("Please enter a valid direction.")

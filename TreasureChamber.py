@@ -1,5 +1,5 @@
 def TreasureChamber(player, roomStates):
-    directions = ["BACKWARD"]    
+    directions = ["BACKWARD", "Q"]    
     
     print("YOU ARE IN THE TREASURE CHAMBER")   
     treasureChoice = input("TAKE TREASURE? (y/n)").strip().upper()
@@ -18,12 +18,17 @@ def TreasureChamber(player, roomStates):
     
     while userInput not in directions:        
         print("CHOICE(S): BACKWARD")
+        print("Q TO QUIT")
         userInput = input().strip().upper()
 
         if userInput == "BACKWARD":   
             from RoyalTomb import RoyalTomb
             print("BACKWARD: TO ROYAL TOMB") #Test Print
             RoyalTomb(player, roomStates)
+            
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
             
         else:
             print("Please enter a valid direction.")

@@ -6,7 +6,7 @@ def RoyalTomb(player, roomStates):
     
     #Setup some way to save that combat in this room has already happened, check against it before running combat
     
-    directions = ["LEFT", "BACKWARD"]    
+    directions = ["LEFT", "BACKWARD", "Q"]    
     
     print("YOU ARE IN THE ROYAL TOMB")
     
@@ -35,6 +35,7 @@ def RoyalTomb(player, roomStates):
     
     while userInput not in directions:        
         print("CHOICE(S): LEFT, BACKWARD")
+        print("Q TO QUIT")
         userInput = input().strip().upper()
 
         if userInput == "LEFT":   
@@ -45,6 +46,10 @@ def RoyalTomb(player, roomStates):
             from SandyCove import SandyCove
             print("BACKWARD: TO SANDY COVE")
             SandyCove(player, roomStates)
+            
+        elif userInput == "Q":
+            print("GOODBYE")
+            quit()
             
         else:
             print("Please enter a valid direction.")
