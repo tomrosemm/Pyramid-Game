@@ -1,4 +1,4 @@
--Sphinx Riddle(s)
+-T Sphinx Riddle(s)
 -Set battles up in rooms with success check
 -Write actual words in print placeholders
 -Space out prints better
