@@ -1,7 +1,8 @@
 def Armory(player, roomStates):
     
     directions = ["FORWARD", "Q"]    
-    
+    decisions = ["Y", "N"]
+
     #Initialize the room states if not already done
     if "Armory" not in roomStates:
         roomStates["Armory"] = {"visited": False, "swordTaken": False}
@@ -18,25 +19,28 @@ def Armory(player, roomStates):
         print()
     
     if not roomStates["Armory"]["swordTaken"]:
-        swordChoice = input("A long hooked blade sits upon the table, you notice as you move closer. Would you like to take it? (y/n)").strip().upper()
-        print()
-    
-        #Set up to catch mistaken entries, basically just a copy of the room movement structure
-        if swordChoice == "Y":        
-            player["hasSword"] = True
-            roomStates["Armory"]["swordTaken"] = True
-            print("You take the sword in your free hand; its weight is reassuring.")
-            print()
 
-        elif swordChoice == "N":        
-            player["hasTorch"] = False
-            roomStates["Armory"]["swordTaken"] = False
-            print("You decide against taking the sword, how brave.")
-            print()
-        while swordChoice != "Y" and swordChoice != "N":     
-            print("Please enter a valid choice: (y/n)\n")
-            input()
+        swordChoice = ''
+        print("A long hooked blade sits upon the table, you notice as you move closer. Would you like to take it? (y/n)")
 
+        while swordChoice not in decisions:
+
+            swordChoice = input().strip().upper()
+
+            #Set up to catch mistaken entries, basically just a copy of the room movement structure
+            if swordChoice == "Y":        
+                player["hasSword"] = True
+                roomStates["Armory"]["swordTaken"] = True
+                print("SWORD TAKEN\n")
+            
+            elif swordChoice == "N":        
+                player["hasTorch"] = False
+                roomStates["Armory"]["swordTaken"] = False
+                print("You decide against taking the sword, how brave.")
+                print()
+
+            else:
+                print("Please enter a valid decision\n")
     else:
         print("The Armory is truly empty, now that you've taken the only sword.")
         print()
