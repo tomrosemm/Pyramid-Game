@@ -14,7 +14,7 @@ def Entrance(player,roomStates):
         roomStates["Entrance"]["visited"] = True
     
     else:
-        print("You are in the room you entered the pyramid from.")
+        print("You are in the room you entered the pyramid from. The way you entered has caved in.")
         print()
     
     #Check if player has already taken the torch
@@ -44,19 +44,19 @@ def Entrance(player,roomStates):
     userInput = ''
     
     while userInput not in directions:        
-        print("CHOICE(S): FORWARD")
+        print("Choice: forward")
         print()
-        print("Q TO QUIT")
+        print("Q to quit")
         print()
         userInput = input().strip().upper()
 
         if userInput == "FORWARD":
             print()
-            print("FORWARD: TO ENCAMPMENT") #Test Print
+            print("You move forward through the narrow doorway into the next room.")
             
             if player["hasTorch"]:
                 print()
-                print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
+                print("The light of the torch guides your way.")
                 
             print("__________________________________________________")
             print()
@@ -65,7 +65,7 @@ def Entrance(player,roomStates):
         
         elif userInput == "Q":
             print()
-            print("Goodbye")
+            print("Goodbye.")
             quit()
             
         else:
