@@ -1,4 +1,3 @@
--Sphinx Riddle(s)
 -Set battles up in rooms with success check
 -Sphinx Riddle
 -Sandy Cove
