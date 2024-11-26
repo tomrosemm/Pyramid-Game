@@ -100,9 +100,11 @@ def SphinxRoom(player, roomStates):
                 print("'I do thank you for the gift of the light though. That counts for something.''")
                 print()
                 
-                if player["health"] < 100:
-                    player["health"] = 100
-                    print("You have been fully healed!")
+                if player["health"] < player["maxHealth"]:
+                    amountHealed = player["maxHealth"] - player["health"]
+                    player["health"] = player["maxHealth"]
+                    print()
+                    print("You recovered " + str(amountHealed) + " hit points.")
                     print()
                 
                 else:
@@ -162,13 +164,13 @@ if __name__ == '__main__':
     
     player = {
         "name": "TestPlayer",
+        "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),
-        "swordBonus": (10,15),
-        "hasTorch": False
+        "swordBonus": (10,15)
     }
     
     roomStates = {}

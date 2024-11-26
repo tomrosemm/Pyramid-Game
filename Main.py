@@ -37,6 +37,7 @@ if __name__ == "__main__":
     
     player = {
         "name": "Player",
+        "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,

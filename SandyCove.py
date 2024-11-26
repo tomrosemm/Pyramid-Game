@@ -6,7 +6,7 @@ def SandyCove(player, roomStates):
     
     #Initialize the room states if not already done
     if "SandyCove" not in roomStates:
-        roomStates["SandyCove"] = {"visited": False, "isisEventOccurred": False, "recievedFullBlessings": False}
+        roomStates["SandyCove"] = {"visited": False, "isisEventOccurred": False, "receivedFullBlessings": False}
     
     print()
     
@@ -27,10 +27,10 @@ def SandyCove(player, roomStates):
         roomStates["SandyCove"]["isisEventOccurred"] = True
         print()
 
-        if player["health"] < 100:
+        if player["health"] < player["maxHealth"]:
             print("'Allow me to first offer my blessing' she says, as she places a hand on your shoulder. You feel your strength return to you in full.'")
-            amountHealed = 100 - player["health"]
-            player["health"] = 100
+            amountHealed = player["maxHealth"] - player["health"]
+            player["health"] = player["maxHealth"]
             print()
             print("You recovered " + str(amountHealed) + " hit points.")
 
@@ -39,9 +39,9 @@ def SandyCove(player, roomStates):
         
         print()
 
-        if not roomStates["SandyCove"]["recievedFullBlessings"]:
+        if not roomStates["SandyCove"]["receivedFullBlessings"]:
             if player["hasTorch"] == False:
-                print("'You have missed a tool at the beginning of your journey that may yet continue to assist you in your endeavours. Head back to the first room you entered.'")
+                print("'You have missed a tool at the beginning of your journey that may yet continue to assist you in your endeavors. Head back to the first room you entered.'")
                 print()
                 #Option to send player to room? Just adding item feels weak
                 
@@ -60,7 +60,7 @@ def SandyCove(player, roomStates):
         
         else:
             print("'I have helped you all I can. Go, and be strong little one.'")
-            roomStates["SandyCove"]["recievedFullBlessings"] = True
+            roomStates["SandyCove"]["receivedFullBlessings"] = True
 
     else:
         print("The woman on the bench nods at you as you enter, but makes no other greeting. She seems weaker than before.")
@@ -105,13 +105,13 @@ if __name__ == '__main__':
     
     player = {
         "name": "TestPlayer",
+        "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),
-        "swordBonus": (10,15),
-        "hasTorch": False
+        "swordBonus": (10,15)
     }
     
     roomStates = {}

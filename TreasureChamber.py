@@ -22,8 +22,13 @@ def TreasureChamber(player, roomStates):
     print()
     
     if not roomStates["TreasureChamber"]["treasureTaken"]:
+        
+        treasureChoice = ''
 
         while treasureChoice not in decisions:
+            
+            print("The orb beacons to you, and before you realize it you are in front of it, hand outstretched. Take the orb? (y/n):")
+            print()
 
             treasureChoice = input().strip().upper()
             print()
@@ -33,18 +38,19 @@ def TreasureChamber(player, roomStates):
                 roomStates["TreasureChamber"]["treasureTaken"] = True    
                 print("You take the orb, and before you know it you have been, somehow, launched through the roof of the pyramid and high, high into the air.")
                 print()
-                time.sleep(2)
+                time.sleep(4)
                 print("You have enough time to think over your life and the decisions that lead you here as you fall to your inevitable fate.")
                 print()
-                time.sleep(2)
+                time.sleep(4)
                 print("You could have been something. You could have taken that corner office job in Stacy's dad's company, but no. You were too proud.")
                 print()
-                time.sleep(2)
+                time.sleep(4)
                 print("You wonder if you'll be identifiable. Part of you assumes you'll just be a we spot on the sand, but stranger things-")
                 print()
-                time.sleep(2)
+                time.sleep(3)
                 print("Splat!")
-                time.sleep(5)
+                print()
+                time.sleep(4)
                 print("You win!")
                 time.sleep(3)
                 quit()
@@ -93,13 +99,13 @@ if __name__ == '__main__':
     
     player = {
         "name": "TestPlayer",
+        "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),
-        "swordBonus": (10,15),
-        "hasTorch": False
+        "swordBonus": (10,15)
     }
     
     roomStates = {}

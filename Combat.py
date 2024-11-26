@@ -67,7 +67,8 @@ def combat(player,enemy):
 if __name__ == '__main__':
     
     player = {
-        "name": "Player",
+        "name": "TestPlayer",
+        "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
         "hasAxe": False,
