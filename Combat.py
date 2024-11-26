@@ -44,7 +44,7 @@ def combat(player,enemy):
         if enemy["health"] <= 0:
             print(f"{enemy['name']} has been defeated!")
             print()
-            print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+            print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: 0")
             print()
             print("__________________________________________________")
             return True
@@ -59,7 +59,7 @@ def combat(player,enemy):
         if player["health"] <= 0:
             print(f"{player['name']} has been defeated!")
             print()
-            print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+            print(f"Combat ended. {player['name']} health: 0, {enemy['name']} health: {enemy['health']}")
             print()
             print("__________________________________________________")
             return False
