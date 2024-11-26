@@ -65,7 +65,7 @@ def Entrance(player,roomStates):
         
         elif userInput == "Q":
             print()
-            print("Goodbye")
+            print("Goodbye.")
             quit()
             
         else:
