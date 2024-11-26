@@ -1,7 +1,4 @@
 -Battle Test/Tweaking numbers
--Check SnakeWay back/forth with and without torch (Maybe make moving through SnakeWay different from moving to next room)
--Utilize an external library
--ASKii Art Title(?)
 -Set up unit tests
 -Document Code
 -Documentation Generation
@@ -10,6 +7,8 @@
 -Presentation
 -Readme
 
+-XUtilize an external library
+-XASKii Art Title(?)
 -XReplace hard coded health implied max @ 100 and give player dictionary a maxHealth, replace where appropriate
 -XWrite actual words in print placeholders
 -XSpace out prints better

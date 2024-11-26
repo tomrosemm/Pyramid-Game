@@ -62,6 +62,7 @@ def combat(player,enemy):
             print(f"Combat ended. {player['name']} health: 0, {enemy['name']} health: {enemy['health']}")
             print()
             print("__________________________________________________")
+            print()
             return False
 
 if __name__ == '__main__':
@@ -74,8 +75,9 @@ if __name__ == '__main__':
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),
-        "swordBonus": (10,15)
-}
+        "swordBonus": (10,15),
+        "hasTorch": False
+    }
 
     tombGoblin = {
         "name": "Goblin Fred",

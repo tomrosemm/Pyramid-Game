@@ -16,16 +16,22 @@ from Combat import *
 #External Libraries to try out
 # import blessings
 
-# import pyfiglet
 # import names
 # import prompt_toolkit
 # import numpy
 
 def titleScreen():
-    if pyFigletLoaded:
+    
+    try:
+        import pyfiglet
+        pyFigletImported = True
+    except (ImportError):
+        pyFigletImported = False
 
-        #askii title screen with pyfiglet
-        return
+    if pyFigletImported:
+        title = pyfiglet.figlet_format("The Pyramid", font = "5lineoblique")
+        print(title)
+        print()
     
     else:
         print()

@@ -3,8 +3,6 @@ from LesserBurialChamber import *
 import random
 import time
 
-#Do something to make coming back through the snakeway from sphinx room w/o torch also proc snake bites
-
 def SnakeWay(player, roomStates):
     
     directions = ["FORWARD", "BACKWARD", "Q"]
@@ -57,10 +55,8 @@ def SnakeWay(player, roomStates):
             
             else:
                 print()
-                print("In absolute darkness, you stumble through the passage way, sustaining more than a couple snake bites..")
+                print("In absolute darkness, you stumble around the passage way, sustaining more than a couple snake bites..")
                 print()
-                
-                # print(f"Before Snakebites - {player['name']} health: {player['health']}")
                 
                 #Take randomized damage
                 i = 0
@@ -71,8 +67,7 @@ def SnakeWay(player, roomStates):
                     print("You are bitten by a snake, taking " + str(snakeDamage) + " damage.")
                     print()
                     i += 1
-                
-                # print(f"After Snakebites - {player['name']} health: {player['health']}")
+                    
                 # print()
                 
                 input("You steady yourself and move on. Press enter to continue to the next room.")
@@ -109,7 +104,8 @@ if __name__ == '__main__':
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),
-        "swordBonus": (10,15)
+        "swordBonus": (10,15),
+        "hasTorch": False
     }
     
     roomStates = {}
