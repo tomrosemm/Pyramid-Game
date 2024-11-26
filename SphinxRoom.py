@@ -34,7 +34,7 @@ def SphinxRoom(player, roomStates):
         print()
     
     if not roomStates["SphinxRoom"]["riddleSolved"] and not roomStates["SphinxRoom"]["riddleFailed"]:
-        print("As you approach the large sphinx, she eyes you sharply, and you wisely stop outside his reach.")
+        print("As you approach the large sphinx, he eyes you sharply, and you wisely stop outside his reach.")
         print()
     
         if player["hasTorch"]:
@@ -116,14 +116,12 @@ def SphinxRoom(player, roomStates):
         print("As you move past, the sphinx watches you with pity.")
         print()
     
-    # print("YOU CAN TRAVEL " + ", ".join(directions))
     print("You can go " + ", ".join([d for d in directions if d != "Q"]).lower())
     print("Where would you like to go?")
     print()
     userInput = ''
     
     while userInput not in directions:
-        # print("CHOICES: " + ", ".join(directions).upper())
         print("Choices: " + ", ".join([d for d in directions if d != "Q"]).lower())
         print()
         print("Q to quit")

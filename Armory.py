@@ -5,15 +5,16 @@ def Armory(player, roomStates):
     #Initialize the room states if not already done
     if "Armory" not in roomStates:
         roomStates["Armory"] = {"visited": False, "swordTaken": False}
+    
+    print()
         
     if not roomStates["Armory"]["visited"]:
-        print("WELCOME TO THE ARMORY FOR THE FIRST TIME")
+        print("You enter a small armory with empty weapon stands along the walls. There is a long stone table in the center.")
+        print()
         roomStates["Armory"]["visited"] = True
     
     else:
         print("WELCOME BACK TO THE ARMORY")
-    
-    print("YOU ARE IN THE ARMORY")
     
     if not roomStates["Armory"]["swordTaken"]:
         swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
