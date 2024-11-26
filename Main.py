@@ -44,11 +44,11 @@ if __name__ == "__main__":
         
         #Allow for random name choice from names?
         
-        new_name = input("Enter the player's name: ").strip()
+        newName = input("Enter the player's name: ").strip()
         print()
         
-        if new_name:
-            player["name"] = new_name
+        if newName:
+            player["name"] = newName
             print(f"Player's name updated to: {player['name']}")
             print("__________________________________________________")
             print()
