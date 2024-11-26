@@ -1,7 +1,7 @@
--Sphinx Riddle(s)
+-Sphinx Riddle(s) [done, 5]
 -Set battles up in rooms with success check
 -Write actual words in print placeholders
 -Space out prints better
--Utilize an external library
+-Utilize an external library [done if random counts, otherwise still neeeded]
 -Set up unit tests
 -Battle Test/Tweaking numbers
