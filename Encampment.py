@@ -37,10 +37,15 @@ def Encampment(player, roomStates):
     
     if not roomStates["Encampment"]["battleWon"]:
         print("TIME TO BATTLE!")
-    
+
         #Battle
+        combat(player, tombGoblin)
+        if player["health"] > 0:
+            roomStates["Encampment"]["battleWon"] = True
+        else:
+            print("YOU DIED")
+            quit()
     
-        roomStates["Encampment"]["battleWon"] = True
     
         print("LET'S SAY YOU WON FOR NOW")
     
@@ -83,6 +88,12 @@ if __name__ == '__main__':
         "axeBonus": (5, 10),
         "swordBonus": (10,15),
         "hasTorch": False
+    }
+
+    tombGoblin = {
+        "name": "Goblin Fred",
+        "health": 75,
+        "damageRange": (5, 15)
     }
     
     roomStates = {}
