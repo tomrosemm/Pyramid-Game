@@ -1,7 +1,8 @@
 def Armory(player, roomStates):
     
     directions = ["FORWARD", "Q"]    
-    
+    decisions = ["Y", "N"]
+
     #Initialize the room states if not already done
     if "Armory" not in roomStates:
         roomStates["Armory"] = {"visited": False, "swordTaken": False}
@@ -16,32 +17,27 @@ def Armory(player, roomStates):
     print("YOU ARE IN THE ARMORY")
     
     if not roomStates["Armory"]["swordTaken"]:
-        swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
-    
-        #Set up to catch mistaken entries, basically just a copy of the room movement structure
-        if swordChoice == "Y":        
-            player["hasSword"] = True
-            roomStates["Armory"]["swordTaken"] = True
-            print("SWORD TAKEN")
-        
-        elif swordChoice == "N":        
-            player["hasTorch"] = False
-            roomStates["Armory"]["swordTaken"] = False
-            print("You decide against taking the sword, how brave.")
-            print()
-        while swordChoice != "Y" and swordChoice != "N":     
-            print("Please enter a valid choice: (y/n)\n")
-            input()
-        if swordChoice == "Y":        
-            player["hasSword"] = True
-            roomStates["Armory"]["swordTaken"] = True
-            print("SWORD TAKEN")
-        
-        elif swordChoice == "N":        
-            player["hasTorch"] = False
-            roomStates["Armory"]["swordTaken"] = False
-            print("You decide against taking the sword, how brave.")
-            print()
+        swordChoice = ''
+        print("TAKE SWORD? (y/n)")
+
+        while swordChoice not in decisions:
+
+            swordChoice = input().strip().upper()
+
+            #Set up to catch mistaken entries, basically just a copy of the room movement structure
+            if swordChoice == "Y":        
+                player["hasSword"] = True
+                roomStates["Armory"]["swordTaken"] = True
+                print("SWORD TAKEN\n")
+            
+            elif swordChoice == "N":        
+                player["hasTorch"] = False
+                roomStates["Armory"]["swordTaken"] = False
+                print("You decide against taking the sword, how brave.")
+                print()
+
+            else:
+                print("Please enter a valid decision\n")
     else:
         print("THE SWORD HAS ALREADY BEEN TAKEN")
     

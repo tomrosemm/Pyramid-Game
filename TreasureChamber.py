@@ -1,6 +1,8 @@
 def TreasureChamber(player, roomStates):
-    directions = ["BACKWARD", "Q"]   
     
+    directions = ["BACKWARD", "Q"]   
+    decisions = ["Y", "N"]
+
     #Initialize the room states if not already done
     if "TreasureChamber" not in roomStates:
         roomStates["TreasureChamber"] = {"visited": False, "treasureTaken": False}
@@ -15,30 +17,26 @@ def TreasureChamber(player, roomStates):
     print("YOU ARE IN THE TREASURE CHAMBER")
     
     if not roomStates["TreasureChamber"]["treasureTaken"]:
-        treasureChoice = input("TAKE TREASURE? (y/n)").strip().upper()
-    
-        #Set up to catch mistaken entries, basically just a copy of the room movement structure
-        if treasureChoice == "Y":
-            roomStates["TreasureChamber"]["treasureTaken"] = True    
-            print("TREASURE TAKEN. YOU WIN!")
-            quit()
+        
+        treasureChoice = ''
+        print("Take treasure? (y/n)\n")
 
-        elif treasureChoice == "N":
-            roomStates["TreasureChamber"]["treasureTaken"] = False
-            print("NO TREASURE")
+        while treasureChoice not in decisions:
 
-        while treasureChoice != "Y" and treasureChoice != "N":     
-            print("Please enter a valid choice: (y/n)\n")
-            input()
+            treasureChoice = input().strip().upper()
+
+            #Set up to catch mistaken entries, basically just a copy of the room movement structure
+            if treasureChoice == "Y":
+                roomStates["TreasureChamber"]["treasureTaken"] = True    
+                print("TREASURE TAKEN. YOU WIN!")
+                quit()
+
+            elif treasureChoice == "N":
+                roomStates["TreasureChamber"]["treasureTaken"] = False
+                print("NO TREASURE")
             
-        if treasureChoice == "Y":
-            roomStates["TreasureChamber"]["treasureTaken"] = True    
-            print("TREASURE TAKEN. YOU WIN!")
-            quit()
-
-        elif treasureChoice == "N":
-            roomStates["TreasureChamber"]["treasureTaken"] = False
-            print("NO TREASURE")
+            else:
+                print("Please enter a valid decision\n")
 
     else:
         print("THE TREASURE HAS ALREADY BEEN TAKEN")
@@ -62,7 +60,7 @@ def TreasureChamber(player, roomStates):
             quit()
             
         else:
-            print("Please enter a valid direction.")
+            print("Please enter a valid direction.\n")
 
 if __name__ == '__main__':
     
