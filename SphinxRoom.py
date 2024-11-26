@@ -8,9 +8,9 @@ import random
 def SphinxRoom(player, roomStates):
     
     sphinxRiddleLibrary = {
-        "riddle1": "ANSWER1",
-        "riddle2": "ANSWER2",
-        "riddle3": "ANSWER3"
+        "What is that which in the morning goes upon four feet, upon two feet in the afternoon, and in the evening upon three?": "MAN",
+        "I am the dark child of a shining father, a wingless bird flying to heaven; every eye that meets me weeps, but not from grief. What am I?": "SMOKE",
+        "Always wax, yet always wane: I melt, succumbed to the flame. Lighting darkness, with fate unblessed, I soon devolve to shapeless mess. What am I? : A [Blank]": "CANDLE"  
     }
 
     directions = ["BACKWARD", "RIGHT", "Q"] #Changes if riddle is solved, as door is open
