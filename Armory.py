@@ -41,6 +41,7 @@ def Armory(player, roomStates):
 
             else:
                 print("Please enter a valid decision\n")
+            
     else:
         print("The Armory is truly empty, now that you've taken the only sword.")
         print()
