@@ -22,19 +22,23 @@ def InnerBurialChamber(player, roomStates):
     if "InnerBurialChamber" not in roomStates:
         roomStates["InnerBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblinDefeated": False, "mummyDefeated": False}
         
+    print()
+        
     if not roomStates["InnerBurialChamber"]["visited"]:
-        print("WELCOME TO THE INNER BURIAL CHAMBER FOR THE FIRST TIME")
+        print("You enter a mid sized room that must have once been well kept. There are remains of royal ornamentations ont he walls, and ornate sarcophagi reside in alcoves in the wall.")
         roomStates["InnerBurialChamber"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE INNER BURIAL CHAMBER")
-    
-    print("YOU ARE IN THE INNER BURIAL CHAMBER")\
+        print("You are once again in the Inner Burial Chamber.")
         
+    print()
+    
     if not roomStates["InnerBurialChamber"]["battleWon"]:
         print("TIME TO BATTLE!")
 
         roomStates["InnerBurialChamber"]["tombGoblinDefeated"] = combat(player,tombGoblin)
+        print()
+        print("One down, one to go!")
         roomStates["InnerBurialChamber"]["mummyDefeated"] = combat(player,mummy)
         
         if roomStates["InnerBurialChamber"]["tombGoblinDefeated"] and roomStates["InnerBurialChamber"]["mummyDefeated"]:
