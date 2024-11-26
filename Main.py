@@ -39,7 +39,7 @@ if __name__ == "__main__":
         print("WELCOME TO THE GAME")
         print()
         
-        #Allow for random name choice form names
+        #Allow for random name choice from names
         
         new_name = input("Enter the player's name: ").strip()
         print()
