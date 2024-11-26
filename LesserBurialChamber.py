@@ -59,7 +59,9 @@ def LesserBurialChamber(player, roomStates):
     
     print("You can travel either forward or backward.")
     print("Where would you like to go?")
+    print()
     userInput = ''
+    print()
     
     while userInput not in directions:        
         print("Choices: forward, backward")
