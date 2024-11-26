@@ -4,13 +4,25 @@ from Combat import *
     
 def InnerBurialChamber(player, roomStates):
     
+    tombGoblin = {
+        "name": "Goblin Fred",
+        "health": 75,
+        "damageRange": (5,15)
+    }
+    
+    mummy = {
+        "name": "The Mummy",
+        "health": 150,
+        "damageRange": (3, 10)
+    }
+    
     directions = ["RIGHT", "BACKWARD", "Q"]
     
     #Initialize the room states if not already done
     if "InnerBurialChamber" not in roomStates:
-        roomStates["InnerBurialChamber"] = {"visited": False, "battleWon": False}
+        roomStates["InnerBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblinDefeated": False, "mummyDefeated": False}
         
-    if not roomStates["Encampment"]["visited"]:
+    if not roomStates["InnerBurialChamber"]["visited"]:
         print("WELCOME TO THE INNER BURIAL CHAMBER FOR THE FIRST TIME")
         roomStates["InnerBurialChamber"]["visited"] = True
     
@@ -20,23 +32,22 @@ def InnerBurialChamber(player, roomStates):
     print("YOU ARE IN THE INNER BURIAL CHAMBER")\
         
     if not roomStates["InnerBurialChamber"]["battleWon"]:
-        print("YOU ARE ATTACKED BY 2 TOMB GOBLINS AND A MUMMY")
+        print("TIME TO BATTLE!")
+
+        roomStates["InnerBurialChamber"]["tombGoblinDefeated"] = combat(player,tombGoblin)
+        roomStates["InnerBurialChamber"]["mummyDefeated"] = combat(player,mummy)
         
-        if player["hasAxe"]:
-            print("YOU HAVE AN AXE")
-    
+        if roomStates["InnerBurialChamber"]["tombGoblinDefeated"] and roomStates["InnerBurialChamber"]["mummyDefeated"]:
+            print("YOU WON!")
+            roomStates["InnerBurialChamber"]["battleWon"] = True
+        
         else:
-            print("STRAP IN")
-        
-        print("BEGIN BATTLE")
-        
-        #Battle
-        
-        roomStates["InnerBurialChamber"]["battleWon"] = True
-        print("SUCCESSFUL BATTLE")
+            print("YOU WERE DEFEATED BY THE ENEMIES")
+            print("GAME OVER")
+            quit()
     
     else:
-        print("YOU ALREADY DEFEATED THE ENEMIES")
+        print("YOU ALREADY DEFEATED THE ENEMIES HERE")
         
     print("YOU CAN TRAVEL RIGHT OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")
@@ -76,6 +87,8 @@ if __name__ == '__main__':
         "swordBonus": (10,15),
         "hasTorch": False
     }
+    
+    
     
     roomStates = {}
     

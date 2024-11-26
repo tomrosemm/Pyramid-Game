@@ -4,6 +4,12 @@ from Combat import *
 
 def Encampment(player, roomStates):
     
+    tombGoblin = {
+        "name": "Goblin Fred",
+        "health": 75,
+        "damageRange": (5,15)
+    }
+    
     directions = ["FORWARD", "BACKWARD", "Q"]    
     
     #Initialize the room states if not already done
@@ -38,11 +44,15 @@ def Encampment(player, roomStates):
     if not roomStates["Encampment"]["battleWon"]:
         print("TIME TO BATTLE!")
     
-        #Battle
-    
-        roomStates["Encampment"]["battleWon"] = True
-    
-        print("LET'S SAY YOU WON FOR NOW")
+        roomStates["Encampment"]["battleWon"] = combat(player,tombGoblin)
+        
+        if roomStates["Encampment"]["battleWon"]:
+            print("YOU WON!")
+        
+        else:
+            print("YOU WERE DEFEATED BY THE TOMB GOBLINS")
+            print("GAME OVER")
+            quit()
     
     else:
         print("YOU ALREADY DEFEATED THE TOMB GOBLINS")

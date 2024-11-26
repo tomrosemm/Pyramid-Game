@@ -1,9 +1,9 @@
--Set battles up in rooms with success check
--Sphinx Riddle
 -Sandy Cove
 -Write actual words in print placeholders
+-Sphinx Riddles
 -Space out prints better
 -Utilize an external library
+-ASKii Art Title(?)
 -Set up unit tests
 -Battle Test/Tweaking numbers
 -Document Code
@@ -11,3 +11,7 @@
 -Report
 -Recording
 -Presentation
+
+-XSphinx Rotating Riddle Setup
+-XFigure out how to handle multiple battles in a room
+-XSet battles up in rooms with success check

@@ -4,11 +4,23 @@ from Combat import *
 
 def LesserBurialChamber(player, roomStates):
     
+    tombGoblin1 = {
+        "name": "Goblin Fred",
+        "health": 75,
+        "damageRange": (5,15)
+    }
+    
+    tombGoblin2 = {
+        "name": "Goblin Fred",
+        "health": 75,
+        "damageRange": (5,15)
+    }
+    
     directions = ["FORWARD", "BACKWARD", "Q"]
     
     #Initialize the room states if not already done
     if "LesserBurialChamber" not in roomStates:
-        roomStates["LesserBurialChamber"] = {"visited": False, "battleWon": False}
+        roomStates["LesserBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblin1Defeated": False, "tombGoblin2Defeated": False}
         
     if not roomStates["LesserBurialChamber"]["visited"]:
         print("FIRST TIME IN THE LESSER BURIAL CHAMBER")
@@ -21,15 +33,21 @@ def LesserBurialChamber(player, roomStates):
     
     if not roomStates["LesserBurialChamber"]["battleWon"]:
         print("TIME TO BATTLE!")
-    
-        #Battle
+
+        roomStates["LesserBurialChamber"]["tombGoblin1Defeated"] = combat(player,tombGoblin1)
+        roomStates["LesserBurialChamber"]["tombGoblin2Defeated"] = combat(player,tombGoblin2)
         
-        roomStates["LesserBurialChamber"]["battleWon"] = True
-    
-        print("LET'S SAY YOU WON FOR NOW")
+        if roomStates["LesserBurialChamber"]["tombGoblin1Defeated"] and roomStates["LesserBurialChamber"]["tombGoblin2Defeated"]:
+            print("YOU WON!")
+            roomStates["LesserBurialChamber"]["battleWon"] = True
+        
+        else:
+            print("YOU WERE DEFEATED BY THE TOMB GOBLINS")
+            print("GAME OVER")
+            quit()
     
     else:
-        print("YOU ALREADY DEFEATED THE ENEMIES HERE")
+        print("YOU ALREADY DEFEATED THE TOMB GOBLINS")
     
     print("YOU CAN TRAVEL FORWARD OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")

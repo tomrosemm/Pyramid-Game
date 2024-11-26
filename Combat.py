@@ -24,6 +24,7 @@ def calculateDamageRange(player):
     return player["baseDamageRange"]
 
 def combat(player,enemy):
+    #If return True, battle was won, if False, lost and player died
     print(f"TIME TO FIGHT {enemy['name']}!")
     
     while player["health"] > 0 and enemy["health"] > 0:
@@ -37,6 +38,8 @@ def combat(player,enemy):
         
         if enemy["health"] <= 0:
             print(f"{enemy['name']} has been defeated!")
+            print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+            return True
             break
         
         #Enemy attack
@@ -47,9 +50,9 @@ def combat(player,enemy):
         
         if player["health"] <= 0:
             print(f"{player['name']} has been defeated!")
+            print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+            return False
             break
-    
-    print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
 
 if __name__ == '__main__':
     
@@ -68,5 +71,11 @@ if __name__ == '__main__':
         "health": 75,
         "damageRange": (5,15)
 }
+    
+    mummy = {
+        "name": "The Mummy",
+        "health": 150,
+        "damageRange": (3, 10)
+    }
     
     combat(player, tombGoblin)

@@ -3,12 +3,24 @@ from TreasureChamber import *
 from Combat import *
 
 def RoyalTomb(player, roomStates):
+    
+    mummy1 = {
+        "name": "The Mummy",
+        "health": 150,
+        "damageRange": (3, 10)
+    }
+    
+    mummy2 = {
+        "name": "The Mummy",
+        "health": 150,
+        "damageRange": (3, 10)
+    }
 
     directions = ["LEFT", "BACKWARD", "Q"]    
     
     #Initialize the room states if not already done
     if "RoyalTomb" not in roomStates:
-        roomStates["RoyalTomb"] = {"visited": False, "battleWon": False}
+        roomStates["RoyalTomb"] = {"visited": False, "battleWon": False, "mummy1Defeated": False, "mummy2Defeated": False}
         
     if not roomStates["RoyalTomb"]["visited"]:
         print("WELCOME TO THE ROYAL TOMB FOR THE FIRST TIME")
@@ -20,28 +32,24 @@ def RoyalTomb(player, roomStates):
     print("YOU ARE IN THE ROYAL TOMB")
     
     if not roomStates["RoyalTomb"]["battleWon"]:
-        print("YOU ARE ATTACKED BY 3 TOMB GOBLINS AND 2 MUMMIES")
-        
-        if player["hasAxe"] and not player["hasSword"]:
-            print("YOU HAVE AN AXE")
-    
-        elif player["hasSword"]:
-            print("YOU HAVE A HOOKED SWORD")
-    
-        else:
-            print("STRAP IN")
-    
-        print("BEGIN BATTLE")
+        print("TIME TO BATTLE!")
 
-        #Battle
+        roomStates["RoyalTomb"]["mummy1Defeated"] = combat(player,mummy1)
+        roomStates["RoyalTomb"]["mummy2Defeated"] = combat(player,mummy2)
         
-        roomStates["RoyalTomb"]["battleWon"] = True
-        print("LET'S SAY YOU WON FOR NOW")
+        if roomStates["RoyalTomb"]["mummy1Defeated"] and roomStates["RoyalTomb"]["mummy2Defeated"]:
+            print("YOU WON!")
+            roomStates["RoyalTomb"]["battleWon"] = True
+        
+        else:
+            print("YOU WERE DEFEATED BY THE ENEMIES")
+            print("GAME OVER")
+            quit()
     
     else:
-        print("YOU ALREADY DEFEATED THE BOSS")
+        print("YOU ALREADY DEFEATED THE ENEMIES HERE")
     
-    print("YOU CAN TRAVEL FORWARD OR BACKWARD")
+    print("YOU CAN TRAVEL LEFT OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")
     userInput = ''
     
@@ -70,7 +78,7 @@ if __name__ == '__main__':
     
     player = {
         "name": "TestPlayer",
-        "health": 100,
+        "health": 200,
         "baseDamageRange": (10,20),
         "hasAxe": False,
         "hasSword": False,

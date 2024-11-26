@@ -3,11 +3,19 @@ from InnerBurialChamber import *
 
 from Combat import *
 
+import random
+
 def SphinxRoom(player, roomStates):
+    
+    sphinxRiddleLibrary = {
+        "riddle1": "ANSWER1",
+        "riddle2": "ANSWER2",
+        "riddle3": "ANSWER3"
+    }
 
     directions = ["BACKWARD", "RIGHT", "Q"] #Changes if riddle is solved, as door is open
     
-    riddleAnswer = "THE ANSWER"
+    # riddleAnswer = "THE ANSWER"
     
     #Initialize the room states if not already done
     if "SphinxRoom" not in roomStates:
@@ -32,10 +40,12 @@ def SphinxRoom(player, roomStates):
             print("THE ROOM IS DIM AND MUSTY")
     
         print("THE SPHINX ASKS YOU A RIDDLE.")
-        print("THE ANSWER IS: THE ANSWER")
         
-        playerRiddleAnswer = ''
-        playerRiddleAnswer = input().upper()
+        # Randomly pick a riddle and its answer
+        riddle, riddleAnswer = random.choice(list(sphinxRiddleLibrary.items()))
+        print(riddle)
+        
+        playerRiddleAnswer = input("YOUR ANSWER: ").strip().upper()
         
         if riddleAnswer == playerRiddleAnswer:
             print("YOU WERE CORRECT")
