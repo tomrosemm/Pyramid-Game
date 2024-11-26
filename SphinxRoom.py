@@ -4,6 +4,7 @@ from InnerBurialChamber import *
 from Combat import *
 
 import random
+import time
 
 def SphinxRoom(player, roomStates):
     
@@ -44,15 +45,16 @@ def SphinxRoom(player, roomStates):
             print("The darkness of the room envelopes you, as the sphinx begins to speak from the shadows.")
             print()
     
-        print(f"Greetings, {player['name']}. I see your travels have landed you in some trouble. I can help you be stronger, but first you must solve my riddle.")
+        print(f"'Greetings, {player['name']}. I see your travels have landed you in some trouble. I can help you be stronger, but first you must solve my riddle.'")
         print()
         
         # Randomly pick a riddle and its answer
         riddle, riddleAnswer = random.choice(list(sphinxRiddleLibrary.items()))
-        print(riddle)
+        print("'" + riddle + "'")
         print()
         
         playerRiddleAnswer = input("Your answer: ").strip().upper()
+        print()
         
         if riddleAnswer == playerRiddleAnswer:
             print("The sphinx is pleased, and says 'Correct!'")
@@ -74,54 +76,82 @@ def SphinxRoom(player, roomStates):
                     print("Oh my... you are already at full health? Now how'd you do that?")
                     print()
                 
-            print("SPHINX CRUMBLES TO REVEAL A DOOR")
+            print("Once towering with wisdom and riddles, the sphinx watched in silent despair as its once-pristine stone cracked, each fragment carrying centuries of memory.")
+            print()
+            time.sleep(2)
+            print("As the final piece fell, its voice—a whisper of ancient secrets—faded into the wind, unheard and unremembered.")
+            print()
+            time.sleep(2)
+            print("Alone in the rubble, it mourned not its end, but the noble purpose it could never fulfill again.")
+            print()
+            time.sleep(4)
+            print("There was a door behind the sphinx!")
+            print()
+            time.sleep(1)
         
         else:
-            print("YOU WERE WRONG")
+            print("The sphinx sadly lowers his gaze. 'I'm sorry, that's wrong. I would love to help you, but my aid comes with a price.'")
+            print()
             
             if player["hasTorch"]:
-                print("SPHINX THANKS YOU FOR THE LIGHT THOUGH")
-                #Give torch reward
+                print("'I do thank you for the gift of the light though. That counts for something.''")
+                print()
+                
+                if player["health"] < 100:
+                    player["health"] = 100
+                    print("You have been fully healed!")
+                    print()
+                
+                else:
+                    print("Oh my... you are already at full health? Now how'd you do that?")
+                    print()
             
             roomStates["SphinxRoom"]["riddleFailed"] = True
     
     elif roomStates["SphinxRoom"]["riddleSolved"]:
-        print("THERE IS A CRUMBLED SPHINX ON THE FLOOR")
+        print("The remains of the sphinx head lie scattered on the floor, rendered dust in the winds of time.")
+        print()
     
     elif roomStates["SphinxRoom"]["riddleFailed"]:
-        print("THE SPHINX EYES YOU WITH DISTASTE")
+        print("As you move past, the sphinx watches you with pity.")
+        print()
     
     # print("YOU CAN TRAVEL " + ", ".join(directions))
-    print("YOU CAN TRAVEL " + ", ".join([d for d in directions if d != "Q"]))
-    print("WHERE DO YOU WANT TO MOVE?")
+    print("You can go " + ", ".join([d for d in directions if d != "Q"]).lower())
+    print("Where would you like to go?")
+    print()
     userInput = ''
     
     while userInput not in directions:
         # print("CHOICES: " + ", ".join(directions).upper())
-        print("CHOICES: " + ", ".join([d for d in directions if d != "Q"]).upper())
-        print("Q TO QUIT")
+        print("Choices: " + ", ".join([d for d in directions if d != "Q"]).lower())
+        print()
+        print("Q to quit")
+        print()
         userInput = input().strip().upper()
+        print()
         
         if userInput == "FORWARD" and roomStates["SphinxRoom"]["riddleSolved"]:
-            print("YOU STEP OVER THE CRUMBLED SPHINX")
-            print("FORWARD: TO ARMORY")#Test print
+            print("You step over the crumbled sphinx, and make your way into the small door that was behind him.")
+            print()
+            print("__________________________________________________")
             Armory(player, roomStates)
         
-        elif userInput == "FORWARD" and roomStates["SphinxRoom"]["riddleSolved"] == False:
-                print("THE SPHINX GROWLS AS YOU APPROACH")
-                #If there's time can we do something where you can push it further and enter an unbeatable battle with the sphinx?
-        
         elif userInput == "RIGHT":
-            print("RIGHT: TO INNER BURIAL CHAMBER") #Test print
+            print("You make your way through the ornate door at the end of the hall nearest the sphinx.")
+            print()
+            print("__________________________________________________")
             InnerBurialChamber(player, roomStates)
         
         elif userInput == "BACKWARD":
             from LesserBurialChamber import LesserBurialChamber
-            print("BACKWARD: TO LESSER BURIAL CHAMBER")#Test print
+            print("You head back through the door to the Lesser Burial Chamber.")
+            print()
+            print("__________________________________________________")
             LesserBurialChamber(player, roomStates)
         
         elif userInput == "Q":
-            print("GOODBYE")
+            print("Goodbye.")
             quit()
         
         else:
