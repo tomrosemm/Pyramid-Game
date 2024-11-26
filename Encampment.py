@@ -15,6 +15,8 @@ def Encampment(player, roomStates):
     #Initialize the room states if not already done
     if "Encampment" not in roomStates:
         roomStates["Encampment"] = {"visited": False, "axeTaken": False, "battleWon": False}
+    
+    print()
         
     if not roomStates["Encampment"]["visited"]:
         print("You enter a small room. At the far end, rubble is piled up to form a makeshift walled off encampment.")
@@ -59,7 +61,7 @@ def Encampment(player, roomStates):
             print()
             print("You have been defeated by a single tomb goblin.")
             print()
-            print("GAME OVER")
+            print("Game over; Goodbye.")
             quit()
     
     else:
