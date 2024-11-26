@@ -12,8 +12,8 @@ def InnerBurialChamber(player, roomStates):
     
     mummy = {
         "name": "The Mummy",
-        "health": 150,
-        "damageRange": (3, 10)
+        "health": 100,
+        "damageRange": (3, 7)
     }
     
     directions = ["RIGHT", "BACKWARD", "Q"]

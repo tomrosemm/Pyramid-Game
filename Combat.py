@@ -74,8 +74,8 @@ if __name__ == '__main__':
     
     mummy = {
         "name": "The Mummy",
-        "health": 150,
-        "damageRange": (3, 10)
+        "health": 100,
+        "damageRange": (3, 7)
     }
     
     combat(player, tombGoblin)

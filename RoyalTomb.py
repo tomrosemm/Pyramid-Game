@@ -6,14 +6,14 @@ def RoyalTomb(player, roomStates):
     
     mummy1 = {
         "name": "The Mummy",
-        "health": 150,
-        "damageRange": (3, 10)
+        "health": 100,
+        "damageRange": (3, 7)
     }
     
     mummy2 = {
         "name": "The Mummy",
-        "health": 150,
-        "damageRange": (3, 10)
+        "health": 100,
+        "damageRange": (3, 7)
     }
 
     directions = ["LEFT", "BACKWARD", "Q"]    

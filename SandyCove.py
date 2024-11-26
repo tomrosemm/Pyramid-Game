@@ -6,10 +6,10 @@ def SandyCove(player, roomStates):
     
     #Initialize the room states if not already done
     if "SandyCove" not in roomStates:
-        roomStates["SandyCove"] = {"visited": False}
+        roomStates["SandyCove"] = {"visited": False, "gryphonEventOccurred": False}
         
     if not roomStates["SandyCove"]["visited"]:
-        print("WELCOME TOT HE SANDY COVE FOR THE FIRST TIME")
+        print("WELCOME TO THE SANDY COVE FOR THE FIRST TIME")
         roomStates["SandyCove"]["visited"] = True
     
     else:
@@ -17,17 +17,32 @@ def SandyCove(player, roomStates):
     
     print("YOU ARE IN A SANDY COVE")
     
-    if player["hasTorch"] == False:
-        print("HINT TO TORCH")
+    if not roomStates["SandyCove"]["gryphonEventOccurred"]:
+        roomStates["SandyCove"]["gryphonEventOccurred"] = True
         
-    if player["hasAxe"] == False:
-        print("HINT TO AXE")
+        if player["hasTorch"] == False:
+            print("HINT TO TORCH")
+            
+        if player["hasAxe"] == False:
+            print("HINT TO AXE")
+            
+        if player["hasTorch"] and player["hasAxe"]:
+            print("TAKE ANOTHER SHOT AT THE RIDDLE")
+            
+            roomStates["SphinxRoom"]["riddleSolved"] = False
+            roomStates["SphinxRoom"]["riddleFailed"] = False
         
-    if player["hasTorch"] and player["hasAxe"]:
-        print("TAKE ANOTHER SHOT AT THE RIDDLE")
-        #UNLOCK RIDDLE SOMEHOW
+        #Check health, refill if under full, say something if full
+        if player["health"] < 100:
+            print("LET'S HEAL YOU UP")
+            player["health"] = 100
+        
+        else:
+            print("WOW, HOW DID YOU MANAGE TO SURVIVE ALL THAT?")
+            
     
-    #Check health, refill if under full, say something if full
+    else:
+        print("THE GRYPHON LOOKS AT YOU AS YOU ENTER. HE IS UNBOTHERED.")
     
     print("YOU CAN TRAVEL FORWARD OR BACKWARD")
     print("WHERE DO YOU WANT TO MOVE?")
