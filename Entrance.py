@@ -9,36 +9,37 @@ def Entrance(player,roomStates):
         roomStates["Entrance"] = {"visited": False, "torchTaken": False}    
     
     if not roomStates["Entrance"]["visited"]:
-        print("WELCOME TO THE PYRAMID")
+        print("You find yourself in the corner of a pyramid. The way you entered has caved in.")
         print()
         roomStates["Entrance"]["visited"] = True
     
-    print("YOU ARE IN THE ENTRANCE")
-    print()
+    else:
+        print("You are in the room you entered the pyramid from.")
+        print()
     
     #Check if player has already taken the torch
     if not roomStates["Entrance"]["torchTaken"]:
-        torchChoice = input("TAKE TORCH? (y/n)").strip().upper()
+        torchChoice = input("There is a lit torch leaning against the corner of the room. Would you like to take it? (y/n)").strip().upper()
         print()
     
         #Set up to catch mistaken entries, basically just a copy of the room movement structure
         if torchChoice == "Y":        
             player["hasTorch"] = True
             roomStates["Entrance"]["torchTaken"] = True
-            print("TORCH TAKEN")
+            print("You pick up the torch, and feel a small sense of relief. At least you now have light.")
             print()
         
         else:     
-            print("NO TORCH")
+            print("You decide against taking the torch. Who knows if you'll need to sneak around?")
             print()
     
     else:
-        print("THE TORCH IS ALREADY TAKEN")
+        print("You grip your torch tightly, glad that you grabbed it earlier.")
         print()
     
-    print("YOU CAN TRAVEL ONLY FORWARD")
-    print()
-    print("WHERE DO YOU WANT TO MOVE?")
+    print("You can only travel forward from here.")
+    # print()
+    print("Where would you like to go?")
     print()
     userInput = ''
     

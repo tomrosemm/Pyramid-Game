@@ -36,10 +36,12 @@ if __name__ == "__main__":
     roomStates = {}
     
     while True:
-        print("WELCOME TO THE GAME")
+        print()
+        print("Welcome to Pyramid.")
+        print()
         print()
         
-        #Allow for random name choice from names
+        #Allow for random name choice from names?
         
         new_name = input("Enter the player's name: ").strip()
         print()
@@ -47,10 +49,14 @@ if __name__ == "__main__":
         if new_name:
             player["name"] = new_name
             print(f"Player's name updated to: {player['name']}")
+            print("__________________________________________________")
             print()
             
         else:
             print("Name cannot be empty. Using default name.")
+            print()
+            print(f"Player's name defaults to: {player['name']}")
+            print("__________________________________________________")
             print()
             
         Entrance(player, roomStates)
