@@ -17,11 +17,12 @@ def Encampment(player, roomStates):
         roomStates["Encampment"] = {"visited": False, "axeTaken": False, "battleWon": False}
         
     if not roomStates["Encampment"]["visited"]:
-        print("GREETINGS FROM THE TOMB GOBLINS")
+        print("You enter a small room. At the far end, rubble is piled up in a makeshift walled off encampment.")
+        print()
         roomStates["Encampment"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE GOBLIN ENCAMPMENT")
+        print("You again enter the room with the makeshift goblin encampment.")
     
     print("YOU ARE IN THE TOMB GOBLIN ENCAMPMENT")
     
