@@ -1,7 +1,13 @@
--Sphinx Riddle(s)
 -Set battles up in rooms with success check
+-Sphinx Riddle
+-Sandy Cove
 -Write actual words in print placeholders
 -Space out prints better
 -Utilize an external library
 -Set up unit tests
 -Battle Test/Tweaking numbers
+-Document Code
+-Documentation Generation
+-Report
+-Recording
+-Presentation
