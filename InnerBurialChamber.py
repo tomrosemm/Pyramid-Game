@@ -23,7 +23,11 @@ def InnerBurialChamber(player, roomStates):
         roomStates["InnerBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblinDefeated": False, "mummyDefeated": False}
         
     if not roomStates["InnerBurialChamber"]["visited"]:
+<<<<<<< Updated upstream
         print("WELCOME TO THE INNER BURIAL CHAMBER FOR THE FIRST TIME")
+=======
+        print("You enter a mid sized room that must have once been well kept. There are remains of royal ornamentations on the walls, and ornate sarcophagi reside in alcoves in the wall.")
+>>>>>>> Stashed changes
         roomStates["InnerBurialChamber"]["visited"] = True
     
     else:
@@ -32,43 +36,52 @@ def InnerBurialChamber(player, roomStates):
     print("YOU ARE IN THE INNER BURIAL CHAMBER")\
         
     if not roomStates["InnerBurialChamber"]["battleWon"]:
-        print("TIME TO BATTLE!")
-
+        print("You are attacked by a tomb goblin and a mummy! They seem wierdly close.")
         roomStates["InnerBurialChamber"]["tombGoblinDefeated"] = combat(player,tombGoblin)
         roomStates["InnerBurialChamber"]["mummyDefeated"] = combat(player,mummy)
         
         if roomStates["InnerBurialChamber"]["tombGoblinDefeated"] and roomStates["InnerBurialChamber"]["mummyDefeated"]:
-            print("YOU WON!")
+            print("You defeated the tomb goblin and the mummy!")
             roomStates["InnerBurialChamber"]["battleWon"] = True
         
         else:
-            print("YOU WERE DEFEATED BY THE ENEMIES")
-            print("GAME OVER")
+            print("You have been slain by the soon-to-be-wed mummy and tomb goblin. But, good for them at least, you know?")
+            print()
+            print("Game over; Goodbye.")
             quit()
     
     else:
-        print("YOU ALREADY DEFEATED THE ENEMIES HERE")
-        
-    print("YOU CAN TRAVEL RIGHT OR BACKWARD")
-    print("WHERE DO YOU WANT TO MOVE?")
+        print("The defeated mummy and tomb goblin lay slumped against a wall in an eternal embrace.")
+
+    print()    
+    print("You can travel either right or backward.")
+    print("Where would you like to go?")
+    print()
     userInput = ''
         
     while userInput not in directions:
-        print("CHOICES: RIGHT, BACKWARD")
-        print("Q TO QUIT")
+        print("Choices: right, backward")
+        print()
+        print("Q to quit")
+        print()
         userInput = input().strip().upper()
+        print()
             
         if userInput == "RIGHT":
-            print("RIGHT: TO SANDY COVE")#Test print
+            print("You head through the narrow gap in the cracked wall ahead.")
+            print()
+            print("__________________________________________________")
             SandyCove(player, roomStates)
         
         elif userInput == "BACKWARD":
             from SphinxRoom import SphinxRoom
-            print("BACKWARD: TO SPHINX ROOM")
+            print("You head back into the room of the sphinx.")
+            print()
+            print("__________________________________________________")
             SphinxRoom(player, roomStates)
                 
         elif userInput == "Q":
-            print("GOODBYE")
+            print("Goodbye.")
             quit()
 
         else:
@@ -87,8 +100,6 @@ if __name__ == '__main__':
         "swordBonus": (10,15),
         "hasTorch": False
     }
-    
-    
     
     roomStates = {}
     

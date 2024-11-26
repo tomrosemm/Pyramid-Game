@@ -22,10 +22,29 @@ def Armory(player, roomStates):
         if swordChoice == "Y":        
             player["hasSword"] = True
             roomStates["Armory"]["swordTaken"] = True
+<<<<<<< Updated upstream
             print("SWORD TAKEN")
         
         else:     
             print("NO SWORD")
+=======
+            print("You take the sword in your free hand; its weight is reassuring.")
+            print()
+
+        elif swordChoice == "N":        
+            player["hasTorch"] = False
+            roomStates["Armory"]["swordTaken"] = False
+            print("You decide against taking the sword, how brave.")
+            print()
+        while swordChoice != "Y" and swordChoice != "N":     
+            print("Please enter a valid choice: (y/n)\n")
+            input()
+            print()
+
+    else:
+        print("The Armory is truly empty, now that you've taken the only sword.")
+        print()
+>>>>>>> Stashed changes
     
     else:
         print("THE SWORD HAS ALREADY BEEN TAKEN")
