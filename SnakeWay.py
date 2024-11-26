@@ -12,7 +12,7 @@ def SnakeWay(player, roomStates):
     if "SnakeWay" not in roomStates:
         roomStates["SnakeWay"] = {"visited": False}
     
-    if not roomStates["Snakeway"]["visited"]:
+    if not roomStates["SnakeWay"]["visited"]:
         print("FIRST TIME IN THE SNAKEWAY")
         roomStates["SnakeWay"]["visited"] = True
     
