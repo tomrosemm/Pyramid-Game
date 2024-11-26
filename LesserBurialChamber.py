@@ -22,53 +22,68 @@ def LesserBurialChamber(player, roomStates):
     if "LesserBurialChamber" not in roomStates:
         roomStates["LesserBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblin1Defeated": False, "tombGoblin2Defeated": False}
         
+    print()
+        
     if not roomStates["LesserBurialChamber"]["visited"]:
-        print("FIRST TIME IN THE LESSER BURIAL CHAMBER")
+        print("You enter the Lesser Burial Chamber. Multiple dusty sarcophagi line both walls of the room, though the lids of the majority have been removed, revealing empty contents.")
+        print()
         roomStates["LesserBurialChamber"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE LESSER BURIAL CHAMBER")
-    
-    print("YOU ARE IN THE LESSER BURIAL CHAMBER")
+        print("You once again find yourself in the Lesser Burial Chamber.")
+        print()
     
     if not roomStates["LesserBurialChamber"]["battleWon"]:
-        print("TIME TO BATTLE!")
+        print("The lids on the two sarcophagi that still have them are pushed aside, and you are charged by two tomb goblins.")
+        print()
 
         roomStates["LesserBurialChamber"]["tombGoblin1Defeated"] = combat(player,tombGoblin1)
+        print()
+        print("One down, one to go!")
         roomStates["LesserBurialChamber"]["tombGoblin2Defeated"] = combat(player,tombGoblin2)
         
         if roomStates["LesserBurialChamber"]["tombGoblin1Defeated"] and roomStates["LesserBurialChamber"]["tombGoblin2Defeated"]:
-            print("YOU WON!")
+            print("You defeated the tomb goblins!")
             roomStates["LesserBurialChamber"]["battleWon"] = True
         
         else:
-            print("YOU WERE DEFEATED BY THE TOMB GOBLINS")
-            print("GAME OVER")
+            print("You have been slaughtered by the tomb goblins.")
+            print()
+            print("Game over; Goodbye.")
             quit()
     
     else:
-        print("YOU ALREADY DEFEATED THE TOMB GOBLINS")
+        print()
+        print("The dead tomb goblins lie piled atop one another... You didn't do that. Who did that?")
+        print()
     
-    print("YOU CAN TRAVEL FORWARD OR BACKWARD")
-    print("WHERE DO YOU WANT TO MOVE?")
+    print("You can travel either forward or backward.")
+    print("Where would you like to go?")
     userInput = ''
     
     while userInput not in directions:        
-        print("CHOICE(S): FORWARD, BACKWARD")
-        print("Q TO QUIT")
+        print("Choices: forward, backward")
+        print()
+        print("Q to quit")
+        print()
         userInput = input().strip().upper()
 
-        if userInput == "FORWARD":   
-            print("FORWARD: TO SPHINX ROOM") #Test Print
+        if userInput == "FORWARD":
+            print()
+            print("You move through a tall opening into the room of the sphinx.") #Test Print
+            print("__________________________________________________")
             SphinxRoom(player, roomStates)
         
         elif userInput == "BACKWARD":
+            print()
             from SnakeWay import SnakeWay
-            print("BACKWARD: TO SnakeWay")
+            print("You decide to return to the SnakeWay.")
+            print("__________________________________________________")
             SnakeWay(player, roomStates)
             
         elif userInput == "Q":
-            print("GOODBYE")
+            print()
+            print("Goodbye.")
             quit()
             
         else:
