@@ -11,7 +11,7 @@ def Encampment(player, roomStates):
     }
     
     directions = ["FORWARD", "BACKWARD", "Q"]    
-    
+    decisions = ["Y", "N"]
     #Initialize the room states if not already done
     if "Encampment" not in roomStates:
         roomStates["Encampment"] = {"visited": False, "axeTaken": False, "battleWon": False}
@@ -29,36 +29,28 @@ def Encampment(player, roomStates):
     
     #check if player has already taken the axe
     if not roomStates["Encampment"]["axeTaken"]:
-        axeChoice = input("There is a splintered and battered axe on the floor of the room. Would you like to take it? (y/n)").strip().upper()
-        print()
-    
-        #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        axeChoice = ''
+        print("There is a splintered and battered axe on the floor of the room. Would you like to take it? (y/n)\n")
         
-        if axeChoice == "Y":        
-            player["hasAxe"] = True
-            roomStates["Encampment"]["axeTaken"] = True
-            print("You pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
-            print()
+        while axeChoice not in decisions:
+            
+            axeChoice = input().strip().upper()
+        
+            #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        
+            if axeChoice == "Y":        
+                player["hasAxe"] = True
+                roomStates["Encampment"]["axeTaken"] = True
+                print("You pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
+                print()
 
-        elif axeChoice == "N":
-            player["hasAxe"] = False
-            roomStates["Encampment"]["axeTaken"] = False
-            print("You decide against taking the axe. You don't need anything to slow you down!\n")
+            elif axeChoice == "N":
+                player["hasAxe"] = False
+                roomStates["Encampment"]["axeTaken"] = False
+                print("You decide against taking the axe. You don't need anything to slow you down!\n")
 
-        while axeChoice != "Y" and axeChoice != "N":     
-            print("Please enter a valid choice: (y/n)\n")
-            input()
-
-        if axeChoice == "Y":        
-            player["hasAxe"] = True
-            roomStates["Encampment"]["axeTaken"] = True
-            print("You pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
-            print()
-
-        elif axeChoice == "N":
-            player["hasAxe"] = False
-            roomStates["Encampment"]["axeTaken"] = False
-            print("You decide against taking the axe. You don't need anything to slow you down!\n")
+            else:
+                print("Please enter a valid decision")
     
     else:
         print("It's a good thing you took the axe when you did; the tomb goblins blood has soaked the spot where it once lay.")
