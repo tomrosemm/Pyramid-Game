@@ -63,7 +63,6 @@ def combat(player,enemy):
             print()
             print("__________________________________________________")
             return False
-            break
 
 if __name__ == '__main__':
     

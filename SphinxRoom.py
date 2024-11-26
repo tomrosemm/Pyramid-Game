@@ -20,42 +20,59 @@ def SphinxRoom(player, roomStates):
     #Initialize the room states if not already done
     if "SphinxRoom" not in roomStates:
         roomStates["SphinxRoom"] = {"visited": False, "riddleSolved": False, "riddleFailed": False}
+    
+    print()
         
     if not roomStates["SphinxRoom"]["visited"]:
-        print("WELCOME TO THE ROOM TO THE SPHINX FOR THE FIRST TIME")
+        print("You enter a large hall, at the end of which sits a sphinx, largely in ruin; only his head remains.")
+        print()
         roomStates["SphinxRoom"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE ROOM OF THE SPHINX")
-    
-    print("YOU ARE IN THE ROOM OF THE SPHINX")
+        print("You enter the room of the sphinx, the long hall stretching on into the shadows.")
+        print()
     
     if not roomStates["SphinxRoom"]["riddleSolved"] and not roomStates["SphinxRoom"]["riddleFailed"]:
-        print("A SPHINX GREETS YOU")
+        print("As you approach the large sphinx, she eyes you sharply, and you wisely stop outside his reach.")
+        print()
     
         if player["hasTorch"]:
-            print("THE SPHINX SEEMS TO GREATLY ENJOY THE LIGHT OF THE TORCH")
+            print("As the light of the torch illuminates the sphinx, you can't help but think he looks slightly pleased by it. He begins to speak.")
+            print()
     
         else:
-            print("THE ROOM IS DIM AND MUSTY")
+            print("The darkness of the room envelopes you, as the sphinx begins to speak from the shadows.")
+            print()
     
-        print("THE SPHINX ASKS YOU A RIDDLE.")
+        print(f"Greetings, {player['name']}. I see your travels have landed you in some trouble. I can help you be stronger, but first you must solve my riddle.")
+        print()
         
         # Randomly pick a riddle and its answer
         riddle, riddleAnswer = random.choice(list(sphinxRiddleLibrary.items()))
         print(riddle)
+        print()
         
-        playerRiddleAnswer = input("YOUR ANSWER: ").strip().upper()
+        playerRiddleAnswer = input("Your answer: ").strip().upper()
         
         if riddleAnswer == playerRiddleAnswer:
-            print("YOU WERE CORRECT")
+            print("The sphinx is pleased, and says 'Correct!'")
+            print()
             roomStates["SphinxRoom"]["riddleSolved"] = True
             
             directions = ["FORWARD", "BACKWARD", "RIGHT", "Q"]
             
             if player["hasTorch"]:
-                print("SPHINX THANKS YOU FOR THE LIGHT TOO.")
-                #Give torch reward
+                print("'Thank you for the light of that torch as well; it's so dark in here, one could easily go mad. Let me heal you.'")
+                print()
+                
+                if player["health"] < 100:
+                    player["health"] = 100
+                    print("You have been fully healed!")
+                    print()
+                
+                else:
+                    print("Oh my... you are already at full health? Now how'd you do that?")
+                    print()
                 
             print("SPHINX CRUMBLES TO REVEAL A DOOR")
         
