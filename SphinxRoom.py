@@ -6,11 +6,15 @@ from Combat import *
 import random
 
 def SphinxRoom(player, roomStates):
-    
+        #List of riddles and their respective answers
     sphinxRiddleLibrary = {
         "What is that which in the morning goes upon four feet, upon two feet in the afternoon, and in the evening upon three?": "MAN",
         "I am the dark child of a shining father, a wingless bird flying to heaven; every eye that meets me weeps, but not from grief. What am I?": "SMOKE",
-        "Always wax, yet always wane: I melt, succumbed to the flame. Lighting darkness, with fate unblessed, I soon devolve to shapeless mess. What am I? : A [Blank]": "CANDLE"  
+        "Always wax, yet always wane: I melt, succumbed to the flame. Lighting darkness, with fate unblessed, I soon devolve to shapeless mess. What am I? : A [Blank]": "CANDLE",  
+        "I run, but never walk; I murmur but never talk; I have a bed but never sleep; I have a mouth but never eat. What am I?": "RIVER",
+        "I cannot be seen or felt, nor heard or smelt; The more I am, the less you see; The sooner the Sun fades, the greater I'll be. What am I?": "DARKNESS",
+        "The wind is a good friend of mine, I was very popular in the dawn of time. I'll be with you in your times of fear, but if you say my name I will disappear. What am I?": "SILENCE",
+        "I have a tail but no body, I have a head but no brain. What am I?": "COIN"
     }
 
     directions = ["BACKWARD", "RIGHT", "Q"] #Changes if riddle is solved, as door is open

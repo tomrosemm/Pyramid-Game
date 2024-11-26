@@ -33,15 +33,32 @@ def Encampment(player, roomStates):
         print()
     
         #Set up to catch mistaken entries, basically just a copy of the room movement structure
+        
         if axeChoice == "Y":        
             player["hasAxe"] = True
             roomStates["Encampment"]["axeTaken"] = True
             print("You pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
             print()
-    
-        else:     
-            print("You decide against taking the axe. You don't need anything to slow you down!")
+
+        elif axeChoice == "N":
+            player["hasAxe"] = False
+            roomStates["Encampment"]["axeTaken"] = False
+            print("You decide against taking the axe. You don't need anything to slow you down!\n")
+
+        while axeChoice != "Y" and axeChoice != "N":     
+            print("Please enter a valid choice: (y/n)\n")
+            input()
+
+        if axeChoice == "Y":        
+            player["hasAxe"] = True
+            roomStates["Encampment"]["axeTaken"] = True
+            print("You pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
             print()
+
+        elif axeChoice == "N":
+            player["hasAxe"] = False
+            roomStates["Encampment"]["axeTaken"] = False
+            print("You decide against taking the axe. You don't need anything to slow you down!\n")
     
     else:
         print("It's a good thing you took the axe when you did; the tomb goblins blood has soaked the spot where it once lay.")
