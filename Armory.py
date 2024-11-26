@@ -36,7 +36,7 @@ def Armory(player, roomStates):
         while swordChoice != "Y" and swordChoice != "N":     
             print("Please enter a valid choice: (y/n)\n")
             input()
-
+            
     else:
         print("The Armory is truly empty, now that you've taken the only sword.")
         print()
