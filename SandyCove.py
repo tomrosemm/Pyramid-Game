@@ -7,7 +7,9 @@ def SandyCove(player, roomStates):
     #Initialize the room states if not already done
     if "SandyCove" not in roomStates:
         roomStates["SandyCove"] = {"visited": False, "gryphonEventOccurred": False}
-        
+    
+    print()
+    
     if not roomStates["SandyCove"]["visited"]:
         print("WELCOME TO THE SANDY COVE FOR THE FIRST TIME")
         roomStates["SandyCove"]["visited"] = True
