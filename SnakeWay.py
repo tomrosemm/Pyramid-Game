@@ -12,52 +12,70 @@ def SnakeWay(player, roomStates):
     if "SnakeWay" not in roomStates:
         roomStates["SnakeWay"] = {"visited": False}
     
+    print()
+    
     if not roomStates["SnakeWay"]["visited"]:
-        print("FIRST TIME IN THE SNAKEWAY")
+        print("You enter the dark passageway, traversing the narrow cavern along the edge of the pyramid. ")
+        print()
         roomStates["SnakeWay"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE SNAKEWAY")
-    
-    print("YOU ARE IN THE SNAKEWAY")
+        print("You once again find yourself in the SnakeWay.")
+        print()
+        
+    print("The SnakeWay is pitch black, and you hear a symphony of hisses from deeper in.")
+    print()
     
     if player["hasTorch"] == False:
-        print("YOU DON'T HAVE A LIGHT SOURCE, AND IT'S PITCH BLACK. YOU HEAR HISSING")
+        print("You are quite glad that you grabbed the torch now.")
+        print()
             
     else:
-        print("YOU HAVE A HANDY DANDY TORCH")
+        print("You really regret not grabbing that torch now.")
+        print()
     
-    print("YOU CAN TRAVEL FORWARD OR BACKWARD")
-    print("WHERE DO YOU WANT TO MOVE?")
+    print("You can travel either forward or backward.")
+    print("Where would you like to go?")
+    print()
     userInput = ''
     
     while userInput not in directions:
-        print("CHOICE(S): FORWARD, BACKWARD")
-        print("Q TO QUIT")
+        print("Choices: forward, backward")
+        print()
+        print("Q to quit")
+        print()
         userInput = input().strip().upper()
 
         if userInput == "FORWARD" or userInput == "BACKWARD":
             
             
             if player["hasTorch"]:
-                print("THE LIGHT OF THE TORCH ALLOWS YOU TO COMPLETELY AVOID THE SNAKES")
+                print()
+                print("Thanks to the torch, you are able to navigate around the hissing snakes, avoiding their bites.")
+                print()
             
             else:
-                print("YOU STUMBLE THROUGH THE DARKNESS AND INTO MORE THAN A COUPLE SNAKES. THEY BITE.")
+                print()
+                print("In absolute darkness, you stumble through the passage way, sustaining more than a couple snake bites..")
+                print()
                 #Take randomized damage
                 
             if userInput == "FORWARD":
-                print("FORWARD: TO LESSER BURIAL CHAMBER") #Test Print
+                print("You reach the end of the passageway and duck under a crumbling doorframe into the next room.")
+                print()
+                print("__________________________________________________")
             
                 LesserBurialChamber(player, roomStates)
         
             elif userInput == "BACKWARD":
                 from Encampment import Encampment
-                print("BACKWARD: TO ENCAMPMENT")
+                print("You decide to turn back and revisit the tomb goblin encampment.")
+                print()
+                print("__________________________________________________")
                 Encampment(player, roomStates)
             
         elif userInput == "Q":
-            print("GOODBYE")
+            print("Goodbye.")
             quit()
             
         else:
