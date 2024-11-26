@@ -57,6 +57,9 @@ def Entrance(player,roomStates):
             if player["hasTorch"]:
                 print()
                 print("THE LIGHT OF THE TORCH GUIDES YOUR WAY")
+                
+            print("__________________________________________________")
+            print()
             
             Encampment(player, roomStates)
         
