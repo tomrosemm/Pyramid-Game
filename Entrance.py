@@ -21,18 +21,34 @@ def Entrance(player,roomStates):
     if not roomStates["Entrance"]["torchTaken"]:
         torchChoice = input("There is a lit torch leaning against the corner of the room. Would you like to take it? (y/n)").strip().upper()
         print()
-    
+
         #Set up to catch mistaken entries, basically just a copy of the room movement structure
         if torchChoice == "Y":        
             player["hasTorch"] = True
             roomStates["Entrance"]["torchTaken"] = True
-            print("You pick up the torch, and feel a small sense of relief. At least you now have light.")
-            print()
-        
-        else:     
+            print("You pick up the torch, and feel a small sense of relief. At least you now have light.\n")
+            
+        elif torchChoice == "N":        
+            player["hasTorch"] = False
+            roomStates["Entrance"]["torchTaken"] = False
             print("You decide against taking the torch. Who knows if you'll need to sneak around?")
             print()
+
+        while torchChoice != "Y" and torchChoice != "N":     
+            print("Please enter a valid choice: (y/n)\n")
+            input()
     
+        if torchChoice == "Y":        
+            player["hasTorch"] = True
+            roomStates["Entrance"]["torchTaken"] = True
+            print("You pick up the torch, and feel a small sense of relief. At least you now have light.\n")
+            
+        elif torchChoice == "N":        
+            player["hasTorch"] = False
+            roomStates["Entrance"]["torchTaken"] = False
+            print("You decide against taking the torch. Who knows if you'll need to sneak around?")
+            print()
+            
     else:
         print("You grip your torch tightly, glad that you grabbed it earlier.")
         print()
