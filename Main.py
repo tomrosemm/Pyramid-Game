@@ -21,6 +21,18 @@ from Combat import *
 # import prompt_toolkit
 # import numpy
 
+def titleScreen():
+    if pyFigletLoaded:
+
+        #askii title screen with pyfiglet
+        return
+    
+    else:
+        print()
+        print("Welcome to Pyramid.")
+        print()
+        print()
+
 if __name__ == "__main__":
     
     player = {
@@ -37,10 +49,7 @@ if __name__ == "__main__":
     roomStates = {}
     
     while True:
-        print()
-        print("Welcome to Pyramid.")
-        print()
-        print()
+        titleScreen()
         
         #Allow for random name choice from names?
         

@@ -21,54 +21,68 @@ def RoyalTomb(player, roomStates):
     #Initialize the room states if not already done
     if "RoyalTomb" not in roomStates:
         roomStates["RoyalTomb"] = {"visited": False, "battleWon": False, "mummy1Defeated": False, "mummy2Defeated": False}
+    
+    print()
         
     if not roomStates["RoyalTomb"]["visited"]:
-        print("WELCOME TO THE ROYAL TOMB FOR THE FIRST TIME")
+        print("You enter a room with a fewer number of sarcophagi than you've seen thus far, but much more lavishly adorned.")
         roomStates["RoyalTomb"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE ROYAL TOMB")
-    
-    print("YOU ARE IN THE ROYAL TOMB")
+        print("You have returned to the Royal Tomb.")
     
     if not roomStates["RoyalTomb"]["battleWon"]:
-        print("TIME TO BATTLE!")
+        print("As you take your first steps into the room, two of the sarcophagi burst open, and you are attacked by two mummies.")
 
         roomStates["RoyalTomb"]["mummy1Defeated"] = combat(player,mummy1)
+        print()
+        print("One down, one to go!")
         roomStates["RoyalTomb"]["mummy2Defeated"] = combat(player,mummy2)
         
         if roomStates["RoyalTomb"]["mummy1Defeated"] and roomStates["RoyalTomb"]["mummy2Defeated"]:
-            print("YOU WON!")
+            print("You defeated the pair of mummies!")
+            print()
             roomStates["RoyalTomb"]["battleWon"] = True
         
         else:
-            print("YOU WERE DEFEATED BY THE ENEMIES")
-            print("GAME OVER")
+            print("You were felled by the mummies. Try again!")
+            print()
+            print("Game over; Goodbye.")
             quit()
     
     else:
-        print("YOU ALREADY DEFEATED THE ENEMIES HERE")
+        print("The pair of mummies you defeated have dissapeared without a trace.")
+        print()
     
-    print("YOU CAN TRAVEL LEFT OR BACKWARD")
-    print("WHERE DO YOU WANT TO MOVE?")
+    print("You can move left or backward.")
+    print("Where would you like to go?")
+    print()
     userInput = ''
     
-    while userInput not in directions:        
-        print("CHOICE(S): LEFT, BACKWARD")
-        print("Q TO QUIT")
+    while userInput not in directions: 
+        print()
+        print("Choices: left, backward")
+        print()
+        print("Q to quit")
+        print()
         userInput = input().strip().upper()
+        print()
 
         if userInput == "LEFT":   
-            print("FORWARD: TO TREASURE CHAMBER") #Test Print
+            print("You travel through the small, simple wooden door along the left side of the wall.")
+            print()
+            print("__________________________________________________")
             TreasureChamber(player, roomStates)
         
         elif userInput == "BACKWARD":
             from SandyCove import SandyCove
-            print("BACKWARD: TO SANDY COVE")
+            print("You return to the Sandy Cove behind you.")
+            print()
+            print("__________________________________________________")
             SandyCove(player, roomStates)
             
         elif userInput == "Q":
-            print("GOODBYE")
+            print("Goodbye.")
             quit()
             
         else:

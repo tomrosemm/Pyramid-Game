@@ -58,6 +58,7 @@ def InnerBurialChamber(player, roomStates):
     print("Where would you like to go?")
     print()
     userInput = ''
+    print()
         
     while userInput not in directions:
         print("Choices: right, backward")

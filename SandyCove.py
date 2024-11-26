@@ -6,67 +6,96 @@ def SandyCove(player, roomStates):
     
     #Initialize the room states if not already done
     if "SandyCove" not in roomStates:
-        roomStates["SandyCove"] = {"visited": False, "gryphonEventOccurred": False}
+        roomStates["SandyCove"] = {"visited": False, "isisEventOccurred": False, "recievedFullBlessings": False}
     
     print()
     
     if not roomStates["SandyCove"]["visited"]:
-        print("WELCOME TO THE SANDY COVE FOR THE FIRST TIME")
+        print("You squeeze through the crack in the wall to find a large, open room.")
+        print("Mounds of sand are piled high against the walls, and there is, somehow, vibrant shrubbery littered throughout the room.")
         roomStates["SandyCove"]["visited"] = True
     
-    else:
-        print("WELCOME BACK TO THE SANDY COVE")
+    print()
     
-    print("YOU ARE IN A SANDY COVE")
-    
-    if not roomStates["SandyCove"]["gryphonEventOccurred"]:
-        roomStates["SandyCove"]["gryphonEventOccurred"] = True
-        
-        if player["hasTorch"] == False:
-            print("HINT TO TORCH")
-            
-        if player["hasAxe"] == False:
-            print("HINT TO AXE")
-            
-        if player["hasTorch"] and player["hasAxe"]:
-            print("TAKE ANOTHER SHOT AT THE RIDDLE")
-            
-            roomStates["SphinxRoom"]["riddleSolved"] = False
-            roomStates["SphinxRoom"]["riddleFailed"] = False
-        
-        #Check health, refill if under full, say something if full
+    if not roomStates["SandyCove"]["isisEventOccurred"]:
+        print("As you enter, you draw the attention of a tall, slender woman resting at a bench in the middle of the room.")
+        print("She is wearing a sheath dress, resting a staff of papyrus across her lap, and wearing a headpiece shaped like a throne.")
+        print()
+        print("As you approach, you see she is observing you with a smile, though there is a sadness in her eyes.")
+        print()
+        print(f"'Welcome, {player['name']}. I know you have faced many harsh trials to reach this place, but rest easy; I'm here to offer you wisdom and protection.'")
+        roomStates["SandyCove"]["isisEventOccurred"] = True
+        print()
+
         if player["health"] < 100:
-            print("LET'S HEAL YOU UP")
+            print("'Allow me to first offer my blessing' she says, as she places a hand on your shoulder. You feel your strength return to you in full.'")
+            amountHealed = 100 - player["health"]
             player["health"] = 100
+            print()
+            print("You recovered " + str(amountHealed) + " hit points.")
+
+        else:
+            print("'No seriously, what bug did you find? How are you at full health, that shouldn't even be possible, let alone easy.'")
+        
+        print()
+
+        if not roomStates["SandyCove"]["recievedFullBlessings"]:
+            if player["hasTorch"] == False:
+                print("'You have missed a tool at the beginning of your journey that may yet continue to assist you in your endeavours. Head back to the first room you entered.'")
+                print()
+                #Option to send player to room? Just adding item feels weak
+                
+            elif player["hasAxe"] == False:
+                print("'You have missed an opportunity to strengthen yourself. Head back to the room you first entered combat in.'")
+                print()
+                #Option to send player to room? Just adding item feels weak
+                
+            elif player["hasTorch"] and player["hasAxe"]:
+                print("'The sphinx likes his riddles, but he's usually bound to archaic rules. I can bend them just a little, so let's give you another shot at that riddle.'")
+                print()
+                #Keep track of this occuring in roomStates so player can't endlessly loop into the riddle
+                roomStates["SphinxRoom"]["riddleSolved"] = False
+                roomStates["SphinxRoom"]["riddleFailed"] = False
+                #Option to send player to room?
         
         else:
-            print("WOW, HOW DID YOU MANAGE TO SURVIVE ALL THAT?")
-            
-    
+            print("'I have helped you all I can. Go, and be strong little one.'")
+            roomStates["SandyCove"]["recievedFullBlessings"] = True
+
     else:
-        print("THE GRYPHON LOOKS AT YOU AS YOU ENTER. HE IS UNBOTHERED.")
+        print("The woman on the bench nods at you as you enter, but makes no other greeting. She seems weaker than before.")
     
-    print("YOU CAN TRAVEL FORWARD OR BACKWARD")
-    print("WHERE DO YOU WANT TO MOVE?")
+    print()
+    print("You can travel either forward or backward.")
+    print("Where would you like to go?")
+    print()
     
     userInput = ''
+    print()
     
     while userInput not in directions:
-        print("CHOICES: FORWARD, BACKWARD")
-        print("Q TO QUIT")
+        print("Choices: forward, backward")
+        print()
+        print("Q to quit")
+        print()
         userInput = input().strip().upper()
+        print()
         
         if userInput == "FORWARD":
-            print("FORWARD: TO ROYAL TOMB")
+            print("You head through the large, gold encrusted door in front of you.")
+            print()
+            print("__________________________________________________")
             RoyalTomb(player, roomStates)
         
         elif userInput == "BACKWARD":
             from InnerBurialChamber import InnerBurialChamber
-            print("BACKWARD: TO INNER BURIAL CHAMBER")
+            print("You return to the Inner Burial Chamber.")
+            print()
+            print("__________________________________________________")
             InnerBurialChamber(player, roomStates)
             
         elif userInput == "Q":
-            print("GOODBYE")
+            print("Goodbye.")
             quit()
         
         else:

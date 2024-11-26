@@ -4,6 +4,9 @@ def TreasureChamber(player, roomStates):
     #Initialize the room states if not already done
     if "TreasureChamber" not in roomStates:
         roomStates["TreasureChamber"] = {"visited": False, "treasureTaken": False}
+    
+    print()
+    
         
     if not roomStates["TreasureChamber"]["visited"]:
         print("WELCOME TO THE TREASURE CHAMBER FOR THE FIRST TIME")
