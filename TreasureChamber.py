@@ -22,10 +22,24 @@ def TreasureChamber(player, roomStates):
             roomStates["TreasureChamber"]["treasureTaken"] = True    
             print("TREASURE TAKEN. YOU WIN!")
             quit()
-    
-        else:     
+
+        elif treasureChoice == "N":
+            roomStates["TreasureChamber"]["treasureTaken"] = False
             print("NO TREASURE")
-    
+
+        while treasureChoice != "Y" and treasureChoice != "N":     
+            print("Please enter a valid choice: (y/n)\n")
+            input()
+            
+        if treasureChoice == "Y":
+            roomStates["TreasureChamber"]["treasureTaken"] = True    
+            print("TREASURE TAKEN. YOU WIN!")
+            quit()
+
+        elif treasureChoice == "N":
+            roomStates["TreasureChamber"]["treasureTaken"] = False
+            print("NO TREASURE")
+
     else:
         print("THE TREASURE HAS ALREADY BEEN TAKEN")
     
