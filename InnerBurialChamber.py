@@ -24,9 +24,13 @@ def InnerBurialChamber(player, roomStates):
         
     if not roomStates["InnerBurialChamber"]["visited"]:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         print("WELCOME TO THE INNER BURIAL CHAMBER FOR THE FIRST TIME")
 =======
         print("You enter a mid sized room that must have once been well kept. There are remains of royal ornamentations on the walls, and ornate sarcophagi reside in alcoves in the wall.")
+>>>>>>> Stashed changes
+=======
+        print("You enter a mid sized room that must have once been well kept. There are remains of fine ornamentations scattered about, and semi-ornate sarcophagi reside in alcoves along the wall.")
 >>>>>>> Stashed changes
         roomStates["InnerBurialChamber"]["visited"] = True
     
