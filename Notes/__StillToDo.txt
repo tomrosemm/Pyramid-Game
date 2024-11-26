@@ -1,18 +1,19 @@
--SnakeWay damage
--Check snakeway back/forth with and without torch
--Write actual words in print placeholders
 -Sphinx Riddles
+-Write actual words in print placeholders
 -Space out prints better
+-Battle Test/Tweaking numbers
+-Check SnakeWay back/forth with and without torch (Maybe make moving through SnakeWay different from moving to next room)
 -Utilize an external library
 -ASKii Art Title(?)
 -Set up unit tests
--Battle Test/Tweaking numbers
 -Document Code
 -Documentation Generation
 -Report
 -Recording
 -Presentation
+-Readme
 
+-XSnakeWay damage
 -XSandy Cove Health and riddle unlock
 -XSphinx Rotating Riddle Setup
 -XFigure out how to handle multiple battles in a room
