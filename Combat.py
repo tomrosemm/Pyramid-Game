@@ -48,7 +48,6 @@ def combat(player,enemy):
             print()
             print("__________________________________________________")
             return True
-            break
         
         #Enemy attack
         enemyDamage = random.randint(*enemy["damageRange"])
@@ -81,14 +80,14 @@ if __name__ == '__main__':
 
     tombGoblin = {
         "name": "Goblin Fred",
-        "health": 75,
-        "damageRange": (5,15)
+        "health": 50,
+        "damageRange": (3,10)
 }
     
     mummy = {
         "name": "The Mummy",
-        "health": 100,
-        "damageRange": (3, 7)
+        "health": 75,
+        "damageRange": (4, 10)
 }
     
     combat(player, tombGoblin)

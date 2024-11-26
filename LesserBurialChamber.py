@@ -6,14 +6,14 @@ def LesserBurialChamber(player, roomStates):
     
     tombGoblin1 = {
         "name": "Goblin Fred",
-        "health": 75,
-        "damageRange": (5,15)
+        "health": 50,
+        "damageRange": (3,10)
     }
     
     tombGoblin2 = {
         "name": "Goblin Fred",
-        "health": 75,
-        "damageRange": (5,15)
+        "health": 50,
+        "damageRange": (3,10)
     }
     
     directions = ["FORWARD", "BACKWARD", "Q"]
