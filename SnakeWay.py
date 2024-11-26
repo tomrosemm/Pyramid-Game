@@ -10,11 +10,11 @@ def SnakeWay(player, roomStates):
     
     #Initialize the room states if not already done
     if "SnakeWay" not in roomStates:
-        roomStates["Snakeway"] = {"visited": False}
+        roomStates["SnakeWay"] = {"visited": False}
     
     if not roomStates["Snakeway"]["visited"]:
         print("FIRST TIME IN THE SNAKEWAY")
-        roomStates["Snakeway"]["visited"] = True
+        roomStates["SnakeWay"]["visited"] = True
     
     else:
         print("WELCOME BACK TO THE SNAKEWAY")
@@ -36,8 +36,8 @@ def SnakeWay(player, roomStates):
         print("Q TO QUIT")
         userInput = input().strip().upper()
 
-        if userInput == "FORWARD":   
-            print("FORWARD: TO LESSER BURIAL CHAMBER") #Test Print
+        if userInput == "FORWARD" or userInput == "BACKWARD":
+            
             
             if player["hasTorch"]:
                 print("THE LIGHT OF THE TORCH ALLOWS YOU TO COMPLETELY AVOID THE SNAKES")
@@ -45,13 +45,16 @@ def SnakeWay(player, roomStates):
             else:
                 print("YOU STUMBLE THROUGH THE DARKNESS AND INTO MORE THAN A COUPLE SNAKES. THEY BITE.")
                 #Take randomized damage
+                
+            if userInput == "FORWARD":
+                print("FORWARD: TO LESSER BURIAL CHAMBER") #Test Print
             
-            LesserBurialChamber(player, roomStates)
+                LesserBurialChamber(player, roomStates)
         
-        elif userInput == "BACKWARD":
-            from Encampment import Encampment
-            print("BACKWARD: TO ENCAMPMENT")
-            Encampment(player, roomStates)
+            elif userInput == "BACKWARD":
+                from Encampment import Encampment
+                print("BACKWARD: TO ENCAMPMENT")
+                Encampment(player, roomStates)
             
         elif userInput == "Q":
             print("GOODBYE")
