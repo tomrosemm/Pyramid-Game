@@ -7,11 +7,16 @@ import random
 
 def SphinxRoom(player, roomStates):
     
-    sphinxRiddleLibrary = {
-        "riddle1": "ANSWER1",
-        "riddle2": "ANSWER2",
-        "riddle3": "ANSWER3"
-    }
+    #List of riddles and their respective answers
+            
+    riddleList = ["I run, but never walk; I murmur but never talk; I have a bed but never sleep; I have a mouth but never eat. What am I?", 
+                "I cannot be seen or felt, nor heard or smelt; The more I am, the less you see; The sooner the Sun fades, the greater I'll be. What am I?",
+                "I have 4 legs in the morning, 2 legs in the afternoon, and 3 legs in the evening. What am I?",
+                "The wind is a good friend of mine, I was very popular in the dawn of time. I'll be with you in your times of fear, but if you say my name I will disappear. What am I?", 
+                "I have a tail but no body, I have a head but no brain. What am I?"]
+
+    answerList = ["river", "darkness", "human", "silence", "coin", ]
+
 
     directions = ["BACKWARD", "RIGHT", "Q"] #Changes if riddle is solved, as door is open
     
@@ -42,7 +47,9 @@ def SphinxRoom(player, roomStates):
         print("THE SPHINX ASKS YOU A RIDDLE.")
         
         # Randomly pick a riddle and its answer
-        riddle, riddleAnswer = random.choice(list(sphinxRiddleLibrary.items()))
+        randSeed = random.randint(0,4)
+        riddle = riddleList[randSeed]
+        riddleAnswer = answerList[randSeed]
         print(riddle)
         
         playerRiddleAnswer = input("YOUR ANSWER: ").strip().upper()
