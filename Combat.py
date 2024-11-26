@@ -25,7 +25,12 @@ def calculateDamageRange(player):
 
 def combat(player,enemy):
     #If return True, battle was won, if False, lost and player died
-    print(f"TIME TO FIGHT {enemy['name']}!")
+
+    print("__________________________________________________")
+    print()
+
+    print(f"Entering combat with {enemy['name']}!")
+    print()
     
     while player["health"] > 0 and enemy["health"] > 0:
         
@@ -38,7 +43,10 @@ def combat(player,enemy):
         
         if enemy["health"] <= 0:
             print(f"{enemy['name']} has been defeated!")
+            print()
             print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+            print()
+            print("__________________________________________________")
             return True
             break
         
@@ -50,7 +58,10 @@ def combat(player,enemy):
         
         if player["health"] <= 0:
             print(f"{player['name']} has been defeated!")
+            print()
             print(f"Combat ended. {player['name']} health: {player['health']}, {enemy['name']} health: {enemy['health']}")
+            print()
+            print("__________________________________________________")
             return False
             break
 

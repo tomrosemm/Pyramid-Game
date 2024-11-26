@@ -15,10 +15,11 @@ from Combat import *
 
 #External Libraries to try out
 # import blessings
-import pyfiglet
-import names
-import prompt_toolkit
-import numpy
+
+# import pyfiglet
+# import names
+# import prompt_toolkit
+# import numpy
 
 if __name__ == "__main__":
     
