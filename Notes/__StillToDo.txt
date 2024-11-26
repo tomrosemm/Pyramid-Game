@@ -1,4 +1,3 @@
--Sandy Cove
 -Write actual words in print placeholders
 -Sphinx Riddles
 -Space out prints better
@@ -12,6 +11,7 @@
 -Recording
 -Presentation
 
+-XSandy Cove Health and riddle unlock
 -XSphinx Rotating Riddle Setup
 -XFigure out how to handle multiple battles in a room
 -XSet battles up in rooms with success check
