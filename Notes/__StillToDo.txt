@@ -1,3 +1,5 @@
+-SnakeWay damage
+-Check snakeway back/forth with and without torch
 -Write actual words in print placeholders
 -Sphinx Riddles
 -Space out prints better
