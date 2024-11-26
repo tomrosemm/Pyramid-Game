@@ -14,39 +14,73 @@ def Armory(player, roomStates):
         roomStates["Armory"]["visited"] = True
     
     else:
-        print("WELCOME BACK TO THE ARMORY")
+        print("You return to the cramped armory.")
+        print()
     
     if not roomStates["Armory"]["swordTaken"]:
-        swordChoice = input("TAKE SWORD? (y/n)").strip().upper()
+        swordChoice = input("A long hooked blade sits upon the table, you notice as you move closer. Would you like to take it? (y/n)").strip().upper()
+        print()
     
         #Set up to catch mistaken entries, basically just a copy of the room movement structure
         if swordChoice == "Y":        
             player["hasSword"] = True
             roomStates["Armory"]["swordTaken"] = True
-            print("SWORD TAKEN")
+            print("You take the sword in your free hand; its weight is reassuring.")
+            print()
         
+<<<<<<< Updated upstream
         else:     
             print("NO SWORD")
     
+=======
+        elif swordChoice == "N":        
+            player["hasTorch"] = False
+            roomStates["Armory"]["swordTaken"] = False
+            print("You decide against taking the sword, how brave.")
+            print()
+            
+        while swordChoice != "Y" and swordChoice != "N":     
+            print("Please enter a valid choice: (y/n)\n")
+            input()
+            
+        if swordChoice == "Y":        
+            player["hasSword"] = True
+            roomStates["Armory"]["swordTaken"] = True
+            print("SWORD TAKEN")
+        
+        elif swordChoice == "N":        
+            player["hasTorch"] = False
+            roomStates["Armory"]["swordTaken"] = False
+            print("You decide against taking the sword, how brave.")
+            print()
+>>>>>>> Stashed changes
     else:
-        print("THE SWORD HAS ALREADY BEEN TAKEN")
+        print("The Armory is truly empty, now that you've taken the only sword.")
+        print()
     
-    print("YOU CAN TRAVEL ONLY BACKWARD")
-    print("WHERE DO YOU WANT TO MOVE?")
+    print("You can travel only backward.")
+    print("Where would you like to go?")
+    print()
     userInput = ''
+    print()
     
     while userInput not in directions:        
-        print("CHOICE(S): BACKWARD")
-        print('Q TO QUIT')
+        print("Choice: Backward")
+        print()
+        print('Q to quit')
+        print()
         userInput = input().strip().upper()
+        print()
 
         if userInput == "BACKWARD":
             from SphinxRoom import SphinxRoom
-            print("BACKWARD: TO SPHINX ROOM") #Test Print
+            print("You head back into the room of the sphinx.")
+            print()
+            print("__________________________________________________")
             SphinxRoom(player, roomStates)
             
         elif userInput == "Q":
-            print("GOODBYE")
+            print("Goodbye.")
             quit()
             
         else:
