@@ -1,11 +1,11 @@
 import unittest
-from Entrance import Entrance # type: ignore
+from RoyalTomb import RoyalTomb # type: ignore
 
-class EntranceTest(unittest.TestCase):
+class RoyalTombTest(unittest.TestCase):
 
-    def test_Entrance(self):
-        cls = Entrance(player, roomStates)
-        self.assertTrue(cls(player["hasTorch"], roomStates), "should be true")
+    def test_RoyalTomb(self):
+        cls = RoyalTomb(player, roomStates)
+        self.assertTrue(cls(player, roomStates["RoyalTomb"]["battleWon"]), "should be true")
 
 if __name__ == '__main__':
     
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     }
     
     roomStates = {}
-    Entrance(player, roomStates)
+    RoyalTomb(player, roomStates)
     unittest.main()

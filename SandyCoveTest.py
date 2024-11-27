@@ -1,11 +1,11 @@
 import unittest
-from Entrance import Entrance # type: ignore
+from SandyCove import SandyCove # type: ignore
 
-class EntranceTest(unittest.TestCase):
+class SandyCoveTest(unittest.TestCase):
 
-    def test_Entrance(self):
-        cls = Entrance(player, roomStates)
-        self.assertTrue(cls(player["hasTorch"], roomStates), "should be true")
+    def test_SandyCove(self):
+        cls = SandyCove(player, roomStates)
+        self.assertEqual(cls(player["health"], roomStates), 100)
 
 if __name__ == '__main__':
     
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     }
     
     roomStates = {}
-    Entrance(player, roomStates)
+    SandyCove(player, roomStates)
     unittest.main()

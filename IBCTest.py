@@ -1,11 +1,11 @@
 import unittest
-from Entrance import Entrance # type: ignore
+from InnerBurialChamber import InnerBurialChamber # type: ignore
 
-class EntranceTest(unittest.TestCase):
+class InnerBurialChamberTest(unittest.TestCase):
 
-    def test_Entrance(self):
-        cls = Entrance(player, roomStates)
-        self.assertTrue(cls(player["hasTorch"], roomStates), "should be true")
+    def test_InnerBurialChamber(self):
+        cls = InnerBurialChamber(player, roomStates)
+        self.assertTrue(cls(player, roomStates["InnerBurialChamber"]["battleWon"]), "should be true")
 
 if __name__ == '__main__':
     
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     }
     
     roomStates = {}
-    Entrance(player, roomStates)
+    InnerBurialChamber(player, roomStates)
     unittest.main()
