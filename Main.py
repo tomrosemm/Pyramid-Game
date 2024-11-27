@@ -14,6 +14,14 @@ from TreasureChamber import *
 from Combat import *
 
 def titleScreen():
+    """!
+    Creates a title screen for the pyramid game.
+    Tries to import pyFiglet, if errors just uses a simple type title,
+    if successful makes askii art title.
+    
+    @param  pyFigletImported    holds bool value reflecting if pyFiglet was successfully imported
+    @param  title               stores the askii title created by pyFiglet
+    """
     
     try:
         import pyfiglet
