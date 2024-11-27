@@ -5,13 +5,13 @@ from Combat import *
 def InnerBurialChamber(player, roomStates):
     
     tombGoblin = {
-        "name": "Goblin Fred",
+        "name": "Goblin Harold",
         "health": 50,
         "damageRange": (3,10)
     }
     
     mummy = {
-        "name": "The Mummy",
+        "name": "Ms. Mummy",
         "health": 75,
         "damageRange": (4, 10)
     }

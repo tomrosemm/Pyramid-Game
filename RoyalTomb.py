@@ -5,13 +5,13 @@ from Combat import *
 def RoyalTomb(player, roomStates):
     
     mummy1 = {
-        "name": "The Mummy",
+        "name": "King Mummy",
         "health": 75,
         "damageRange": (4, 10)
     }
     
     mummy2 = {
-        "name": "The Mummy",
+        "name": "Queen Mummy",
         "health": 75,
         "damageRange": (4, 10)
     }

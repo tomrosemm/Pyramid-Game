@@ -5,13 +5,13 @@ from Combat import *
 def LesserBurialChamber(player, roomStates):
     
     tombGoblin1 = {
-        "name": "Goblin Fred",
+        "name": "Goblin Ted",
         "health": 50,
         "damageRange": (3,10)
     }
     
     tombGoblin2 = {
-        "name": "Goblin Fred",
+        "name": "Goblin Greg",
         "health": 50,
         "damageRange": (3,10)
     }

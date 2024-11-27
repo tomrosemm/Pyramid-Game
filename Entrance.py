@@ -68,7 +68,6 @@ def Entrance(player, roomStates):
                 print("The light of the torch guides your way.")
                 
             print("__________________________________________________")
-            print()
             
             Encampment(player, roomStates)
         

@@ -13,19 +13,12 @@ from TreasureChamber import *
 #Import Systems
 from Combat import *
 
-#External Libraries to try out
-# import blessings
-
-# import names
-# import prompt_toolkit
-# import numpy
-
 def titleScreen():
     
     try:
         import pyfiglet
-        pyFigletImported = True
-    except (ImportError):
+        pyFigletImported = True 
+    except ImportError:
         pyFigletImported = False
 
     if pyFigletImported:
