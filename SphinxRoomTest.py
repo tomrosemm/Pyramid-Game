@@ -1,11 +1,11 @@
 import unittest
-from Entrance import Entrance # type: ignore
+from SphinxRoom import SphinxRoom # type: ignore
 
-class EntranceTest(unittest.TestCase):
+class SphinxRoomTest(unittest.TestCase):
 
-    def test_Entrance(self):
-        cls = Entrance(player, roomStates)
-        self.assertTrue(cls(player["hasTorch"], roomStates), "should be true")
+    def test_SphinxRoom(self):
+        cls = SphinxRoom(player, roomStates)
+        self.assertTrue(cls(player, roomStates["SphinxRoom"]["riddleSolved"]), "should be true")
 
 if __name__ == '__main__':
     
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     }
     
     roomStates = {}
-    Entrance(player, roomStates)
+    SphinxRoom(player, roomStates)
     unittest.main()

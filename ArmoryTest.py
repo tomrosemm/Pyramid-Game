@@ -1,11 +1,11 @@
 import unittest
-from Entrance import Entrance # type: ignore
+from Armory import Armory # type: ignore
 
-class EntranceTest(unittest.TestCase):
+class ArmoryTest(unittest.TestCase):
 
-    def test_Entrance(self):
-        cls = Entrance(player, roomStates)
-        self.assertTrue(cls(player["hasTorch"], roomStates), "should be true")
+    def test_Armory(self):
+        cls = Armory(player, roomStates)
+        self.assertTrue(cls(player["hasSword"], roomStates), "should be true")
 
 if __name__ == '__main__':
     
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     }
     
     roomStates = {}
-    Entrance(player, roomStates)
+    Armory(player, roomStates)
     unittest.main()
