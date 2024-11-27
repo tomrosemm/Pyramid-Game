@@ -1,6 +1,9 @@
 import time
 
 def TreasureChamber(player, roomStates):
+    """!
+    Contains the information and flow for the Treasure Chamber.
+    """
     
     directions = ["BACKWARD", "Q"]   
     decisions = ["Y", "N"]

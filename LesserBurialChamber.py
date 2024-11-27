@@ -3,6 +3,9 @@ from SphinxRoom import *
 from Combat import *
 
 def LesserBurialChamber(player, roomStates):
+    """!
+    Contains the information and flow for the Lesser Burial Chamber.
+    """
     
     tombGoblin1 = {
         "name": "Goblin Ted",

@@ -4,6 +4,9 @@ import random
 import time
 
 def SnakeWay(player, roomStates):
+    """!
+    Contains the information and flow for the SnakeWay.
+    """
     
     directions = ["FORWARD", "BACKWARD", "Q"]
     

@@ -7,6 +7,9 @@ import random
 import time
 
 def SphinxRoom(player, roomStates):
+    """!
+    Contains the information and flow for the Sphinx Room.
+    """
 
     #List of riddles and their respective answers
     sphinxRiddleLibrary = {

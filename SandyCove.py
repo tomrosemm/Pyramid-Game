@@ -1,6 +1,9 @@
 from RoyalTomb import *
 
 def SandyCove(player, roomStates):
+    """!
+    Contains the information and flow for the Sandy Cove.
+    """
     
     directions = ["FORWARD", "BACKWARD", "Q"]
     

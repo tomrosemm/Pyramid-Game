@@ -1,4 +1,7 @@
 def Armory(player, roomStates):
+    """!
+    Contains the information and flow for the Armory.
+    """
         
     directions = ["FORWARD", "Q"]    
     decisions = ["Y", "N"]
