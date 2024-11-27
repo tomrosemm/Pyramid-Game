@@ -1,4 +1,3 @@
--Battle Test/Tweaking numbers
 -Set up unit tests
 -Document Code
 -Documentation Generation

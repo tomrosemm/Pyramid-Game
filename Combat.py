@@ -34,7 +34,18 @@ def calculateDamageRange(player):
 
 def combat(player,enemy):
     """!
+    Takes player and enemy dictionary as arguments, 
+    uses values in dictionary to run combat between the two
+    and return True if player successful, False if enemy successful
     
+    @param player               the player dictionary
+    @param enemy                the enemy dictionary
+    @param playerDamageRange    holds the result of calling calculateDamageRange()
+    @param playerDamage         random int from the range established by calculateDamageRange() 
+                                to represent one of the players attacks
+    @param enemyDamage          random int from the enemy damageRange established
+                                to represent one of the enemies attacks
+    @return     Value to reflect if player won battle, True for yes, False for no
     """
     #If return True, battle was won, if False, lost and player died
 
