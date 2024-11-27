@@ -1,0 +1,77 @@
+\doxysection{Encampment Namespace Reference}
+\hypertarget{namespace_encampment}{}\label{namespace_encampment}\index{Encampment@{Encampment}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_encampment_a47962bbd64ef007018b2d921f4ac66d5}{Encampment}} (\mbox{\hyperlink{namespace_armory_add4c8144aae96529758c14a492850692}{player}}, \mbox{\hyperlink{namespace_armory_a32020bcf65ea4a4bd01641ffc7736670}{room\+States}})
+\begin{DoxyCompactList}\small\item\em Contains the information and flow for the \doxylink{namespace_encampment}{Encampment}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_encampment_a2a40f8cb185436b58b88e909bbb626f4}{player}}
+\item 
+dict \mbox{\hyperlink{namespace_encampment_aac1b99e15ceccf0378fe4adcb75e717e}{room\+States}} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_encampment_a47962bbd64ef007018b2d921f4ac66d5}\index{Encampment@{Encampment}!Encampment@{Encampment}}
+\index{Encampment@{Encampment}!Encampment@{Encampment}}
+\doxysubsubsection{\texorpdfstring{Encampment()}{Encampment()}}
+{\footnotesize\ttfamily \label{namespace_encampment_a47962bbd64ef007018b2d921f4ac66d5} 
+Encampment.\+Encampment (\begin{DoxyParamCaption}\item[{}]{player}{, }\item[{}]{room\+States}{}\end{DoxyParamCaption})}
+
+
+
+Contains the information and flow for the \doxylink{namespace_encampment}{Encampment}. 
+
+Contains opportunity to take an axe, a battle with a tomb goblin, and movement forward and backward.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player dictionary \\
+\hline
+{\em room\+States} & the room\+States dictionary \\
+\hline
+{\em tomb\+Goblin} & the tomb\+Goblin dictionary for the tomb goblin battled here \\
+\hline
+{\em directions} & list of directions available for travel \\
+\hline
+{\em decisions} & list of options available to choose \\
+\hline
+{\em axe\+Choice} & holds choice specific to taking axe \\
+\hline
+{\em user\+Input} & holds choice specific to room travel from this room \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_encampment_a2a40f8cb185436b58b88e909bbb626f4}\index{Encampment@{Encampment}!player@{player}}
+\index{player@{player}!Encampment@{Encampment}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{namespace_encampment_a2a40f8cb185436b58b88e909bbb626f4} 
+dict Encampment.\+player}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}TestPlayer"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}maxHealth"{}}:\ 100,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 100,}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}baseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}originalBaseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasAxe"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasSword"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}axeBonus"{}}:\ (5,\ 10),}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}swordBonus"{}}:\ (10,15),}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasTorch"{}}:\ \textcolor{keyword}{False}}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_encampment_aac1b99e15ceccf0378fe4adcb75e717e}\index{Encampment@{Encampment}!roomStates@{roomStates}}
+\index{roomStates@{roomStates}!Encampment@{Encampment}}
+\doxysubsubsection{\texorpdfstring{roomStates}{roomStates}}
+{\footnotesize\ttfamily \label{namespace_encampment_aac1b99e15ceccf0378fe4adcb75e717e} 
+dict Encampment.\+room\+States = \{\}}
+

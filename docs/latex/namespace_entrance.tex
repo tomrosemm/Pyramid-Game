@@ -1,0 +1,75 @@
+\doxysection{Entrance Namespace Reference}
+\hypertarget{namespace_entrance}{}\label{namespace_entrance}\index{Entrance@{Entrance}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_entrance_a0bf736b154cc457449e6125bc2a0f9e7}{Entrance}} (\mbox{\hyperlink{namespace_armory_add4c8144aae96529758c14a492850692}{player}}, \mbox{\hyperlink{namespace_armory_a32020bcf65ea4a4bd01641ffc7736670}{room\+States}})
+\begin{DoxyCompactList}\small\item\em Contains the information and flow for the \doxylink{namespace_entrance}{Entrance} room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_entrance_a18aec4c0b2147f555a7cc190e7542e29}{player}}
+\item 
+dict \mbox{\hyperlink{namespace_entrance_a6ecddfd68231e566bf2d3902ac1476b6}{room\+States}} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_entrance_a0bf736b154cc457449e6125bc2a0f9e7}\index{Entrance@{Entrance}!Entrance@{Entrance}}
+\index{Entrance@{Entrance}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{Entrance()}{Entrance()}}
+{\footnotesize\ttfamily \label{namespace_entrance_a0bf736b154cc457449e6125bc2a0f9e7} 
+Entrance.\+Entrance (\begin{DoxyParamCaption}\item[{}]{player}{, }\item[{}]{room\+States}{}\end{DoxyParamCaption})}
+
+
+
+Contains the information and flow for the \doxylink{namespace_entrance}{Entrance} room. 
+
+Contains opportunity to take a torch, and movement forward.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player dictionary \\
+\hline
+{\em room\+States} & the room\+States dictionary \\
+\hline
+{\em directions} & list of directions available for travel \\
+\hline
+{\em decisions} & list of options available to choose \\
+\hline
+{\em torch\+Choice} & holds choice specific to taking torch \\
+\hline
+{\em user\+Input} & holds choice specific to room travel from this room \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_entrance_a18aec4c0b2147f555a7cc190e7542e29}\index{Entrance@{Entrance}!player@{player}}
+\index{player@{player}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{namespace_entrance_a18aec4c0b2147f555a7cc190e7542e29} 
+dict Entrance.\+player}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}TestPlayer"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}maxHealth"{}}:\ 100,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 100,}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}baseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}originalBaseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasAxe"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasSword"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}axeBonus"{}}:\ (5,\ 10),}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}swordBonus"{}}:\ (10,15),}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasTorch"{}}:\ \textcolor{keyword}{False}}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_entrance_a6ecddfd68231e566bf2d3902ac1476b6}\index{Entrance@{Entrance}!roomStates@{roomStates}}
+\index{roomStates@{roomStates}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{roomStates}{roomStates}}
+{\footnotesize\ttfamily \label{namespace_entrance_a6ecddfd68231e566bf2d3902ac1476b6} 
+dict Entrance.\+room\+States = \{\}}
+

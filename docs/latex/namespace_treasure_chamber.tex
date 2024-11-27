@@ -1,0 +1,75 @@
+\doxysection{Treasure\+Chamber Namespace Reference}
+\hypertarget{namespace_treasure_chamber}{}\label{namespace_treasure_chamber}\index{TreasureChamber@{TreasureChamber}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_treasure_chamber_a1841f8bcca639fef5bc2a234082a3275}{Treasure\+Chamber}} (\mbox{\hyperlink{namespace_treasure_chamber_a3e472bbab7a8b58045fa2416ed4ca40a}{player}}, \mbox{\hyperlink{namespace_treasure_chamber_a9a8bebae7d079714d86c0cef44ae2eb2}{room\+States}})
+\begin{DoxyCompactList}\small\item\em Contains the information and flow for the Treasure Chamber. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_treasure_chamber_a3e472bbab7a8b58045fa2416ed4ca40a}{player}}
+\item 
+dict \mbox{\hyperlink{namespace_treasure_chamber_a9a8bebae7d079714d86c0cef44ae2eb2}{room\+States}} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_treasure_chamber_a1841f8bcca639fef5bc2a234082a3275}\index{TreasureChamber@{TreasureChamber}!TreasureChamber@{TreasureChamber}}
+\index{TreasureChamber@{TreasureChamber}!TreasureChamber@{TreasureChamber}}
+\doxysubsubsection{\texorpdfstring{TreasureChamber()}{TreasureChamber()}}
+{\footnotesize\ttfamily \label{namespace_treasure_chamber_a1841f8bcca639fef5bc2a234082a3275} 
+Treasure\+Chamber.\+Treasure\+Chamber (\begin{DoxyParamCaption}\item[{}]{player}{, }\item[{}]{room\+States}{}\end{DoxyParamCaption})}
+
+
+
+Contains the information and flow for the Treasure Chamber. 
+
+Contains an orb treasure that can be taken, and movement backward.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player dictionary \\
+\hline
+{\em room\+States} & the room\+States dictionary \\
+\hline
+{\em directions} & list of directions available for travel \\
+\hline
+{\em decisions} & list of options available to choose \\
+\hline
+{\em treasure\+Choice} & holds choice specific to taking treasure \\
+\hline
+{\em user\+Input} & holds choice specific to room travel from this room \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_treasure_chamber_a3e472bbab7a8b58045fa2416ed4ca40a}\index{TreasureChamber@{TreasureChamber}!player@{player}}
+\index{player@{player}!TreasureChamber@{TreasureChamber}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{namespace_treasure_chamber_a3e472bbab7a8b58045fa2416ed4ca40a} 
+dict Treasure\+Chamber.\+player}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}TestPlayer"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}maxHealth"{}}:\ 100,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 100,}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}baseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}originalBaseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasAxe"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasSword"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}axeBonus"{}}:\ (5,\ 10),}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}swordBonus"{}}:\ (10,15),}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasTorch"{}}:\ \textcolor{keyword}{False}}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_treasure_chamber_a9a8bebae7d079714d86c0cef44ae2eb2}\index{TreasureChamber@{TreasureChamber}!roomStates@{roomStates}}
+\index{roomStates@{roomStates}!TreasureChamber@{TreasureChamber}}
+\doxysubsubsection{\texorpdfstring{roomStates}{roomStates}}
+{\footnotesize\ttfamily \label{namespace_treasure_chamber_a9a8bebae7d079714d86c0cef44ae2eb2} 
+dict Treasure\+Chamber.\+room\+States = \{\}}
+
