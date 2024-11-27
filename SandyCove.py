@@ -60,7 +60,7 @@ def SandyCove(player, roomStates):
                 print()
                 #Option to send player to room? Just adding item feels weak
                 
-            elif player["hasTorch"] and player["hasAxe"]:
+            elif player["hasTorch"] and player["hasAxe"] and roomStates["SphinxRoom"]["riddleFailed"]:
                 print("'The sphinx likes his riddles, but he's usually bound to archaic rules. I can bend them just a little, so let's give you another shot at that riddle.'")
                 print()
                 #Keep track of this occuring in roomStates so player can't endlessly loop into the riddle
