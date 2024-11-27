@@ -7,12 +7,12 @@ def LesserBurialChamber(player, roomStates):
     Contains the information and flow for the Lesser Burial Chamber.
     Contains a battle with two tomb goblins, and movement forward and backward.
     
-    @param          player
-    @param          roomStates
-    @param          tombGoblin1
-    @param          tombGoblin2
-    @param          directions
-    @param          userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          tombGoblin1     the tombGoblin dictionary for the first tomb goblin battled here
+    @param          tombGoblin2     the tombGoblin dictionary for the second tomb goblin battled here
+    @param          directions      list of directions available for travel
+    @param          userInput       holds choice specific to room travel from this room
     """
     
     tombGoblin1 = {

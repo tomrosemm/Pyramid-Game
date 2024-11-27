@@ -5,11 +5,11 @@ def SandyCove(player, roomStates):
     Contains the information and flow for the Sandy Cove.
     Contains an event with goddess Isis, the opportunity for healing, item hints, and unlocking the sphinx's riddle once more, and movement forward and backward.
     
-    @param          player
-    @param          roomStates
-    @param          directions
-    @param          amountHealed
-    @param          userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          directions      list of directions available for travel
+    @param          amountHealed    reflects the amount of damage healed by Isis
+    @param          userInput       holds choice specific to room travel from this room
     """
     
     directions = ["FORWARD", "BACKWARD", "Q"]

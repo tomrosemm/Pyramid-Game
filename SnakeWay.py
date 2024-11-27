@@ -8,11 +8,12 @@ def SnakeWay(player, roomStates):
     Contains the information and flow for the SnakeWay.
     Contains snake bite danger, and movement forward and backward.
     
-    @param          player
-    @param          roomStates
-    @param          i
-    @param          snakeDamage
-    @param          userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          directions      list of directions available for travel
+    @param          i               counter variable for snake bite while loop
+    @param          snakeDamage     holds random value to serve as each snake bite damage
+    @param          userInput       holds choice specific to room travel from this room
     """
     
     directions = ["FORWARD", "BACKWARD", "Q"]

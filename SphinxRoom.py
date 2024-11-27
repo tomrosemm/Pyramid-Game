@@ -11,15 +11,15 @@ def SphinxRoom(player, roomStates):
     Contains the information and flow for the Sphinx Room.
     Contains a sphinx with a riddle that can reveal door to the armory as well as heal, and movement forward, right, and backward.
     
-    @param          player
-    @param          roomStates
-    @param          sphinxRiddleLibrary
-    @param          directions
-    @param          riddle
-    @param          riddleAnswer
-    @param          playerRiddleAnswer
-    @param          amountHealed
-    @param          userInput
+    @param          player                  the player dictionary
+    @param          roomStates              the roomStates dictionary
+    @param          sphinxRiddleLibrary     the dictionary with the riddle:answer pairs for the sphinx to draw from
+    @param          directions              list of directions available for travel
+    @param          riddle                  riddle from the chosen dictionary pair
+    @param          riddleAnswer            answer from the chosen dictionary pair
+    @param          playerRiddleAnswer      holds players answer to the riddle
+    @param          amountHealed            reflects the amount of damage healed by the sphinx
+    @param          userInput               holds choice specific to room travel from this room
     """
 
     #List of riddles and their respective answers

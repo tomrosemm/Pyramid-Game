@@ -7,13 +7,13 @@ def Encampment(player, roomStates):
     Contains the information and flow for the Encampment.
     Contains opportunity to take an axe, a battle with a tomb goblin, and movement forward and backward.
     
-    @param          player
-    @param          roomStates
-    @param          tombGoblin
-    @param          directions
-    @param          decisions
-    @param          axeChoice
-    @param          userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          tombGoblin      the tombGoblin dictionary for the tomb goblin battled here
+    @param          directions      list of directions available for travel
+    @param          decisions       list of options available to choose
+    @param          axeChoice       holds choice specific to taking axe
+    @param          userInput       holds choice specific to room travel from this room
     """
 
     tombGoblin = {
