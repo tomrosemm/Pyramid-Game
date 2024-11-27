@@ -28,7 +28,27 @@ def TreasureChamber(player, roomStates):
             #Set up to catch mistaken entries, basically just a copy of the room movement structure
             if treasureChoice == "Y":
                 roomStates["TreasureChamber"]["treasureTaken"] = True    
+<<<<<<< Updated upstream
                 print("TREASURE TAKEN. YOU WIN!")
+=======
+                print("You take the orb, and before you know it you have been, somehow, launched through the roof of the pyramid and high, high into the air.")
+                print()
+                time.sleep(4)
+                print("You have enough time to think over your life and the decisions that lead you here as you fall to your inevitable fate.")
+                print()
+                time.sleep(4)
+                print("You could have been something. You could have taken that corner office job in Stacy's dad's company, but no. You were too proud.")
+                print()
+                time.sleep(4)
+                print("You wonder if you'll be identifiable. Part of you assumes you'll just be a we spot on the sand, but stranger things-")
+                print()
+                time.sleep(3)
+                print("Splat!")
+                print()
+                time.sleep(4)
+                print("You win!")
+                time.sleep(3)
+>>>>>>> Stashed changes
                 quit()
 
             elif treasureChoice == "N":
@@ -56,7 +76,11 @@ def TreasureChamber(player, roomStates):
             RoyalTomb(player, roomStates)
             
         elif userInput == "Q":
+<<<<<<< Updated upstream
             print("GOODBYE")
+=======
+            print("Goodbye.")
+>>>>>>> Stashed changes
             quit()
             
         else:

@@ -64,7 +64,11 @@ def SandyCove(player, roomStates):
             InnerBurialChamber(player, roomStates)
             
         elif userInput == "Q":
+<<<<<<< Updated upstream
             print("GOODBYE")
+=======
+            print("Goodbye.")
+>>>>>>> Stashed changes
             quit()
         
         else:

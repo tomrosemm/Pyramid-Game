@@ -56,7 +56,11 @@ def Armory(player, roomStates):
             SphinxRoom(player, roomStates)
             
         elif userInput == "Q":
+<<<<<<< Updated upstream
             print("GOODBYE")
+=======
+            print("Goodbye.")
+>>>>>>> Stashed changes
             quit()
             
         else:
