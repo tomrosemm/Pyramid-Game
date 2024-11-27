@@ -36,6 +36,7 @@ def TreasureChamber(player, roomStates):
             #Set up to catch mistaken entries, basically just a copy of the room movement structure
             if treasureChoice == "Y":
                 roomStates["TreasureChamber"]["treasureTaken"] = True    
+
                 print("You take the orb, and before you know it you have been, somehow, launched through the roof of the pyramid and high, high into the air.")
                 print()
                 time.sleep(4)
@@ -53,7 +54,7 @@ def TreasureChamber(player, roomStates):
                 time.sleep(4)
                 print("You win!")
                 time.sleep(3)
-                break
+                quit()
 
             elif treasureChoice == "N":
                 roomStates["TreasureChamber"]["treasureTaken"] = False
@@ -90,7 +91,7 @@ def TreasureChamber(player, roomStates):
             
         elif userInput == "Q":
             print("Goodbye.")
-            break
+            quit()
             
         else:
             print("Please enter a valid direction.\n")

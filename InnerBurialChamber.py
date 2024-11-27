@@ -83,7 +83,7 @@ def InnerBurialChamber(player, roomStates):
                 
         elif userInput == "Q":
             print("Goodbye.")
-            break
+            quit()
 
         else:
             print("Please enter a valid direction.")
