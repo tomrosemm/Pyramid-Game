@@ -2,7 +2,7 @@ from Encampment import *
 
 def Entrance(player, roomStates):
     """!
-    
+    Contains the information and flow for the Entrance room.
     """
     
     directions = ["FORWARD", "Q"]
