@@ -7,6 +7,12 @@ def SnakeWay(player, roomStates):
     """!
     Contains the information and flow for the SnakeWay.
     Contains snake bite danger, and movement forward and backward.
+    
+    @param          player
+    @param          roomStates
+    @param          i
+    @param          snakeDamage
+    @param          userInput
     """
     
     directions = ["FORWARD", "BACKWARD", "Q"]
