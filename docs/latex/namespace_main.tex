@@ -1,0 +1,75 @@
+\doxysection{Main Namespace Reference}
+\hypertarget{namespace_main}{}\label{namespace_main}\index{Main@{Main}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_main_a2073576740cd77f4ac2aec999dca3314}{title\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Creates a title screen for the pyramid game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_main_ae3e3aa8986843bba4df81ee62ea1ab4c}{player}}
+\item 
+dict \mbox{\hyperlink{namespace_main_a83e76f0e33b14d7869d9c3f1dbd8495a}{room\+States}} = \{\}
+\item 
+\mbox{\hyperlink{namespace_main_ae8201c0277bd1573bb277e30cd30696b}{new\+Name}} = input("{}Enter the \mbox{\hyperlink{namespace_armory_add4c8144aae96529758c14a492850692}{player}}\textquotesingle{}s name\+: "{}).strip()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_main_a2073576740cd77f4ac2aec999dca3314}\index{Main@{Main}!titleScreen@{titleScreen}}
+\index{titleScreen@{titleScreen}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{titleScreen()}{titleScreen()}}
+{\footnotesize\ttfamily \label{namespace_main_a2073576740cd77f4ac2aec999dca3314} 
+Main.\+title\+Screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a title screen for the pyramid game. 
+
+Tries to import py\+Figlet, if errors just uses a simple type title, if successful makes askii art title.
+
+
+\begin{DoxyParams}{Parameters}
+{\em py\+Figlet\+Imported} & holds bool value reflecting if py\+Figlet was successfully imported \\
+\hline
+{\em title} & stores the askii title created by py\+Figlet \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_main_ae8201c0277bd1573bb277e30cd30696b}\index{Main@{Main}!newName@{newName}}
+\index{newName@{newName}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{newName}{newName}}
+{\footnotesize\ttfamily \label{namespace_main_ae8201c0277bd1573bb277e30cd30696b} 
+Main.\+new\+Name = input("{}Enter the \mbox{\hyperlink{namespace_armory_add4c8144aae96529758c14a492850692}{player}}\textquotesingle{}s name\+: "{}).strip()}
+
+\Hypertarget{namespace_main_ae3e3aa8986843bba4df81ee62ea1ab4c}\index{Main@{Main}!player@{player}}
+\index{player@{player}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{namespace_main_ae3e3aa8986843bba4df81ee62ea1ab4c} 
+dict Main.\+player}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}TestPlayer"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}maxHealth"{}}:\ 100,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 100,}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}baseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}originalBaseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasAxe"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasSword"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}axeBonus"{}}:\ (5,\ 10),}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}swordBonus"{}}:\ (10,15),}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasTorch"{}}:\ \textcolor{keyword}{False}}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_main_a83e76f0e33b14d7869d9c3f1dbd8495a}\index{Main@{Main}!roomStates@{roomStates}}
+\index{roomStates@{roomStates}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{roomStates}{roomStates}}
+{\footnotesize\ttfamily \label{namespace_main_a83e76f0e33b14d7869d9c3f1dbd8495a} 
+dict Main.\+room\+States = \{\}}
+

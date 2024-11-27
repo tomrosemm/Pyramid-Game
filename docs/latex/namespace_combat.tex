@@ -1,0 +1,124 @@
+\doxysection{Combat Namespace Reference}
+\hypertarget{namespace_combat}{}\label{namespace_combat}\index{Combat@{Combat}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_combat_ac61e25678b90b5cbb07ccd6d3ce069fb}{calculate\+Damage\+Range}} (\mbox{\hyperlink{namespace_combat_a0a30324f60c0cae6a5f233fe41331475}{player}})
+\begin{DoxyCompactList}\small\item\em Takes player dictionary as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_combat_ac26d19248f01fb3f6c3b424afd1de4c2}{combat}} (\mbox{\hyperlink{namespace_combat_a0a30324f60c0cae6a5f233fe41331475}{player}}, enemy)
+\begin{DoxyCompactList}\small\item\em Takes player and enemy dictionary as arguments, uses values in dictionary to run combat between the two and return True if player successful, False if enemy successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_combat_a0a30324f60c0cae6a5f233fe41331475}{player}}
+\item 
+dict \mbox{\hyperlink{namespace_combat_a0824858142e89590b606bb13fbe93a3f}{tomb\+Goblin}}
+\item 
+dict \mbox{\hyperlink{namespace_combat_a30c40911bd3f2629b1be6b8454150169}{mummy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_combat_ac61e25678b90b5cbb07ccd6d3ce069fb}\index{Combat@{Combat}!calculateDamageRange@{calculateDamageRange}}
+\index{calculateDamageRange@{calculateDamageRange}!Combat@{Combat}}
+\doxysubsubsection{\texorpdfstring{calculateDamageRange()}{calculateDamageRange()}}
+{\footnotesize\ttfamily \label{namespace_combat_ac61e25678b90b5cbb07ccd6d3ce069fb} 
+Combat.\+calculate\+Damage\+Range (\begin{DoxyParamCaption}\item[{}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Takes player dictionary as an argument. 
+
+Checks for Truth values in has\+Axe and has\+Sword, if truth found used the axe\+Bonus or sword\+Bonus to augment the original\+Base\+Damage\+Range
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player dictionary \\
+\hline
+{\em original\+Range} & the variable that holds the damage range to be augmented by the presence of sword or axe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the appropriate damage range for the combat being initiated 
+\end{DoxyReturn}
+\Hypertarget{namespace_combat_ac26d19248f01fb3f6c3b424afd1de4c2}\index{Combat@{Combat}!combat@{combat}}
+\index{combat@{combat}!Combat@{Combat}}
+\doxysubsubsection{\texorpdfstring{combat()}{combat()}}
+{\footnotesize\ttfamily \label{namespace_combat_ac26d19248f01fb3f6c3b424afd1de4c2} 
+Combat.\+combat (\begin{DoxyParamCaption}\item[{}]{player}{, }\item[{}]{enemy}{}\end{DoxyParamCaption})}
+
+
+
+Takes player and enemy dictionary as arguments, uses values in dictionary to run combat between the two and return True if player successful, False if enemy successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player dictionary \\
+\hline
+{\em enemy} & the enemy dictionary \\
+\hline
+{\em player\+Damage\+Range} & holds the result of calling \doxylink{namespace_combat_ac61e25678b90b5cbb07ccd6d3ce069fb}{calculate\+Damage\+Range()} \\
+\hline
+{\em player\+Damage} & random int from the range established by \doxylink{namespace_combat_ac61e25678b90b5cbb07ccd6d3ce069fb}{calculate\+Damage\+Range()} to represent one of the players attacks \\
+\hline
+{\em enemy\+Damage} & random int from the enemy damage\+Range established to represent one of the enemies attacks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value to reflect if player won battle, True for yes, False for no 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_combat_a30c40911bd3f2629b1be6b8454150169}\index{Combat@{Combat}!mummy@{mummy}}
+\index{mummy@{mummy}!Combat@{Combat}}
+\doxysubsubsection{\texorpdfstring{mummy}{mummy}}
+{\footnotesize\ttfamily \label{namespace_combat_a30c40911bd3f2629b1be6b8454150169} 
+dict Combat.\+mummy}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}The\ Mummy"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 75,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}damageRange"{}}:\ (4,\ 10)}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_combat_a0a30324f60c0cae6a5f233fe41331475}\index{Combat@{Combat}!player@{player}}
+\index{player@{player}!Combat@{Combat}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{namespace_combat_a0a30324f60c0cae6a5f233fe41331475} 
+dict Combat.\+player}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}TestPlayer"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}maxHealth"{}}:\ 100,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 100,}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}baseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}originalBaseDamageRange"{}}:\ (10,20),}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasAxe"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasSword"{}}:\ \textcolor{keyword}{False},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}axeBonus"{}}:\ (5,\ 10),}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}swordBonus"{}}:\ (10,15),}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}hasTorch"{}}:\ \textcolor{keyword}{False}}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_combat_a0824858142e89590b606bb13fbe93a3f}\index{Combat@{Combat}!tombGoblin@{tombGoblin}}
+\index{tombGoblin@{tombGoblin}!Combat@{Combat}}
+\doxysubsubsection{\texorpdfstring{tombGoblin}{tombGoblin}}
+{\footnotesize\ttfamily \label{namespace_combat_a0824858142e89590b606bb13fbe93a3f} 
+dict Combat.\+tomb\+Goblin}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}:\ \textcolor{stringliteral}{"{}Goblin\ Fred"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}health"{}}:\ 50,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}damageRange"{}}:\ (3,10)}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
