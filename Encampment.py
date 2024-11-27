@@ -3,6 +3,9 @@ from SnakeWay import *
 from Combat import *
 
 def Encampment(player, roomStates):
+    """!
+    Contains the information and flow for the Encampment.
+    """
 
     tombGoblin = {
         "name": "Goblin Fred",

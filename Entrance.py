@@ -1,6 +1,9 @@
 from Encampment import *
 
 def Entrance(player, roomStates):
+    """!
+    
+    """
     
     directions = ["FORWARD", "Q"]
     decisions = ["Y", "N"]

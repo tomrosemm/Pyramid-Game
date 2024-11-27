@@ -3,6 +3,9 @@ from TreasureChamber import *
 from Combat import *
 
 def RoyalTomb(player, roomStates):
+    """!
+    Contains the information and flow for the Royal Tomb.
+    """
     
     mummy1 = {
         "name": "King Mummy",

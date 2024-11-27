@@ -3,6 +3,9 @@ from SandyCove import *
 from Combat import *
 
 def InnerBurialChamber(player, roomStates):
+    """!
+    Contains the information and flow for the Inner Burial Chamber.
+    """
     
     tombGoblin = {
         "name": "Goblin Harold",
