@@ -81,6 +81,7 @@ if __name__ == '__main__':
         "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
+        "originalBaseDamageRange": (10,20),
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),

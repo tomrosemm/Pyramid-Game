@@ -3,8 +3,15 @@ import random #Choosing from range for damage in combat
 import time #Sleeping in combat for better flow
 
 def calculateDamageRange(player):
+    """
+    Takes player dictionary as an argument.
+    Checks for Truth values in hasAxe and hasSword,
+    if truth found used the axeBonus or swordBonus to
+    augment the originalBaseDamageRange
+    """
     #Takes player dictionary, checks for sword or axe, returns augmented damage range for strongest match or base range if none found
     
+    originalRange = player["originalBaseDamageRange"]
     if player["hasAxe"] and not player["hasSword"]:
         #Sword stronger, so check first if we only have axe
         return (
@@ -19,7 +26,7 @@ def calculateDamageRange(player):
             player["baseDamageRange"][1] + player["swordBonus"][1]
         )
     
-    return player["baseDamageRange"]
+    return originalRange
 
 def combat(player,enemy):
     #If return True, battle was won, if False, lost and player died
@@ -69,6 +76,7 @@ if __name__ == '__main__':
         "maxHealth": 100,
         "health": 100,
         "baseDamageRange": (10,20),
+        "originalBaseDamageRange": (10,20),
         "hasAxe": False,
         "hasSword": False,
         "axeBonus": (5, 10),
