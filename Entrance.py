@@ -4,6 +4,13 @@ def Entrance(player, roomStates):
     """!
     Contains the information and flow for the Entrance room.
     Contains opportunity to take a torch, and movement forward.
+    
+    @param      player
+    @param      roomStates
+    @param      directions
+    @param      decisions
+    @param      torchChoice
+    @param      userInput
     """
     
     directions = ["FORWARD", "Q"]
