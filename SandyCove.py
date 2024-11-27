@@ -96,7 +96,7 @@ def SandyCove(player, roomStates):
             
         elif userInput == "Q":
             print("Goodbye.")
-            quit()
+            break
         
         else:
             print("Please enter a valid direction.")

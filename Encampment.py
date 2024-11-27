@@ -71,7 +71,7 @@ def Encampment(player, roomStates):
             print("You have been defeated by a single tomb goblin.")
             print()
             print("Game over; Goodbye.")
-            quit()
+            exit(0)
     
     else:
         print("The dead tomb goblin lies near the door closest the entrance.")
@@ -105,7 +105,7 @@ def Encampment(player, roomStates):
         elif userInput == "Q":
             print()
             print("Goodbye.")
-            quit()
+            break
             
         else:
             print("Please enter a valid direction.")

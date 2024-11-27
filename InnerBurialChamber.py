@@ -48,7 +48,7 @@ def InnerBurialChamber(player, roomStates):
             print("You have been slain by the soon-to-be-wed mummy and tomb goblin. But, good for them at least, you know?")
             print()
             print("Game over; Goodbye.")
-            quit()
+            exit(0)
     
     else:
         print("The defeated mummy and tomb goblin lay slumped against a wall in an eternal embrace.")
@@ -83,7 +83,7 @@ def InnerBurialChamber(player, roomStates):
                 
         elif userInput == "Q":
             print("Goodbye.")
-            quit()
+            break
 
         else:
             print("Please enter a valid direction.")

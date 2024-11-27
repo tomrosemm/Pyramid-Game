@@ -50,7 +50,7 @@ def LesserBurialChamber(player, roomStates):
             print("You have been slaughtered by the tomb goblins.")
             print()
             print("Game over; Goodbye.")
-            quit()
+            exit(0)
     
     else:
         print()
@@ -86,7 +86,7 @@ def LesserBurialChamber(player, roomStates):
         elif userInput == "Q":
             print()
             print("Goodbye.")
-            quit()
+            break
             
         else:
             print("Please enter a valid direction.")

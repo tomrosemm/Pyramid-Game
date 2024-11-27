@@ -53,7 +53,7 @@ def TreasureChamber(player, roomStates):
                 time.sleep(4)
                 print("You win!")
                 time.sleep(3)
-                quit()
+                break
 
             elif treasureChoice == "N":
                 roomStates["TreasureChamber"]["treasureTaken"] = False
@@ -90,7 +90,7 @@ def TreasureChamber(player, roomStates):
             
         elif userInput == "Q":
             print("Goodbye.")
-            quit()
+            break
             
         else:
             print("Please enter a valid direction.\n")

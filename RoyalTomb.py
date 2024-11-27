@@ -48,7 +48,7 @@ def RoyalTomb(player, roomStates):
             print("You were felled by the mummies. Try again!")
             print()
             print("Game over; Goodbye.")
-            quit()
+            exit(0)
     
     else:
         print("The pair of mummies you defeated have dissapeared without a trace.")
@@ -83,7 +83,7 @@ def RoyalTomb(player, roomStates):
             
         elif userInput == "Q":
             print("Goodbye.")
-            quit()
+            break
             
         else:
             print("Please enter a valid direction.")
