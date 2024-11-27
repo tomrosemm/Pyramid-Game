@@ -3,6 +3,7 @@ import time
 def TreasureChamber(player, roomStates):
     """!
     Contains the information and flow for the Treasure Chamber.
+    Contains an orb treasure that can be taken, and movement backward.
     """
     
     directions = ["BACKWARD", "Q"]   

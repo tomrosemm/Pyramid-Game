@@ -5,6 +5,7 @@ from Combat import *
 def InnerBurialChamber(player, roomStates):
     """!
     Contains the information and flow for the Inner Burial Chamber.
+    Contains a battle with a tomb goblin and a mummy, and movement right and backward.
     """
     
     tombGoblin = {

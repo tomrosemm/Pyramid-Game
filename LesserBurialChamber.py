@@ -5,6 +5,7 @@ from Combat import *
 def LesserBurialChamber(player, roomStates):
     """!
     Contains the information and flow for the Lesser Burial Chamber.
+    Contains a battle with two tomb goblins, and movement forward and backward.
     """
     
     tombGoblin1 = {

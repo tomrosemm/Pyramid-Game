@@ -5,6 +5,7 @@ from Combat import *
 def Encampment(player, roomStates):
     """!
     Contains the information and flow for the Encampment.
+    Contains opportunity to take an axe, a battle with a tomb goblin, and movement forward and backward.
     """
 
     tombGoblin = {

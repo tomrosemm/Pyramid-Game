@@ -3,6 +3,7 @@ from RoyalTomb import *
 def SandyCove(player, roomStates):
     """!
     Contains the information and flow for the Sandy Cove.
+    Contains an event with goddess Isis, the opportunity for healing, item hints, and unlocking the sphinx's riddle once more, and movement forward and backward.
     """
     
     directions = ["FORWARD", "BACKWARD", "Q"]

@@ -1,6 +1,7 @@
 def Armory(player, roomStates):
     """!
     Contains the information and flow for the Armory.
+    Contains an opportunity to get a hooked sword, and movement backward. Doors seal after leaving first time.
     """
         
     directions = ["FORWARD", "Q"]    

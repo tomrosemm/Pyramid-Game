@@ -5,6 +5,7 @@ from Combat import *
 def RoyalTomb(player, roomStates):
     """!
     Contains the information and flow for the Royal Tomb.
+    Contains a battle with two mummies, and movement left and backward.
     """
     
     mummy1 = {
