@@ -3,15 +3,18 @@ from TreasureChamber import *
 from Combat import *
 
 def RoyalTomb(player, roomStates):
+    """!
+    
+    """
     
     mummy1 = {
-        "name": "The Mummy",
+        "name": "King Mummy",
         "health": 75,
         "damageRange": (4, 10)
     }
     
     mummy2 = {
-        "name": "The Mummy",
+        "name": "Queen Mummy",
         "health": 75,
         "damageRange": (4, 10)
     }
@@ -51,7 +54,7 @@ def RoyalTomb(player, roomStates):
             quit()
     
     else:
-        print("The pair of mummies you defeated have dissapeared without a trace.")
+        print("The pair of mummies you defeated have disappeared without a trace.")
         print()
     
     print("You can move left or backward.")
@@ -89,6 +92,9 @@ def RoyalTomb(player, roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

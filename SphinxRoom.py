@@ -7,6 +7,9 @@ import random
 import time
 
 def SphinxRoom(player, roomStates):
+    """!
+    
+    """
 
     #List of riddles and their respective answers
     sphinxRiddleLibrary = {
@@ -161,6 +164,9 @@ def SphinxRoom(player, roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

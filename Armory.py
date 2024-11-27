@@ -1,4 +1,7 @@
 def Armory(player, roomStates):
+    """!
+    
+    """
     
     directions = ["FORWARD", "Q"]    
     decisions = ["Y", "N"]
@@ -22,16 +25,18 @@ def Armory(player, roomStates):
 
         swordChoice = ''
         print("A long hooked blade sits upon the table, you notice as you move closer. Would you like to take it? (y/n)")
+        print()
 
         while swordChoice not in decisions:
 
             swordChoice = input().strip().upper()
+            print()
 
             #Set up to catch mistaken entries, basically just a copy of the room movement structure
             if swordChoice == "Y":        
                 player["hasSword"] = True
                 roomStates["Armory"]["swordTaken"] = True
-                print("SWORD TAKEN\n")
+                print("You grasp the sword, its weight offering you reassurance.\n")
             
             elif swordChoice == "N":        
                 player["hasTorch"] = False
@@ -62,7 +67,7 @@ def Armory(player, roomStates):
 
         if userInput == "BACKWARD":
             from SphinxRoom import SphinxRoom
-            print("You head back into the room of the sphinx.")
+            print("You head back into the room of the sphinx; heavy iron bars slam over the door to the armory, sealing it for good.")
             print()
             print("__________________________________________________")
             SphinxRoom(player, roomStates)
@@ -75,6 +80,9 @@ def Armory(player, roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

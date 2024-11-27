@@ -21,6 +21,9 @@ from Combat import *
 # import numpy
 
 def titleScreen():
+    """!
+    
+    """
     
     try:
         import pyfiglet
@@ -40,6 +43,9 @@ def titleScreen():
         print()
 
 if __name__ == "__main__":
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

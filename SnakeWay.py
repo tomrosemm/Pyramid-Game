@@ -4,6 +4,9 @@ import random
 import time
 
 def SnakeWay(player, roomStates):
+    """!
+    
+    """
     
     directions = ["FORWARD", "BACKWARD", "Q"]
     
@@ -95,6 +98,9 @@ def SnakeWay(player, roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

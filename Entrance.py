@@ -1,6 +1,9 @@
 from Encampment import *
 
 def Entrance(player,roomStates):
+    """!
+    
+    """
     
     directions = ["FORWARD", "Q"]
     decisions = ["Y", "N"]
@@ -82,6 +85,9 @@ def Entrance(player,roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

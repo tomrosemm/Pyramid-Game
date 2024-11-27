@@ -3,15 +3,18 @@ from SphinxRoom import *
 from Combat import *
 
 def LesserBurialChamber(player, roomStates):
+    """!
+    
+    """
     
     tombGoblin1 = {
-        "name": "Goblin Fred",
+        "name": "Goblin Steve",
         "health": 50,
         "damageRange": (3,10)
     }
     
     tombGoblin2 = {
-        "name": "Goblin Fred",
+        "name": "Goblin David",
         "health": 50,
         "damageRange": (3,10)
     }
@@ -38,12 +41,12 @@ def LesserBurialChamber(player, roomStates):
         print()
 
         roomStates["LesserBurialChamber"]["tombGoblin1Defeated"] = combat(player,tombGoblin1)
-        print()
         print("One down, one to go!")
         roomStates["LesserBurialChamber"]["tombGoblin2Defeated"] = combat(player,tombGoblin2)
         
         if roomStates["LesserBurialChamber"]["tombGoblin1Defeated"] and roomStates["LesserBurialChamber"]["tombGoblin2Defeated"]:
             print("You defeated the tomb goblins!")
+            print()
             roomStates["LesserBurialChamber"]["battleWon"] = True
         
         else:
@@ -92,6 +95,9 @@ def LesserBurialChamber(player, roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

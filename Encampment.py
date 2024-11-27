@@ -3,6 +3,9 @@ from SnakeWay import *
 from Combat import *
 
 def Encampment(player, roomStates):
+    """!
+    
+    """
     
     tombGoblin = {
         "name": "Goblin Fred",
@@ -111,6 +114,9 @@ def Encampment(player, roomStates):
             print("Please enter a valid direction.")
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",

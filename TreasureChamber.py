@@ -1,6 +1,9 @@
 import time
 
 def TreasureChamber(player, roomStates):
+    """!
+    
+    """
     
     directions = ["BACKWARD", "Q"]   
     decisions = ["Y", "N"]
@@ -45,7 +48,7 @@ def TreasureChamber(player, roomStates):
                 print("You could have been something. You could have taken that corner office job in Stacy's dad's company, but no. You were too proud.")
                 print()
                 time.sleep(4)
-                print("You wonder if you'll be identifiable. Part of you assumes you'll just be a we spot on the sand, but stranger things-")
+                print("You wonder if you'll be identifiable. Part of you assumes you'll just be a wet spot on the sand, but stranger things-")
                 print()
                 time.sleep(3)
                 print("Splat!")

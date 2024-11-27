@@ -3,6 +3,9 @@ from SandyCove import *
 from Combat import *
     
 def InnerBurialChamber(player, roomStates):
+    """!
+    
+    """
     
     tombGoblin = {
         "name": "Goblin Fred",
@@ -11,7 +14,7 @@ def InnerBurialChamber(player, roomStates):
     }
     
     mummy = {
-        "name": "The Mummy",
+        "name": "Ms. Mummy",
         "health": 75,
         "damageRange": (4, 10)
     }
@@ -90,6 +93,9 @@ def InnerBurialChamber(player, roomStates):
             
 
 if __name__ == '__main__':
+    """!
+    
+    """
     
     player = {
         "name": "TestPlayer",
