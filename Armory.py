@@ -3,12 +3,12 @@ def Armory(player, roomStates):
     Contains the information and flow for the Armory.
     Contains an opportunity to get a hooked sword, and movement backward. Doors seal after leaving first time.
     
-    @param          player
-    @param          roomStates
-    @param          directions
-    @param          decisions
-    @param          swordChoice
-    @param          userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          directions      list of directions available for travel
+    @param          decisions       list of options available to choose
+    @param          swordChoice     holds choice specific to taking sword
+    @param          userInput       holds choice specific to room travel from this room
     """
         
     directions = ["FORWARD", "Q"]    

@@ -5,12 +5,12 @@ def Entrance(player, roomStates):
     Contains the information and flow for the Entrance room.
     Contains opportunity to take a torch, and movement forward.
     
-    @param      player
-    @param      roomStates
-    @param      directions
-    @param      decisions
-    @param      torchChoice
-    @param      userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          directions      list of directions available for travel
+    @param          decisions       list of options available to choose
+    @param          torchChoice     holds choice specific to taking torch
+    @param          userInput       holds choice specific to room travel from this room
     """
     
     directions = ["FORWARD", "Q"]

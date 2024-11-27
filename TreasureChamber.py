@@ -5,12 +5,12 @@ def TreasureChamber(player, roomStates):
     Contains the information and flow for the Treasure Chamber.
     Contains an orb treasure that can be taken, and movement backward.
     
-    @param          player
-    @param          roomStates
-    @param          directions
-    @param          decisions
-    @param          treasureChoice
-    @param          userInput
+    @param          player          the player dictionary
+    @param          roomStates      the roomStates dictionary
+    @param          directions      list of directions available for travel
+    @param          decisions       list of options available to choose
+    @param          treasureChoice  holds choice specific to taking treasure
+    @param          userInput       holds choice specific to room travel from this room
     """
     
     directions = ["BACKWARD", "Q"]   
