@@ -1,5 +1,3 @@
-#Tweak hp values on death of player or enemy to go from a negative to 0
-
 #Import libraries
 import random #Choosing from range for damage in combat
 import time #Sleeping in combat for better flow
