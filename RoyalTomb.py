@@ -6,6 +6,13 @@ def RoyalTomb(player, roomStates):
     """!
     Contains the information and flow for the Royal Tomb.
     Contains a battle with two mummies, and movement left and backward.
+    
+    @param          player
+    @param          roomStates
+    @param          mummy1
+    @param          mummy1
+    @param          directions
+    @param          userInput
     """
     
     mummy1 = {

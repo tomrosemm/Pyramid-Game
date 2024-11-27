@@ -6,6 +6,13 @@ def InnerBurialChamber(player, roomStates):
     """!
     Contains the information and flow for the Inner Burial Chamber.
     Contains a battle with a tomb goblin and a mummy, and movement right and backward.
+    
+    @param          player
+    @param          roomStates
+    @param          tombGoblin
+    @param          mummy
+    @param          directions
+    @param          userInput
     """
     
     tombGoblin = {
