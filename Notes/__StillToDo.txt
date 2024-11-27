@@ -1,11 +1,11 @@
--Set up unit tests
--Document Code
--Documentation Generation
 -Report
 -Recording
 -Presentation
 -Readme
 
+-XDocumentation Generation
+-XSet up unit tests
+-XDocument Code
 -XUtilize an external library
 -XASKii Art Title(?)
 -XReplace hard coded health implied max @ 100 and give player dictionary a maxHealth, replace where appropriate
