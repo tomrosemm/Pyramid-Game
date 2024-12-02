@@ -14,11 +14,12 @@ def SandyCove(player, roomStates):
     
     directions = ["FORWARD", "BACKWARD", "Q"]
     
+    #Room Label
+    print("____________________\n\nSandy Cove\n____________________\n")
+    
     #Initialize the room states if not already done
     if "SandyCove" not in roomStates:
         roomStates["SandyCove"] = {"visited": False, "isisEventOccurred": False, "receivedFullBlessings": False}
-    
-    print()
     
     if not roomStates["SandyCove"]["visited"]:
         print("You squeeze through the crack in the wall to find a large, open room.")
@@ -113,6 +114,7 @@ def SandyCove(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

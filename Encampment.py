@@ -2,6 +2,20 @@ from SnakeWay import *
 
 from Combat import *
 
+
+def toSnakeway(player, roomStates):
+    print()
+    print("You move towards a small, dark cave-like passageway in the corner of the room.")
+    SnakeWay(player, roomStates)
+
+
+def toEntrance(player, roomStates):
+    from Entrance import Entrance
+    print()
+    print("You decide to head back to the entrance")
+    Entrance(player, roomStates)
+
+
 def Encampment(player, roomStates):
     """!
     Contains the information and flow for the Encampment.
@@ -24,14 +38,16 @@ def Encampment(player, roomStates):
     
     directions = ["FORWARD", "BACKWARD", "Q"]    
     decisions = ["Y", "N"]
+    
+    #Room Label
+    print("____________________\n\nEncampment\n____________________\n")
+    
     #Initialize the room states if not already done
     if "Encampment" not in roomStates:
         roomStates["Encampment"] = {"visited": False, "axeTaken": False, "battleWon": False}
-    
-    print()
         
     if not roomStates["Encampment"]["visited"]:
-        print("You enter a small room. At the far end, rubble is piled up to form a makeshift walled off encampment.")
+        print("You enter a small room. At the far end, rubble is piled up to form a makeshift, walled off tomb goblin camp.")
         print()
         roomStates["Encampment"]["visited"] = True
     
@@ -48,12 +64,10 @@ def Encampment(player, roomStates):
             
             axeChoice = input().strip().upper()
         
-            #Set up to catch mistaken entries, basically just a copy of the room movement structure
-        
             if axeChoice == "Y":        
                 player["hasAxe"] = True
                 roomStates["Encampment"]["axeTaken"] = True
-                print("You pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
+                print("\nYou pick up the axe. Though it has seen better days, the weapon will offer something in the way of protection.")
                 print()
 
             elif axeChoice == "N":
@@ -101,18 +115,11 @@ def Encampment(player, roomStates):
         print()
         userInput = input().strip().upper()
 
-        if userInput == "FORWARD":  
-            print()
-            print("You move towards a small, dark cave-like passageway in the corner of the room.")
-            print("__________________________________________________")
-            SnakeWay(player, roomStates)
+        if userInput == "FORWARD":
+            toSnakeway(player,roomStates)
         
         elif userInput == "BACKWARD":
-            from Entrance import Entrance
-            print()
-            print("You decide to head back to the entrance")
-            print("__________________________________________________")
-            Entrance(player, roomStates)
+            toEntrance(player,roomStates)
             
         elif userInput == "Q":
             print()
@@ -124,6 +131,7 @@ def Encampment(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

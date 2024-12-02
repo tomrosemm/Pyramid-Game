@@ -18,11 +18,12 @@ def SnakeWay(player, roomStates):
     
     directions = ["FORWARD", "BACKWARD", "Q"]
     
+    #Room Label
+    print("____________________\n\nSnakeWay\n____________________\n")
+    
     #Initialize the room states if not already done
     if "SnakeWay" not in roomStates:
         roomStates["SnakeWay"] = {"visited": False}
-    
-    print()
     
     if not roomStates["SnakeWay"]["visited"]:
         print("You enter the dark passageway, traversing the narrow cavern along the edge of the pyramid. ")
@@ -78,8 +79,6 @@ def SnakeWay(player, roomStates):
                     print("You are bitten by a snake, taking " + str(snakeDamage) + " damage.")
                     print()
                     i += 1
-                    
-                # print()
                 
                 input("You steady yourself and move on. Press enter to continue to the next room.")
                 print()
@@ -107,6 +106,7 @@ def SnakeWay(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

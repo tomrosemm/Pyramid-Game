@@ -89,6 +89,7 @@ def combat(player,enemy):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

@@ -5,7 +5,7 @@
 
  Following the prompts onscreen, the player can navigate a decrepit pyramid.
 
- Though not required, installing the pyFiglet library allows for a neat askii TitleScreen
+ Though not required, installing the pyFiglet library allows for a neat ascii TitleScreen
 
  In all rooms, when faced with a decision as to where to travel next, entering q will quit the game.
  

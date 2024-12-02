@@ -27,7 +27,10 @@ def RoyalTomb(player, roomStates):
         "damageRange": (4, 10)
     }
 
-    directions = ["LEFT", "BACKWARD", "Q"]    
+    directions = ["LEFT", "BACKWARD", "Q"]
+    
+    #Room Label
+    print("____________________\n\nRoyal Tomb\n____________________\n")
     
     #Initialize the room states if not already done
     if "RoyalTomb" not in roomStates:
@@ -101,6 +104,7 @@ def RoyalTomb(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

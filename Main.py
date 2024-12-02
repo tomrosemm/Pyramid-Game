@@ -13,14 +13,33 @@ from TreasureChamber import *
 #Import Systems
 from Combat import *
 
+def setPlayerName():
+    """!
+    Set player name based on input, in case of empty (found by False value) name, set to default of 'TestPlayer'
+    
+    @param      newName     holds user input to serve as player name (if not empty)
+    """
+    
+    newName = input("Enter the player's name: ").strip()
+    print()
+        
+    if newName:
+        player["name"] = newName
+        print(f"Player's name updated to: {player['name']}")
+            
+    else:
+        print("Name cannot be empty. Using default name.")
+        print()
+        print(f"Player's name defaults to: {player['name']}")
+
 def titleScreen():
     """!
     Creates a title screen for the pyramid game.
     Tries to import pyFiglet, if errors just uses a simple type title,
-    if successful makes askii art title.
+    if successful makes ascii art title.
     
     @param  pyFigletImported    holds bool value reflecting if pyFiglet was successfully imported
-    @param  title               stores the askii title created by pyFiglet
+    @param  title               stores the ascii title created by pyFiglet
     """
     
     try:
@@ -41,6 +60,7 @@ def titleScreen():
         print()
 
 if __name__ == "__main__":
+    #Game startup, as this is the file program is launched from
     
     player = {
         "name": "TestPlayer",
@@ -60,22 +80,6 @@ if __name__ == "__main__":
     while True:
         titleScreen()
         
-        #Allow for random name choice from names?
-        
-        newName = input("Enter the player's name: ").strip()
-        print()
-        
-        if newName:
-            player["name"] = newName
-            print(f"Player's name updated to: {player['name']}")
-            print("__________________________________________________")
-            print()
-            
-        else:
-            print("Name cannot be empty. Using default name.")
-            print()
-            print(f"Player's name defaults to: {player['name']}")
-            print("__________________________________________________")
-            print()
+        setPlayerName()
             
         Entrance(player, roomStates)

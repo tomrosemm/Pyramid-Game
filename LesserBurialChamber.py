@@ -29,11 +29,12 @@ def LesserBurialChamber(player, roomStates):
     
     directions = ["FORWARD", "BACKWARD", "Q"]
     
+    #Room Label
+    print("____________________\n\nLesser Burial Chamber\n____________________\n")
+    
     #Initialize the room states if not already done
     if "LesserBurialChamber" not in roomStates:
         roomStates["LesserBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblin1Defeated": False, "tombGoblin2Defeated": False}
-        
-    print()
         
     if not roomStates["LesserBurialChamber"]["visited"]:
         print("You enter the Lesser Burial Chamber. Multiple dusty sarcophagi line both walls of the room, though the lids of the majority have been removed, revealing empty contents.")
@@ -104,6 +105,7 @@ def LesserBurialChamber(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

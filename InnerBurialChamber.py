@@ -29,11 +29,12 @@ def InnerBurialChamber(player, roomStates):
     
     directions = ["RIGHT", "BACKWARD", "Q"]
     
+    #Room Label
+    print("____________________\n\nInner Burial Chamber\n____________________\n")
+    
     #Initialize the room states if not already done
     if "InnerBurialChamber" not in roomStates:
         roomStates["InnerBurialChamber"] = {"visited": False, "battleWon": False, "tombGoblinDefeated": False, "mummyDefeated": False}
-        
-    print()
         
     if not roomStates["InnerBurialChamber"]["visited"]:
         print("You enter a mid sized room that must have once been well kept. There are remains of royal ornamentations ont he walls, and ornate sarcophagi reside in alcoves along the wall.")
@@ -102,6 +103,7 @@ def InnerBurialChamber(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

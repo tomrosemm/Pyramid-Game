@@ -6,6 +6,8 @@ from Combat import *
 import random
 import time
 
+#TODO - Refactor directions decision and link to riddle so that offered choices and directions list are hard coded for consistency based on current directions list
+
 def SphinxRoom(player, roomStates):
     """!
     Contains the information and flow for the Sphinx Room.
@@ -35,11 +37,12 @@ def SphinxRoom(player, roomStates):
 
     directions = ["BACKWARD", "RIGHT", "Q"] #Changes if riddle is solved, as door is open
     
+    #Room Label
+    print("____________________\n\nSphinx Room\n____________________\n")
+    
     #Initialize the room states if not already done
     if "SphinxRoom" not in roomStates:
         roomStates["SphinxRoom"] = {"visited": False, "riddleSolved": False, "riddleFailed": False}
-    
-    print()
         
     if not roomStates["SphinxRoom"]["visited"]:
         print("You enter a large hall, at the end of which sits a sphinx, largely in ruin; only his head remains.")
@@ -176,6 +179,7 @@ def SphinxRoom(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

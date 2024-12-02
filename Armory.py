@@ -13,12 +13,13 @@ def Armory(player, roomStates):
         
     directions = ["FORWARD", "Q"]    
     decisions = ["Y", "N"]
+    
+    #Room Label
+    print("____________________\n\nArmory\n____________________\n")
 
     #Initialize the room states if not already done
     if "Armory" not in roomStates:
         roomStates["Armory"] = {"visited": False, "swordTaken": False}
-    
-    print()
         
     if not roomStates["Armory"]["visited"]:
         print("You enter a small armory with empty weapon stands along the walls. There is a long stone table in the center.")
@@ -87,6 +88,7 @@ def Armory(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

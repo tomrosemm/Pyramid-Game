@@ -15,6 +15,9 @@ def TreasureChamber(player, roomStates):
     
     directions = ["BACKWARD", "Q"]   
     decisions = ["Y", "N"]
+    
+    #Room Label
+    print("____________________\n\nTreasure Room\n____________________\n")
 
     #Initialize the room states if not already done
     if "TreasureChamber" not in roomStates:
@@ -109,6 +112,7 @@ def TreasureChamber(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,

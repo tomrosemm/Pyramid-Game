@@ -1,5 +1,21 @@
 from Encampment import *
 
+
+def toEncampment(player, roomStates):
+    """!
+    Contains code for moving from current room into the Encampment w/spacing and roomStates alteration
+    """
+    
+    print()
+    print("You move forward through the narrow doorway into the next room.")
+    
+    if player["hasTorch"]:
+        print()
+        print("The light of the torch guides your way.")
+    
+    Encampment(player, roomStates)
+            
+
 def Entrance(player, roomStates):
     """!
     Contains the information and flow for the Entrance room.
@@ -13,31 +29,41 @@ def Entrance(player, roomStates):
     @param          userInput       holds choice specific to room travel from this room
     """
     
+    #Holds the possible valid choices for decisions in the room
     directions = ["FORWARD", "Q"]
     decisions = ["Y", "N"]
-    #Initialize the room states if not already done
+    
+    #Room Label
+    print("____________________\n\nEntrance\n____________________\n")
+    
+    #Initialize the room state for Entrance if not already done
     if "Entrance" not in roomStates:
         roomStates["Entrance"] = {"visited": False, "torchTaken": False}    
     
+    #If first time visiting room, welcome and set rooms visited value to True
     if not roomStates["Entrance"]["visited"]:
         print("You find yourself in the corner of a pyramid. The way you entered has caved in.")
         print()
         roomStates["Entrance"]["visited"] = True
     
+    #If not first visit, welcome back to room
     else:
-        print("You are in the room you entered the pyramid from. The way you entered has caved in.")
+        print("You are again in the room you entered the pyramid from. The way you entered has caved in.")
         print()
     
     #Check if player has already taken the torch
+    #If not, offer player the choice to do so
     if not roomStates["Entrance"]["torchTaken"]:
+        
+        #Holds user input that represents choice of whether to take torch or not
         torchChoice = ''
         print("There is a lit torch leaning against the corner of the room. Would you like to take it? (y/n)")
 
+        #While loop to allow for erroneous input handling/looping until a valid input is found
         while torchChoice not in decisions:
             
+            #Remove whitespace before/after input and force upper to bypass case-sensitivity
             torchChoice = input().strip().upper()
-
-            #Set up to catch mistaken entries, basically just a copy of the room movement structure
             
             if torchChoice == "Y":        
                 player["hasTorch"] = True
@@ -58,7 +84,6 @@ def Entrance(player, roomStates):
         print()
     
     print("You can only travel forward from here.")
-    # print()
     print("Where would you like to go?")
     print()
     userInput = ''
@@ -71,16 +96,7 @@ def Entrance(player, roomStates):
         userInput = input().strip().upper()
 
         if userInput == "FORWARD":
-            print()
-            print("You move forward through the narrow doorway into the next room.")
-            
-            if player["hasTorch"]:
-                print()
-                print("The light of the torch guides your way.")
-                
-            print("__________________________________________________")
-            
-            Encampment(player, roomStates)
+            toEncampment(player, roomStates)
         
         elif userInput == "Q":
             print()
@@ -93,6 +109,7 @@ def Entrance(player, roomStates):
 
 if __name__ == '__main__':
     
+    #Test variables for launching straight from this room
     player = {
         "name": "TestPlayer",
         "maxHealth": 100,
