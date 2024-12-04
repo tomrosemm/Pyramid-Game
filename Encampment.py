@@ -4,12 +4,18 @@ from Combat import *
 
 
 def toSnakeway(player, roomStates):
+    """!
+    Contains code for moving from current room into the SnakeWay w/spacing and roomStates alteration
+    """
     print()
     print("You move towards a small, dark cave-like passageway in the corner of the room.")
     SnakeWay(player, roomStates)
 
 
 def toEntrance(player, roomStates):
+    """!
+    Contains code for moving from current room into the Entrance w/spacing and roomStates alteration
+    """
     from Entrance import Entrance
     print()
     print("You decide to head back to the entrance")
